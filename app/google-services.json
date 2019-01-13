@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1040326941505",
+    "firebase_url": "https://ragonezi-engenharia.firebaseio.com",
+    "project_id": "ragonezi-engenharia",
+    "storage_bucket": "ragonezi-engenharia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040326941505:android:93074a1e47e730c7",
+        "android_client_info": {
+          "package_name": "vostore.orcamentoragonezi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040326941505-kt5vnap0du7f0tv3t2th088rvhimkbcj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vostore.orcamentoragonezi",
+            "certificate_hash": "8e95dacf6c6fad9f88ef5f89c3d1663d0cc145b4"
+          }
+        },
+        {
+          "client_id": "1040326941505-2e1eafg6osiik4lkbaq3nuropnov08gi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJMOOzp2E0Ot4seK127JaDBJlyJl8ow8U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1040326941505-2e1eafg6osiik4lkbaq3nuropnov08gi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
