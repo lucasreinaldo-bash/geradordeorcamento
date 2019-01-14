@@ -5,33 +5,30 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/nav_orcamento"
+            android:icon="@drawable/img_orcamento"
+            android:title="Orçamento" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/nav_parcelamento"
+            android:icon="@drawable/img_parcelamento"
+            android:title="Parcelamento" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_produtos"
+            android:icon="@drawable/img_produtos"
+            android:title="Produtos" />
+
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Configurar Conta">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/nav_ajustes"
+                android:icon="@drawable/img_config"
+                android:title="Ajustes" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/nav_sair"
+                android:icon="@drawable/img_sair"
+                android:title="Sair" />
         </menu>
     </item>
 

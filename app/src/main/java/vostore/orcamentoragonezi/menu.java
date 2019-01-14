@@ -1,5 +1,6 @@
 package vostore.orcamentoragonezi;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,8 +14,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.firebase.auth.FirebaseAuth;
+
+import vostore.orcamentoragonezi.Firebase.ConfiguracaoFirebase;
+
 public class menu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +46,14 @@ public class menu extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        //Sem essa linha abaixo, os icones do navigation ficarão cinzento
+        navigationView.setItemIconTintList(null);
+
+        //Adicionando um ouvinte de click ao itens do navigation
         navigationView.setNavigationItemSelectedListener(this);
+
+        //Instanciando servidor Firebase
+        mAuth = FirebaseAuth.getInstance();
     }
 
     @Override
@@ -80,22 +94,37 @@ public class menu extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_orcamento) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_parcelamento) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_produtos) {
 
-        } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_ajustes) {
 
+        } else if (id == R.id.nav_sair) {
+            signOut();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    private void signOut() {
+        // Firebase sign out
+
+        mAuth = ConfiguracaoFirebase.getFirebaseAutenticacao();
+        mAuth.signOut();
+        Intent intent = new Intent(menu.this, Login.class);
+        startActivity(intent);
+
+        // Google sign out
+
+
+
+
+
     }
 }
