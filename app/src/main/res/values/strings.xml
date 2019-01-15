@@ -7,4 +7,13 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="titulo1">Orçamentos</string>
+    <string name="titulo2">Parcelamento</string>
+    <string name="titulo3">Produtos</string>
+    <string name="titulo4">Configurar Conta</string>
+    <string name="titulo5">Sair</string>
 </resources>
