@@ -35,6 +35,10 @@
             android:screenOrientation="userPortrait"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
           />
+        <activity
+            android:name=".Main2Activity"
+            android:label="Orçamento Ragonezi"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
     </application>
 

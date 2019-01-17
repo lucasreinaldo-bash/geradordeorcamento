@@ -29,7 +29,7 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        verificarUsuarioLogado();
+      verificarUsuarioLogado();
 
         //Cast
         btnLogin = findViewById(R.id.btn_login);
@@ -57,7 +57,7 @@ public class Login extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
                                 // Toast.makeText(Login.this,"Login bem sucedido",Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(Login.this,MainActivity.class);
+                                Intent intent = new Intent(Login.this,Main2Activity.class);
                                 startActivity(intent);
                                 finish();
                                 //overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
@@ -92,7 +92,7 @@ public class Login extends AppCompatActivity {
     //Abrir tela seguinte
     private  void updateUI(){
         // Toast.makeText(Login.this, "Login Realizado", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(Login.this, MainActivity.class);
+        Intent intent = new Intent(Login.this, Main2Activity.class);
         startActivity(intent);
         finish();
 
