@@ -1,0 +1,2660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo"
+    tools:context=".Servicos.Demolicao">
+
+    <android.support.design.widget.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cam" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="R$"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView91"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textView8"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/edittext_fundo"
+                    android:gravity="center"
+                    android:text="445535"
+                    android:textColor="#1d1d1d" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="Nº"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textView8"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/edittext_fundo"
+                    android:gravity="center"
+                    android:text="001"
+                    android:textColor="#1d1d1d" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+        >
+
+</android.support.design.widget.AppBarLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="76dp"
+            android:layout_height="44dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="57dp"
+            app:srcCompat="@drawable/icon_demolicao" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView3"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="166dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView3"
+                android:orientation="vertical"
+                android:paddingBottom="3dp"
+                android:visibility="visible">
+
+                <CheckBox
+                    android:id="@+id/checkbox_cozinha"
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-10dp"
+                    android:gravity="left|right|center"
+                    android:text="Cozinha" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_banheiro_social"
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="-10dp"
+                    android:gravity="left|right|center"
+                    android:text="Banheiro Social" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_areaservico"
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/imageView3"
+                    android:layout_marginBottom="-10dp"
+                    android:gravity="left|right|center"
+                    android:text="Área de Serviço" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_banheiro_suite"
+                    android:layout_width="172dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/checkbox_quarto2"
+                    android:layout_marginBottom="-10dp"
+                    android:gravity="left|right|center"
+                    android:text="Banheiro Suíte" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_banheiro_lavabo"
+                    android:layout_width="172dp"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/checkbox_banheiro_suite"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="-10dp"
+                    android:gravity="left|right|center"
+                    android:text="Lavabo" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_sacada"
+                    android:layout_width="167dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/checkbox_quartoSuite"
+                    android:gravity="left|right|center"
+                    android:text="Sacada Varanda" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="157dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentTop="false"
+                android:layout_gravity="right"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:visibility="visible">
+
+                <CheckBox
+                    android:id="@+id/checkbox_salaJantar"
+                    android:layout_width="167dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/imageView3"
+                    android:layout_marginBottom="-10dp"
+                    android:gravity="left|right|center"
+                    android:text="Sala de Jantar" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_salaEstar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="-10dp"
+                    android:gravity="left|right|center"
+                    android:text="Sala de Estar" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_quartoSuite"
+                    android:layout_width="139dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+
+                    android:layout_marginBottom="-10dp"
+                    android:gravity="left|right|center"
+                    android:text="Quarto Suíte" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_quarto1"
+                    android:layout_width="117dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="-10dp"
+                    android:gravity="left|right|center"
+                    android:text="Quarto 1" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_quarto2"
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="left|right|center"
+                    android:text="Quarto 2" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="223dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/fundo"
+            android:elevation="10dp"
+            android:visibility="visible"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/linearCozinha"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_light"
+                                android:gravity="center"
+                                android:text="Cozinha"
+                                android:textSize="24sp" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerRevestimentoParede"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de revestimento de parede"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de revestimento de parede"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPiso"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de piso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de piso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de pia"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de pia"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerAlvenaria"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de alvenaria"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de alvenaria"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerTanque"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Tanque"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Tanque"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha42"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X2"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X2"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha44"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X4"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X4"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarHidraulica"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para Hidráulica"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para Hidráulica"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerGesso"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Gesso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Gesso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerVaso"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Vaso Sanitário"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Vaso Sanitário"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/aberturaVao"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Abertura de vão para o nicho"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Abertura de vão para o nicho"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearBanheiroSocial"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_light"
+                                android:gravity="center"
+                                android:text="Banheiro Social"
+                                android:textSize="24sp" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerRevestimentoParede2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de revestimento de parede"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de revestimento de parede"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPiso2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de piso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de piso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPia2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de pia"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de pia"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerAlvenaria2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de alvenaria"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de alvenaria"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerTanque2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Tanque"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Tanque"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha42_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X2"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X2"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha44_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X4"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X4"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarHidraulica2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para Hidráulica"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para Hidráulica"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerGesso2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Gesso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Gesso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerVaso2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Vaso Sanitário"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Vaso Sanitário"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/aberturaVao2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Abertura de vão para o nicho"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Abertura de vão para o nicho"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearAreaServico"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_light"
+                                android:gravity="center"
+                                android:text="Aréa de Serviço"
+                                android:textSize="24sp" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerRevestimentoParede3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de revestimento de parede"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de revestimento de parede"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPiso3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de piso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de piso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPia3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de pia"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de pia"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerAlvenaria3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de alvenaria"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de alvenaria"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerTanque3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Tanque"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Tanque"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha42_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X2"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X2"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha44_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X4"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X4"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarHidraulica3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para Hidráulica"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para Hidráulica"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerGesso3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Gesso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Gesso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerVaso3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Vaso Sanitário"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Vaso Sanitário"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/aberturaVao3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Abertura de vão para o nicho"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Abertura de vão para o nicho"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearBanheiroSuite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_light"
+                                android:gravity="center"
+                                android:text="Banheiro Suite"
+                                android:textSize="24sp" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerRevestimentoParede4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de revestimento de parede"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de revestimento de parede"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPiso4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de piso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de piso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPia4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de pia"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de pia"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerAlvenaria4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de alvenaria"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de alvenaria"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerTanque4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Tanque"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Tanque"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha42_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X2"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X2"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha44_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X4"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X4"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarHidraulica4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para Hidráulica"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para Hidráulica"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerGesso4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Gesso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Gesso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerVaso4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Vaso Sanitário"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Vaso Sanitário"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/aberturaVao4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Abertura de vão para o nicho"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Abertura de vão para o nicho"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLavabo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_light"
+                                android:gravity="center"
+                                android:text="Lavabo"
+                                android:textSize="24sp" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerRevestimentoParede5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de revestimento de parede"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de revestimento de parede"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPiso5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de piso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de piso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPia5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de pia"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de pia"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerAlvenaria5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de alvenaria"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de alvenaria"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerTanque5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Tanque"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Tanque"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha42_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X2"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X2"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha44_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X4"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X4"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarHidraulica5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para Hidráulica"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para Hidráulica"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerGesso5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Gesso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Gesso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerVaso5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Vaso Sanitário"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Vaso Sanitário"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/aberturaVao5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Abertura de vão para o nicho"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Abertura de vão para o nicho"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearSacada"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_light"
+                                android:gravity="center"
+                                android:text="Sacada Varanda"
+                                android:textSize="24sp" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerRevestimentoParede6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de revestimento de parede"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de revestimento de parede"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPiso6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de piso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de piso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPia6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de pia"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de pia"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerAlvenaria6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de alvenaria"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de alvenaria"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerTanque6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Tanque"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Tanque"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha42_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X2"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X2"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha44_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X4"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X4"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarHidraulica_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para Hidráulica"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para Hidráulica"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerGesso_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Gesso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Gesso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerVaso_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Vaso Sanitário"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Vaso Sanitário"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/aberturaVao_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Abertura de vão para o nicho"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Abertura de vão para o nicho"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearSalaJantar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_light"
+                                android:gravity="center"
+                                android:text="Sala de Jantar"
+                                android:textSize="24sp" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerRevestimentoParede7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de revestimento de parede"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de revestimento de parede"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPiso7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de piso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de piso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPia7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de pia"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de pia"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerAlvenaria7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de alvenaria"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de alvenaria"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerTanque7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Tanque"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Tanque"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha42_7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X2"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X2"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha44_7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X4"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X4"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarHidraulica7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para Hidráulica"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para Hidráulica"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerGesso7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Gesso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Gesso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerVaso7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Vaso Sanitário"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Vaso Sanitário"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/aberturaVao7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Abertura de vão para o nicho"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Abertura de vão para o nicho"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearSalaEstar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_light"
+                                android:gravity="center"
+                                android:text="Sala de Estar"
+                                android:textSize="24sp" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerRevestimentoParede8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de revestimento de parede"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de revestimento de parede"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPiso8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de piso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de piso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPia8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de pia"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de pia"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerAlvenaria8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de alvenaria"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de alvenaria"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerTanque8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Tanque"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Tanque"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha42_8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X2"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X2"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha44_8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X4"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X4"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarHidraulica8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para Hidráulica"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para Hidráulica"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerGesso8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Gesso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Gesso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerVaso8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Vaso Sanitário"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Vaso Sanitário"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/aberturaVao8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Abertura de vão para o nicho"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Abertura de vão para o nicho"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearQuartoSuite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_light"
+                                android:gravity="center"
+                                android:text="Quarto Suite"
+                                android:textSize="24sp" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerRevestimentoParede9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de revestimento de parede"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de revestimento de parede"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPiso9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de piso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de piso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPia9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de pia"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de pia"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerAlvenaria9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de alvenaria"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de alvenaria"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerTanque9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Tanque"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Tanque"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha42_9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X2"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X2"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha44_9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X4"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X4"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarHidraulica9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para Hidráulica"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para Hidráulica"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerGesso9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Gesso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Gesso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerVaso9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Vaso Sanitário"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Vaso Sanitário"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/aberturaVao9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Abertura de vão para o nicho"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Abertura de vão para o nicho"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearQuarto1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_light"
+                                android:gravity="center"
+                                android:text="Quarto 1"
+                                android:textSize="24sp" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerRevestimentoParede10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de revestimento de parede"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de revestimento de parede"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPiso10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de piso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de piso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPia10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de pia"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de pia"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerAlvenaria10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de alvenaria"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de alvenaria"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerTanque10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Tanque"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Tanque"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha42_10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X2"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X2"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha44_10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X4"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X4"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarHidraulica10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para Hidráulica"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para Hidráulica"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerGesso10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Gesso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Gesso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerVaso10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Vaso Sanitário"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Vaso Sanitário"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/aberturaVao10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Abertura de vão para o nicho"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Abertura de vão para o nicho"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearQuarto2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_light"
+                                android:gravity="center"
+                                android:text="Quarto 2"
+                                android:textSize="24sp" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerRevestimentoParede11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de revestimento de parede"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de revestimento de parede"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPiso11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de piso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de piso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerPia11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de pia"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de pia"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerAlvenaria11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de alvenaria"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de alvenaria"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerTanque11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Tanque"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Tanque"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha42_11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X2"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X2"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarCaixinha44_11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para caixinha 4X4"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para caixinha 4X4"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/rasgarHidraulica11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Rasgar para Hidráulica"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Rasgar para Hidráulica"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerGesso11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Gesso"
+                                android:inputType="numberDecimal"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Gesso"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/removerVaso11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Remoção de Vaso Sanitário"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Remoção de Vaso Sanitário"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+
+                            <com.rengwuxian.materialedittext.MaterialEditText
+                                android:id="@+id/aberturaVao11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_thin"
+                                android:hint="Abertura de vão para o nicho"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="10sp"
+                                app:met_baseColor="#323333"
+                                app:met_errorColor="#ddaa00"
+                                app:met_floatingLabel="highlight"
+                                app:met_floatingLabelText="Abertura de vão para o nicho"
+                                app:met_floatingLabelTextColor="#982360"
+                                app:met_primaryColor="#982360" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </ScrollView>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/demolicao_finish"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/finish"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</ScrollView>
+</RelativeLayout>

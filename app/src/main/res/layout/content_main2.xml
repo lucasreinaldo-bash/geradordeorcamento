@@ -176,123 +176,75 @@
 
     </LinearLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fillViewport="true"
-        android:layout_alignParentBottom="true"
-        android:measureAllChildren="false"
-        android:scrollbars="none"
-        >
-
-    </ScrollView>
-
-    <LinearLayout
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:elevation="50dp"
-        android:orientation="horizontal"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp">
-
-        <Button
-            android:id="@+id/button11"
-            android:layout_width="100px"
-            android:layout_height="100px"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/icon_art" />
-
-        <Button
-            android:id="@+id/button22"
-            android:layout_width="100px"
-            android:layout_height="100px"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/icon_demolicao" />
-
-        <Button
-            android:id="@+id/button33"
-            android:layout_width="100px"
-            android:layout_height="100px"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/icon_revestimento" />
-
-        <Button
-            android:id="@+id/button44"
-            android:layout_width="100px"
-            android:layout_height="100px"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/icon_hidraulica" />
-
-        <Button
-            android:id="@+id/button55"
-            android:layout_width="100px"
-            android:layout_height="100px"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/icon_eletrica" />
-
-        <Button
-            android:id="@+id/button66"
-            android:layout_width="100px"
-            android:layout_height="100px"
-            android:background="@drawable/um" />
+        android:layout_alignParentStart="true">
 
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:elevation="50dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="222dp"
-        android:background="@drawable/cam" />
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/icon_art" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="142dp"
-        android:layout_marginStart="107dp"
-        android:text="Nº"
-        android:textColor="#ffffff"
-        android:textStyle="bold" />
+            <Button
+                android:id="@+id/button22"
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/icon_demolicao" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView7"
-        android:layout_marginBottom="105dp"
-        android:layout_marginRight="5dp"
-        android:text="R$"
-        android:textColor="#ffffff"
-        android:textStyle="bold" />
+            <Button
+                android:id="@+id/button33"
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/icon_revestimento" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView8"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/edittext_fundo"
-        android:gravity="center"
-        android:text="445535" />
+            <Button
+                android:id="@+id/button44"
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/icon_hidraulica" />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView7"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/edittext_fundo"
-        android:gravity="center"
-        android:text="00001" />
+            <Button
+                android:id="@+id/button55"
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/icon_eletrica" />
+
+            <Button
+                android:id="@+id/button66"
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:background="@drawable/um" />
+
+            <Button
+                android:id="@+id/button77"
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:background="@drawable/finish" />
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
 
     <Button
         android:id="@+id/button8"

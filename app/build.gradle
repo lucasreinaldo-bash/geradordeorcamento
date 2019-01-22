@@ -30,8 +30,12 @@ dependencies {
     //Github
     implementation 'com.ncapdevi:frag-nav:1.0.3'
     implementation 'com.roughike:bottom-bar:1.3.9'
-    implementation ('com.mikepenz:materialdrawer:5.3.1@aar') {
-        transitive = true}
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    implementation 'com.itextpdf:itextg:5.5.10'
+
+    implementation('com.mikepenz:materialdrawer:5.3.1@aar') {
+        transitive = true
+    }
     //Bibliotecas Padrões
     implementation 'com.google.firebase:firebase-database:11.8.0'
     implementation 'com.google.firebase:firebase-auth:11.8.0'

@@ -16,4 +16,14 @@
     <string name="titulo3">Produtos</string>
     <string name="titulo4">Configurar Conta</string>
     <string name="titulo5">Sair</string>
+    <string name="string_permission_help">Help</string>
+
+    <string name="string_permission_help_text">The permission is missing.\n\nTo grant this permission click on Settings, then Permissions and turn the permission on.\n\nThen click back twice to return to the app</string>
+
+    <string name="string_permission_quit">Exit App</string>
+
+    <string name="string_settings">Settings</string>
+    <string name="tituloDialog">Banco de Dados</string>
+    <string name="falha">Falha ao carregar o Banco de Dados!</string>
+    <string name="mensagemSnack">Banco de Dados carregado com sucesso!</string>
 </resources>

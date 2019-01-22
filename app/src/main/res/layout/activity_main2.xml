@@ -8,7 +8,13 @@
     android:fitsSystemWindows="true"
     android:background="@drawable/fundo"
     tools:openDrawer="start">
-
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    </LinearLayout>
     <include
         layout="@layout/app_bar_main2"
         android:layout_width="match_parent"
@@ -19,12 +25,11 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="#ffffff"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main2"
         app:menu="@menu/activity_menu_drawer" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></LinearLayout>
+
 
 </android.support.v4.widget.DrawerLayout>

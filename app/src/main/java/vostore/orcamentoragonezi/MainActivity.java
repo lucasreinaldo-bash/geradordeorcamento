@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
         //BottomBar menu
         mBottomBar = BottomBar.attach(this, savedInstanceState);
         mBottomBar.setItems(R.menu.navigation_bottom);
-        mBottomBar.setBackgroundColor(R.drawable.fundo);
         mBottomBar.setOnMenuTabClickListener(new OnMenuTabClickListener() {
             @Override
             public void onMenuTabSelected(@IdRes int menuItemId) {
@@ -120,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                         home,
                         primary_item1,
                         primary_item2,
-                        new SectionDrawerItem().withName("Categories"),
+                        new SectionDrawerItem().withName("Conta"),
                         secondary_item1,
                         secondary_item2
 
