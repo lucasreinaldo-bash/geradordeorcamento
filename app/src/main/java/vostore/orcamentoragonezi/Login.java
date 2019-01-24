@@ -70,6 +70,7 @@ public class Login extends AppCompatActivity {
                                 toast.show();
 
 
+
                                 // Toast.makeText(Login.this,"Não foi possível entrar no ambiente",Toast.LENGTH_SHORT).show();
                             }
                         }

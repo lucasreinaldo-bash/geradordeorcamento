@@ -26,4 +26,6 @@
     <string name="tituloDialog">Banco de Dados</string>
     <string name="falha">Falha ao carregar o Banco de Dados!</string>
     <string name="mensagemSnack">Banco de Dados carregado com sucesso!</string>
+    <string name="real">R$</string>
+    <string name="removerrevestimentoparede">Remover Revestimento \n de Parede</string>
 </resources>

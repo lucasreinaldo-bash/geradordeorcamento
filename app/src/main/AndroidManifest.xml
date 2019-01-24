@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ActivitysNavigation.Produtos"
+            android:name=".Servicos.Demolicao"
             android:screenOrientation="userPortrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -31,7 +31,7 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".Servicos.Demolicao"
+            android:name=".ActivitysNavigation.Produtos"
             android:screenOrientation="userPortrait"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
