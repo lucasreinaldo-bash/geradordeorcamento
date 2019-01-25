@@ -57,6 +57,7 @@
                     android:layout_centerHorizontal="true"
                     android:background="@drawable/edittext_fundo"
                     android:textColor="#1d1d1d"
+                    android:textSize="12sp"
                     android:gravity="center"
                     android:text="445535" />
 
@@ -80,7 +81,7 @@
                     android:textColor="#ffffff"
                     android:textStyle="bold" />
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/exibirNotaTelaInicial"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@+id/textView8"
@@ -88,7 +89,8 @@
                     android:background="@drawable/edittext_fundo"
                     android:textColor="#1d1d1d"
                     android:gravity="center"
-                    android:text="001" />
+                    android:textSize="12sp"
+                    android:text="" />
             </LinearLayout>
         </android.support.v7.widget.Toolbar>>
 

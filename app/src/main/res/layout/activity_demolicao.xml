@@ -89,7 +89,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/exibirNota"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@+id/textView8"
@@ -248,18 +248,7 @@
                     android:textSize="12sp"
                     android:text="Quarto 2" />
 
-                <Button
-                    android:id="@+id/demolicao_finish"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="left"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="30sp"
-                    android:layout_marginRight="30sp"
-                    android:layout_marginTop="30sp"
-                    android:background="@drawable/finish"
-                    android:gravity="center"
-                    android:visibility="gone" />
+
             </LinearLayout>
 
             <android.support.v7.widget.CardView
@@ -1166,7 +1155,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x2_2"
+                                            android:id="@+id/rasgarCaixinha4x2_2_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -1217,7 +1206,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x4_2"
+                                            android:id="@+id/rasgarCaixinha4x4_2_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -1487,7 +1476,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/removerRevestimentoParede2_3"
+                                            android:id="@+id/removerRevestimentoParede3_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -1538,7 +1527,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/removerPiso2_3"
+                                            android:id="@+id/removerPiso3_2"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -1590,7 +1579,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/removerPia2_3"
+                                            android:id="@+id/removerPia3_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -1795,7 +1784,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x4_3"
+                                            android:id="@+id/rasgarCaixinha4x4_3_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -2317,7 +2306,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x2_4"
+                                            android:id="@+id/rasgarCaixinha4x2_4_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -2368,7 +2357,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x4_4"
+                                            android:id="@+id/rasgarCaixinha4x4_4_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -2895,7 +2884,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x2_5"
+                                            android:id="@+id/rasgarCaixinha4x2_5_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -2946,7 +2935,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x4_5"
+                                            android:id="@+id/rasgarCaixinha4x4_5_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -3473,7 +3462,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x2_6"
+                                            android:id="@+id/rasgarCaixinha4x2_6_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -3524,7 +3513,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x4_6"
+                                            android:id="@+id/rasgarCaixinha4x4_6_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -4050,7 +4039,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x2_7"
+                                            android:id="@+id/rasgarCaixinha4x2_7_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -4101,7 +4090,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x4_7"
+                                            android:id="@+id/rasgarCaixinha4x4_7_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -4628,7 +4617,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x2_8"
+                                            android:id="@+id/rasgarCaixinha4x2_8_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -4679,7 +4668,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x4_8"
+                                            android:id="@+id/rasgarCaixinha4x4_8_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -4730,7 +4719,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarHidraulica4_8"
+                                            android:id="@+id/rasgarHidraulica8_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -5206,7 +5195,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x2_11"
+                                            android:id="@+id/rasgarCaixinha4x2_11_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -5257,7 +5246,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x4_11"
+                                            android:id="@+id/rasgarCaixinha4x4_11_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -5784,7 +5773,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x2_9"
+                                            android:id="@+id/rasgarCaixinha4x2_9_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -5835,7 +5824,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x4_9"
+                                            android:id="@+id/rasgarCaixinha4x4_9_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -5886,7 +5875,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarHidraulica4_9"
+                                            android:id="@+id/rasgarHidraulica9_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -5942,7 +5931,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/removerGesso4_9"
+                                            android:id="@+id/removerGesso9_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -5993,7 +5982,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/removerVaso4_9"
+                                            android:id="@+id/removerVaso9_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -6044,7 +6033,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/removerVao4_9"
+                                            android:id="@+id/removerVao9_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -6362,7 +6351,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x2_10"
+                                            android:id="@+id/rasgarCaixinha4x2_10_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -6413,7 +6402,7 @@
                                             android:textSize="8sp" />
 
                                         <EditText
-                                            android:id="@+id/rasgarCaixinha4x4_10"
+                                            android:id="@+id/rasgarCaixinha4x4_10_1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:background="@android:drawable/editbox_background"
@@ -6719,7 +6708,7 @@
                 android:background="@drawable/um" />
 
             <Button
-                android:id="@+id/button77"
+                android:id="@+id/btnFinishDemolicao"
                 android:layout_width="100px"
                 android:layout_height="100px"
                 android:background="@drawable/finish" />

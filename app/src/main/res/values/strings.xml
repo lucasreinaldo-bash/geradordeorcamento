@@ -28,4 +28,5 @@
     <string name="mensagemSnack">Banco de Dados carregado com sucesso!</string>
     <string name="real">R$</string>
     <string name="removerrevestimentoparede">Remover Revestimento \n de Parede</string>
+    <string name="key_app" />
 </resources>

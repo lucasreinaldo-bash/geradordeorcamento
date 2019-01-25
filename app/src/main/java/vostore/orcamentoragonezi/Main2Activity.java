@@ -1,6 +1,7 @@
 package vostore.orcamentoragonezi;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -17,6 +18,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -50,6 +53,8 @@ public class Main2Activity extends AppCompatActivity
     private final int TAB_SECOND = FragNavController.TAB2;
     private final int TAB_THIRD = FragNavController.TAB3;
     private FragNavController fragNavController;
+    private int numNota = 0;
+    private TextView exibirNota;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,8 +70,27 @@ public class Main2Activity extends AppCompatActivity
         btn5 = findViewById(R.id.button5);
         btn6 = findViewById(R.id.button6);
 
+        exibirNota = findViewById(R.id.exibirNotaTelaInicial);
 
 
+        Intent intent = getIntent();
+        int numeroNota;
+        if (intent == null){
+            Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+        }else {
+            numeroNota = intent.getIntExtra("numeroNota",0);
+            int numeroNotaa = numeroNota;
+            SharedPreferences mypref = getPreferences(MODE_PRIVATE);
+            SharedPreferences.Editor editor = mypref.edit();
+            editor.putInt("numeroNota", numeroNotaa);
+            editor.commit();
+        }
+
+        SharedPreferences mypref = getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor editor = mypref.edit();
+        int numeroNotaaa  = mypref.getInt("numeroNota",0001);
+
+        exibirNota.setText("000"+Integer.toString(numeroNotaaa));
 
 
 
@@ -90,6 +114,9 @@ public class Main2Activity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+
     }
 
 
