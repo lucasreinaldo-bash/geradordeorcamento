@@ -1,20 +1,19 @@
 package vostore.orcamentoragonezi.Servicos;
 
-import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.Manifest;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.os.StrictMode;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,12 +24,9 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.itextpdf.text.BaseColor;
-import com.itextpdf.text.ChapterAutoNumber;
 import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
@@ -40,10 +36,9 @@ import com.itextpdf.text.FontFactory;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfWriter;
-import com.itextpdf.text.pdf.draw.LineSeparator;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -53,13 +48,10 @@ import java.text.DecimalFormat;
 import java.util.Date;
 import java.util.List;
 
-import android.content.DialogInterface;
 import vostore.orcamentoragonezi.Main2Activity;
 
 import vostore.orcamentoragonezi.Permissoes.PermissionsChecker;
 import vostore.orcamentoragonezi.R;
-import vostore.orcamentoragonezi.helper.Preferencias;
-import vostore.orcamentoragonezi.pdf.FileUtils;
 
 import static vostore.orcamentoragonezi.pdf.LogUtils.LOGE;
 
@@ -89,7 +81,7 @@ public class Demolicao extends AppCompatActivity {
     private Button btn_finish;
     PermissionsChecker checker;
     Context mContext;
-    double varRemoverRevestimentoParede2,varRemoverRevestimentoParede3,varRemoverRevestimentoParede4,varRemoverRevestimentoParede5,varRemoverRevestimentoParede6,varRemoverRevestimentoParede7,varRemoverRevestimentoParede8,varRemoverRevestimentoParede9,varRemoverRevestimentoParede10,varRemoverRevestimentoParede11;
+   // double varRemoverRevestimentoParede2,varRemoverRevestimentoParede3,varRemoverRevestimentoParede4,varRemoverRevestimentoParede5,varRemoverRevestimentoParede6,varRemoverRevestimentoParede7,varRemoverRevestimentoParede8,varRemoverRevestimentoParede9,varRemoverRevestimentoParede10,varRemoverRevestimentoParede11;
     double precoRemoverRevestimentoParede = 30.00;
     double precoRemoverPiso = 30.00;
     double precoRemoverAlvenaria = 60.00;
@@ -109,26 +101,136 @@ public class Demolicao extends AppCompatActivity {
     //Variaveis Cozinha
     private   double varRemoverRevestimentoParede = 0;
     private   double varRemoverRevestimentoParede1 = 0;
+    private   double varRemoverRevestimentoParede2 = 0;
+    private   double varRemoverRevestimentoParede2_1 = 0;
+    private   double varRemoverRevestimentoParede3 = 0;
+    private   double varRemoverRevestimentoParede3_1 = 0;
+    private   double varRemoverRevestimentoParede4 = 0;
+    private   double varRemoverRevestimentoParede4_1 = 0;
+    private   double varRemoverRevestimentoParede5 = 0;
+    private   double varRemoverRevestimentoParede5_1 = 0;
+    private   double varRemoverRevestimentoParede6 = 0;
+    private   double varRemoverRevestimentoParede6_1 = 0;
     private  double varRemoverPiso = 0;
     private  double varRemoverPiso1 = 0;
+    private  double varRemoverPiso2 = 0;
+    private  double varRemoverPiso2_1 = 0;
+    private  double varRemoverPiso3 = 0;
+    private  double varRemoverPiso3_1 = 0;
+    private  double varRemoverPiso4 = 0;
+    private  double varRemoverPiso4_1 = 0;
+    private  double varRemoverPiso5 = 0;
+    private  double varRemoverPiso5_1 = 0;
+    private  double varRemoverPiso6 = 0;
+    private  double varRemoverPiso6_1 = 0;
     private  double varRemoverPia = 0;
     private  double varRemoverPia1 = 0;
+    private  double varRemoverPia2 = 0;
+    private  double varRemoverPia2_1 = 0;
+    private  double varRemoverPia3 = 0;
+    private  double varRemoverPia3_1 = 0;
+    private  double varRemoverPia4 = 0;
+    private  double varRemoverPia4_1 = 0;
+    private  double varRemoverPia5 = 0;
+    private  double varRemoverPia5_1 = 0;
+    private  double varRemoverPia6 = 0;
+    private  double varRemoverPia6_1 = 0;
     private  double varRemoverAlvenaria =0;
     private   double varRemoverAlvenaria1 = 0;
+    private   double varRemoverAlvenaria2 = 0;
+    private   double varRemoverAlvenaria2_1 = 0;
+    private   double varRemoverAlvenaria3 = 0;
+    private   double varRemoverAlvenaria3_1 = 0;
+    private   double varRemoverAlvenaria4 = 0;
+    private   double varRemoverAlvenaria4_1 = 0;
+    private   double varRemoverAlvenaria5 = 0;
+    private   double varRemoverAlvenaria5_1 = 0;
+    private   double varRemoverAlvenaria6 = 0;
+    private   double varRemoverAlvenaria6_1 = 0;
     private   double varRemoverTanque = 0;
     private   double varRemoverTanque1 = 0;
+    private   double varRemoverTanque2 = 0;
+    private   double varRemoverTanque2_1 = 0;
+    private   double varRemoverTanque3 = 0;
+    private   double varRemoverTanque3_1 = 0;
+    private   double varRemoverTanque4 = 0;
+    private   double varRemoverTanque4_1 = 0;
+    private   double varRemoverTanque5 = 0;
+    private   double varRemoverTanque5_1 = 0;
+    private   double varRemoverTanque6 = 0;
+    private   double varRemoverTanque6_1 = 0;
     private   double  varRemoverCaixinha4x2 = 0;
     private   double  varRemoverCaixinha4x2_1 = 0;
+    private   double  varRemoverCaixinha4x2_2 = 0;
+    private   double  varRemoverCaixinha4x2_2_1 = 0;
+    private   double  varRemoverCaixinha4x2_3 = 0;
+    private   double  varRemoverCaixinha4x2_3_1 = 0;
+    private   double  varRemoverCaixinha4x2_4 = 0;
+    private   double  varRemoverCaixinha4x2_4_1 = 0;
+    private   double  varRemoverCaixinha4x2_5 = 0;
+    private   double  varRemoverCaixinha4x2_5_1 = 0;
+    private   double  varRemoverCaixinha4x2_6 = 0;
+    private   double  varRemoverCaixinha4x2_6_1 = 0;
     private   double  varRemoverCaixinha4x4 = 0;
     private   double  varRemoverCaixinha4x4_1 = 0;
+    private   double  varRemoverCaixinha4x4_2 = 0;
+    private   double  varRemoverCaixinha4x4_2_1 = 0;
+    private   double  varRemoverCaixinha4x4_3 = 0;
+    private   double  varRemoverCaixinha4x4_3_1 = 0;
+    private   double  varRemoverCaixinha4x4_4 = 0;
+    private   double  varRemoverCaixinha4x4_4_1 = 0;
+    private   double  varRemoverCaixinha4x4_5 = 0;
+    private   double  varRemoverCaixinha4x4_5_1 = 0;
+    private   double  varRemoverCaixinha4x4_6 = 0;
+    private   double  varRemoverCaixinha4x4_6_1 = 0;
     private   double  varRemoverHidraulica = 0;
     private   double  varRemoverHidraulica1 = 0;
+    private   double  varRemoverHidraulica2 = 0;
+    private   double  varRemoverHidraulica2_1 = 0;
+    private   double  varRemoverHidraulica3 = 0;
+    private   double  varRemoverHidraulica3_1 = 0;
+    private   double  varRemoverHidraulica4 = 0;
+    private   double  varRemoverHidraulica4_1 = 0;
+    private   double  varRemoverHidraulica5 = 0;
+    private   double  varRemoverHidraulica5_1 = 0;
+    private   double  varRemoverHidraulica6 = 0;
+    private   double  varRemoverHidraulica6_1 = 0;
     private   double  varRemoverGesso = 0;
     private   double  varRemoverGesso1 = 0;
+    private   double  varRemoverGesso2 = 0;
+    private   double  varRemoverGesso2_1 = 0;
+    private   double  varRemoverGesso3 = 0;
+    private   double  varRemoverGesso3_1 = 0;
+    private   double  varRemoverGesso4 = 0;
+    private   double  varRemoverGesso4_1 = 0;
+    private   double  varRemoverGesso5 = 0;
+    private   double  varRemoverGesso5_1 = 0;
+    private   double  varRemoverGesso6 = 0;
+    private   double  varRemoverGesso6_1 = 0;
     private   double varRemoverVasoSanitario = 0;
     private   double varRemoverVasoSanitario1 = 0;
+    private   double varRemoverVasoSanitario2 = 0;
+    private   double varRemoverVasoSanitario2_1 = 0;
+    private   double varRemoverVasoSanitario3 = 0;
+    private   double varRemoverVasoSanitario3_1 = 0;
+    private   double varRemoverVasoSanitario4 = 0;
+    private   double varRemoverVasoSanitario4_1 = 0;
+    private   double varRemoverVasoSanitario5 = 0;
+    private   double varRemoverVasoSanitario5_1 = 0;
+    private   double varRemoverVasoSanitario6 = 0;
+    private   double varRemoverVasoSanitario6_1 = 0;
     private   double  varRemoverVao = 0;
     private   double  varRemoverVao1 = 0;
+    private   double  varRemoverVao2 = 0;
+    private   double  varRemoverVao2_1 = 0;
+    private   double  varRemoverVao3 = 0;
+    private   double  varRemoverVao3_1 = 0;
+    private   double  varRemoverVao4 = 0;
+    private   double  varRemoverVao4_1 = 0;
+    private   double  varRemoverVao5 = 0;
+    private   double  varRemoverVao5_1 = 0;
+    private   double  varRemoverVao6 = 0;
+    private   double  varRemoverVao6_1 = 0;
 
 
 
@@ -139,6 +241,11 @@ public class Demolicao extends AppCompatActivity {
     private File pdfFile;
     private String alterarNumeroNota;
 
+
+    //
+    private double valorTotalCozinha;
+    private double valorTotalBanheiro1;
+    private double valorTotalBanheiro2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -822,34 +929,34 @@ public class Demolicao extends AppCompatActivity {
                   varRemoverVao = Integer.parseInt(valorRemoverVao1.getText().toString()) * precoRemoverVao;
                   varRemoverVao1 = Integer.parseInt(valorRemoverVao1_1.getText().toString()) * precoRemoverVao;
 
-              double valorTotalCozinha = varRemoverRevestimentoParede + varRemoverRevestimentoParede1 +  varRemoverPiso + varRemoverPiso1 + varRemoverPia + varRemoverPia1 + varRemoverAlvenaria + varRemoverAlvenaria1 + varRemoverTanque + varRemoverTanque1 + varRemoverCaixinha4x2 + varRemoverCaixinha4x2_1 + varRemoverCaixinha4x4 + varRemoverCaixinha4x4_1 + varRemoverHidraulica + varRemoverHidraulica1 + varRemoverGesso + varRemoverGesso1 + varRemoverVasoSanitario + varRemoverVasoSanitario1 + varRemoverVao + varRemoverVao1;
+               valorTotalCozinha = varRemoverRevestimentoParede + varRemoverRevestimentoParede1 +  varRemoverPiso + varRemoverPiso1 + varRemoverPia + varRemoverPia1 + varRemoverAlvenaria + varRemoverAlvenaria1 + varRemoverTanque + varRemoverTanque1 + varRemoverCaixinha4x2 + varRemoverCaixinha4x2_1 + varRemoverCaixinha4x4 + varRemoverCaixinha4x4_1 + varRemoverHidraulica + varRemoverHidraulica1 + varRemoverGesso + varRemoverGesso1 + varRemoverVasoSanitario + varRemoverVasoSanitario1 + varRemoverVao + varRemoverVao1;
 
                 //Calculando Valores Banheiro 1
 
-                double varRemoverRevestimentoParede2 = Double.parseDouble(valorRevestimentoParede2.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverRevestimentoParede2_1 = Double.parseDouble(valorRevestimentoParede2_1.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverPiso2 = Double.parseDouble(valorRemocaoPiso2.getText().toString()) * precoRemoverPiso;
-                double varRemoverPiso2_1 = Double.parseDouble(valorRemocaoPiso2_1.getText().toString()) * precoRemoverPiso;
-                double varRemoverPia2 = Integer.parseInt(valorRemocaoPia2.getText().toString()) * precoRemoverPia;
-                double varRemoverPia2_1 = Integer.parseInt(valorRemocaoPia2_1.getText().toString()) * precoRemoverPia;
-                double varRemoverAlvenaria2 = Double.parseDouble(valorRemocacAlvenaria2.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverAlvenaria2_1 = Double.parseDouble(valorRemocacAlvenaria2_1.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverTanque2 = Integer.parseInt(valorRemocaoTanque2.getText().toString()) * precoRemoverTanque;
-                double varRemoverTanque2_1 = Integer.parseInt(valorRemocaoTanque2_1.getText().toString()) * precoRemoverTanque;
-                double  varRemoverCaixinha4x2_2 = Integer.parseInt(valorRasgarCaixinha4x2_2.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x2_2_1 = Integer.parseInt(valorRasgarCaixinha4x2_2_1.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x4_2 = Integer.parseInt(valorRasgarCaixinha4x4_2.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverCaixinha4x4_2_1 = Integer.parseInt(valorRasgarCaixinha4x4_2_1.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverHidraulica2 = Integer.parseInt(valorRasgarHidraulica2.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverHidraulica2_1 = Integer.parseInt(valorRasgarHidraulica2_1.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverGesso2 = Integer.parseInt(valorRemoverGesso2.getText().toString()) * precoRemoverGesso;
-                double  varRemoverGesso2_1 = Integer.parseInt(valorRemoverGesso2_1.getText().toString()) * precoRemoverGesso;
-                double varRemoverVasoSanitario2 = Integer.parseInt(valorRemoverVaso2.getText().toString()) * precoRemoverVasoSanitario;
-                double varRemoverVasoSanitario2_1 = Integer.parseInt(valorRemoverVaso2_1.getText().toString()) * precoRemoverVasoSanitario;
-                double  varRemoverVao2 = Integer.parseInt(valorRemoverVao2.getText().toString()) * precoRemoverVao;
-                double  varRemoverVao2_1 = Integer.parseInt(valorRemoverVao2_1.getText().toString()) * precoRemoverVao;
+                 varRemoverRevestimentoParede2 = Double.parseDouble(valorRevestimentoParede2.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverRevestimentoParede2_1 = Double.parseDouble(valorRevestimentoParede2_1.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverPiso2 = Double.parseDouble(valorRemocaoPiso2.getText().toString()) * precoRemoverPiso;
+                 varRemoverPiso2_1 = Double.parseDouble(valorRemocaoPiso2_1.getText().toString()) * precoRemoverPiso;
+                 varRemoverPia2 = Integer.parseInt(valorRemocaoPia2.getText().toString()) * precoRemoverPia;
+                 varRemoverPia2_1 = Integer.parseInt(valorRemocaoPia2_1.getText().toString()) * precoRemoverPia;
+                 varRemoverAlvenaria2 = Double.parseDouble(valorRemocacAlvenaria2.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverAlvenaria2_1 = Double.parseDouble(valorRemocacAlvenaria2_1.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverTanque2 = Integer.parseInt(valorRemocaoTanque2.getText().toString()) * precoRemoverTanque;
+                 varRemoverTanque2_1 = Integer.parseInt(valorRemocaoTanque2_1.getText().toString()) * precoRemoverTanque;
+                  varRemoverCaixinha4x2_2 = Integer.parseInt(valorRasgarCaixinha4x2_2.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x2_2_1 = Integer.parseInt(valorRasgarCaixinha4x2_2_1.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x4_2 = Integer.parseInt(valorRasgarCaixinha4x4_2.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverCaixinha4x4_2_1 = Integer.parseInt(valorRasgarCaixinha4x4_2_1.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverHidraulica2 = Integer.parseInt(valorRasgarHidraulica2.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverHidraulica2_1 = Integer.parseInt(valorRasgarHidraulica2_1.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverGesso2 = Integer.parseInt(valorRemoverGesso2.getText().toString()) * precoRemoverGesso;
+                  varRemoverGesso2_1 = Integer.parseInt(valorRemoverGesso2_1.getText().toString()) * precoRemoverGesso;
+                 varRemoverVasoSanitario2 = Integer.parseInt(valorRemoverVaso2.getText().toString()) * precoRemoverVasoSanitario;
+                 varRemoverVasoSanitario2_1 = Integer.parseInt(valorRemoverVaso2_1.getText().toString()) * precoRemoverVasoSanitario;
+                  varRemoverVao2 = Integer.parseInt(valorRemoverVao2.getText().toString()) * precoRemoverVao;
+                  varRemoverVao2_1 = Integer.parseInt(valorRemoverVao2_1.getText().toString()) * precoRemoverVao;
 
-                double valorTotalBanheiro1 = varRemoverRevestimentoParede2 + varRemoverRevestimentoParede2_1 +  varRemoverPiso2 + varRemoverPiso2_1 + varRemoverPia2 + varRemoverPia2_1 + varRemoverAlvenaria2 + varRemoverAlvenaria2_1 + varRemoverTanque2 + varRemoverTanque2 + varRemoverCaixinha4x2_2 + varRemoverCaixinha4x2_2_1 + varRemoverCaixinha4x2_2 + varRemoverCaixinha4x4_2_1 + varRemoverHidraulica2 + varRemoverHidraulica2_1 + varRemoverGesso2 + varRemoverGesso2_1 + varRemoverVasoSanitario2 + varRemoverVasoSanitario2_1 + varRemoverVao2 + varRemoverVao2_1;
+                 valorTotalBanheiro1 = varRemoverRevestimentoParede2 + varRemoverRevestimentoParede2_1 +  varRemoverPiso2 + varRemoverPiso2_1 + varRemoverPia2 + varRemoverPia2_1 + varRemoverAlvenaria2 + varRemoverAlvenaria2_1 + varRemoverTanque2 + varRemoverTanque2 + varRemoverCaixinha4x2_2 + varRemoverCaixinha4x2_2_1 + varRemoverCaixinha4x2_2 + varRemoverCaixinha4x4_2_1 + varRemoverHidraulica2 + varRemoverHidraulica2_1 + varRemoverGesso2 + varRemoverGesso2_1 + varRemoverVasoSanitario2 + varRemoverVasoSanitario2_1 + varRemoverVao2 + varRemoverVao2_1;
 
 
 
@@ -908,7 +1015,7 @@ public class Demolicao extends AppCompatActivity {
                 double  varRemoverVao4_1 = Integer.parseInt(valorRemoverVao4_1.getText().toString()) * precoRemoverVao;
 
 
-                double valorTotalBanheiro2 = varRemoverRevestimentoParede4 + varRemoverRevestimentoParede4_1 +  varRemoverPiso4 + varRemoverPiso4_1 + varRemoverPia4 + varRemoverPia4_1 + varRemoverAlvenaria4 + varRemoverAlvenaria4_1 + varRemoverTanque4 + varRemoverTanque4_1 + varRemoverCaixinha4x2_4 + varRemoverCaixinha4x2_4_1 + varRemoverCaixinha4x4_4 + varRemoverCaixinha4x4_4_1 + varRemoverHidraulica4 + varRemoverHidraulica4_1 + varRemoverGesso4 + varRemoverGesso4_1 + varRemoverVasoSanitario4 + varRemoverVasoSanitario4_1 + varRemoverVao4 + varRemoverVao4_1;
+               valorTotalBanheiro2 = varRemoverRevestimentoParede4 + varRemoverRevestimentoParede4_1 +  varRemoverPiso4 + varRemoverPiso4_1 + varRemoverPia4 + varRemoverPia4_1 + varRemoverAlvenaria4 + varRemoverAlvenaria4_1 + varRemoverTanque4 + varRemoverTanque4_1 + varRemoverCaixinha4x2_4 + varRemoverCaixinha4x2_4_1 + varRemoverCaixinha4x4_4 + varRemoverCaixinha4x4_4_1 + varRemoverHidraulica4 + varRemoverHidraulica4_1 + varRemoverGesso4 + varRemoverGesso4_1 + varRemoverVasoSanitario4 + varRemoverVasoSanitario4_1 + varRemoverVao4 + varRemoverVao4_1;
 
 
                 //Calculando Valores Lavabo
@@ -1110,9 +1217,16 @@ public class Demolicao extends AppCompatActivity {
 
 
                 double total = valorTotalCozinha + valorTotalBanheiro1 + valorTotalBanheiro2 + valorTotalBanheiro2 + valorTotalLavabo + valorTotalSacadaVaranda + valorTotalSalaEstar + valorTotalSalaJantar + valorTotalQuarto1 + valorTotalQuarto2 + valorTotalQuarto3;
-                Toast.makeText(mContext, "R$"+ valorTotalBanheiro1, Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "R$"+ total, Toast.LENGTH_SHORT).show();
 
 
+                try {
+                    createPdfWrapper();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (DocumentException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -1130,7 +1244,7 @@ public class Demolicao extends AppCompatActivity {
         exibirNota.setText("000"+ alterarNumeroNota);
 
         Date now = new Date();
-        android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", now);
+        android.text.format.DateFormat.format("dd-MM-yyyy_hh:mm:ss", now);
 
         File docsFolder = new File(Environment.getExternalStorageDirectory() + "/RelatóriosRagonezi/Relatórios de Demolição");
         if (!docsFolder.exists()) {
@@ -1138,33 +1252,144 @@ public class Demolicao extends AppCompatActivity {
            // Log.i(TAG, "Created a new directory for PDF");
         }
 
-        Font bold = FontFactory.getFont("Times-Roman, Bold", 12, Font.BOLD);
-        pdfFile = new File(docsFolder.getAbsolutePath(),now +"RelatórioDemolicao.pdf");
+        Font bold = FontFactory.getFont("Times-Roman, Bold", 14, Font.BOLD);
+        Font boldTitulo = FontFactory.getFont("Times-Roman, Bold", 22, Font.BOLD);
+        Font boldServicos = FontFactory.getFont("Times-Roman, Bold", 14, Font.BOLD);
+        Font boldServicosPrestados = FontFactory.getFont("Times-Roman, Bold", 12, Font.NORMAL);
+        Font fontData = FontFactory.getFont("Times-Roman, Bold", 10, Font.BOLD);
+        pdfFile = new File(docsFolder.getAbsolutePath(),"RelatórioDemolicao"+"000"+alterarNumeroNota+".pdf");
         OutputStream output = new FileOutputStream(pdfFile);
         Document document = new Document();
         PdfWriter.getInstance(document, output);
         document.open();
 
-        //Paragrafos
-        Paragraph banheiro = new Paragraph("Remover revestimento 1", bold);
-        Paragraph cozinha = new Paragraph("Teste Bold", bold);
 
+        //Adicionando Logo
+        Drawable d = getResources ().getDrawable (R.drawable.logodoc);
+        Bitmap bitmap = ((BitmapDrawable)d).getBitmap();
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        byte[] bitmapData = stream.toByteArray();
+        Image image = null;
+        try {
+            image = Image.getInstance(bitmapData);
+            image.setAlignment(Element.ALIGN_CENTER);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //Data
+        Paragraph dataParagrafo = new Paragraph(String.valueOf(now), fontData);
+        dataParagrafo.setAlignment(Element.ALIGN_LEFT);
+        Paragraph espacoBranco = new Paragraph("", boldTitulo);
+        Paragraph paragrafoCozinha = new Paragraph("Cozinha", boldServicos);
+        Paragraph paragrafoBanheiro = new Paragraph("Banheiro", boldServicos);
+        Paragraph paragrafoAreaServico = new Paragraph("Área de Serviço", boldServicos);
+        Paragraph paragrafoBanheiro2 = new Paragraph("Banheiro Suíte", boldServicos);
+        Paragraph paragrafoLavabo = new Paragraph("Lavabo", boldServicos);
+        Paragraph paragrafoSacadaVaranda = new Paragraph("Sacada Varanda", boldServicos);
+        Paragraph paragrafoSalaJantar = new Paragraph("Sala Jantar", boldServicos);
+        Paragraph paragrafoSalaEstar = new Paragraph("Sala Estar", boldServicos);
+        Paragraph paragrafoQuarto1 = new Paragraph("Quarto 1", boldServicos);
+        Paragraph paragrafoQuarto2 = new Paragraph("Quarto 2", boldServicos);
+        Paragraph paragrafoQuarto3 = new Paragraph("Quarto Suíte", boldServicos);
+
+
+
+        Paragraph paragrafoServicos = new Paragraph("Quarto Suíte", boldServicosPrestados);
+
+        espacoBranco.add(new Paragraph("", boldTitulo));
+        espacoBranco.add(new Paragraph("", boldTitulo));
+        //Paragrafos
+        Paragraph titulo = new Paragraph("Orçamento de Demolição", boldTitulo);
+        //Paragraph banheiro = new Paragraph("Remover revestimento 1", bold);
+        //Paragraph cozinha = new Paragraph("Teste Bold", bold);
+
+
+
+
+        //Alinhar paragrafos
+        titulo.setAlignment(Element.ALIGN_CENTER);
         //Valores de Banheiro
-        banheiro.add(new Paragraph ("Remover revestimento 1"));
+       // banheiro.add(new Paragraph ("Remover revestimento 1"));
         //Valores de Cozinha
-        cozinha.add(new Paragraph("Revestimento 2"));
+        //cozinha.add(new Paragraph("Revestimento 2"));
 
 
         String numeroNotaExibir = Integer.toString(numeroNotaAtual);
 
+         document.add(dataParagrafo);
+         document.addTitle("Orçamento de Demolição");
+         document.add(new Paragraph("Número da nota:000"+numeroNotaExibir));
+         document.add(Chunk.NEWLINE);
+         document.add(Chunk.NEWLINE);
+         document.add(Chunk.NEWLINE);
+         document.add(image);
+         document.add(Chunk.NEWLINE);
+         document.add(titulo);
+         document.add(Chunk.NEWLINE);
+         document.add(Chunk.NEWLINE);
+         document.add(Chunk.NEWLINE);
 
-        document.addTitle("Orçamento de Demolição");
-        document.add(new Paragraph("Número da nota:000"+numeroNotaExibir));
-        document.add(banheiro);
-         document.add(cozinha);
+         if (valorTotalCozinha > 0){
+             document.add(paragrafoCozinha);
+             if (varRemoverRevestimentoParede > 0 || varRemoverRevestimentoParede1 > 0)
+                 document.add(new Paragraph("Remover Revestimento de Parede: "+ valorRevestimentoParede1.getText().toString() +" - "+ valorRevestimentoParede1_1.getText().toString() + "    R$"+ (varRemoverRevestimentoParede1 + varRemoverRevestimentoParede)+"0",boldServicosPrestados));
+             if (varRemoverPiso > 0 || varRemoverPiso1 > 0)
+                document.add(new Paragraph("Remover Piso: "+ valorRemocaoPiso1.getText().toString() +" - "+ valorRemocaoPiso1_1.getText().toString() + "    R$"+ (varRemoverPiso + varRemoverPiso1)+"0",boldServicosPrestados));
+             if (varRemoverPia > 0 || varRemoverPia1 > 0)
+                document.add(new Paragraph("Remover Pia: "+ valorRemocaoPia1.getText().toString() +" - "+ valorRemocaoPia1_1.getText().toString() + "    R$"+ (varRemoverPia + varRemoverPia1)+"0",boldServicosPrestados));
+             if (varRemoverAlvenaria > 0 || varRemoverAlvenaria1 > 0)
+                document.add(new Paragraph("Remover Alvenaria: "+ valorRemocacAlvenaria1.getText().toString() +" - "+ valorRemocacAlvenaria1_1.getText().toString() + "    R$"+ (varRemoverAlvenaria + varRemoverAlvenaria1)+"0",boldServicosPrestados));
+             if (varRemoverTanque > 0 || varRemoverTanque1 > 0)
+                document.add(new Paragraph("Remover Tanque: "+ valorRemocaoTanque1.getText().toString() +" - "+ valorRemocaoTanque1_1.getText().toString() + "    R$"+ (varRemoverTanque + varRemoverTanque1)+"0",boldServicosPrestados));
+             if (varRemoverCaixinha4x2 > 0 || varRemoverCaixinha4x2_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x2 : "+ valorRasgarCaixinha4x2_1.getText().toString() +" - "+ valorRasgarCaixinha4x2_1_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x2 + varRemoverCaixinha4x2_1)+"0",boldServicosPrestados));
+             if (varRemoverCaixinha4x4 > 0 || varRemoverCaixinha4x4_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x4 : "+ valorRasgarCaixinha4x4_1.getText().toString() +" - "+ valorRasgarCaixinha4x4_1_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x4 + varRemoverCaixinha4x4_1)+"0",boldServicosPrestados));
+             if (varRemoverHidraulica > 0 || varRemoverHidraulica1 > 0)
+                document.add(new Paragraph("Rasgar  Hidráulica : "+ valorRasgarHidraulica1.getText().toString() +" - "+ valorRasgarHidraulica1_1.getText().toString() + "    R$"+ (varRemoverHidraulica + varRemoverHidraulica1)+"0",boldServicosPrestados));
+             if (varRemoverGesso > 0 || varRemoverGesso1 > 0)
+                document.add(new Paragraph("Remover Gesso : "+ valorRemoverGesso1.getText().toString() +" - "+ valorRemoverGesso1_1.getText().toString() + "    R$"+ (varRemoverGesso + varRemoverGesso1)+"0",boldServicosPrestados));
+             if (varRemoverVasoSanitario > 0 || varRemoverVasoSanitario1 > 0)
+                document.add(new Paragraph("Remover Vaso Sanitário : "+ valorRemoverVaso1.getText().toString() +" - "+ valorRemoverVaso1_1.getText().toString() + "    R$"+ (varRemoverVasoSanitario1 + varRemoverVasoSanitario)+"0",boldServicosPrestados));
+             if (varRemoverVao > 0 || varRemoverVao1 > 0)
+                document.add(new Paragraph("Remover Vão para Nicho : "+ valorRemoverVao1.getText().toString() +" - "+ valorRemoverVao1_1.getText().toString() + "    R$"+ (varRemoverVao1 + varRemoverVao)+"0",boldServicosPrestados));
+
+         }
+        if (valorTotalBanheiro1 > 0){
+            document.add(paragrafoBanheiro);
+            if (varRemoverRevestimentoParede2 > 0 || varRemoverRevestimentoParede2_1 > 0)
+                document.add(new Paragraph("Remover Revestimento de Parede: "+ valorRevestimentoParede2.getText().toString() +" - "+ valorRevestimentoParede2_1.getText().toString() + "    R$"+ (varRemoverRevestimentoParede2 + varRemoverRevestimentoParede2_1)+"0",boldServicosPrestados));
+            if (varRemoverPiso2 > 0 || varRemoverPiso2_1 > 0)
+                document.add(new Paragraph("Remover Piso: "+ valorRemocaoPiso2.getText().toString() +" - "+ valorRemocaoPiso2_1.getText().toString() + "    R$"+ (varRemoverPiso2 + varRemoverPiso2_1)+"0",boldServicosPrestados));
+            if (varRemoverPia2 > 0 || varRemoverPia2_1 > 0)
+                document.add(new Paragraph("Remover Pia: "+ valorRemocaoPia2.getText().toString() +" - "+ valorRemocaoPia2_1.getText().toString() + "    R$"+ (varRemoverPia2 + varRemoverPia2_1)+"0",boldServicosPrestados));
+            if (varRemoverAlvenaria2 > 0 || varRemoverAlvenaria2_1 > 0)
+                document.add(new Paragraph("Remover Alvenaria: "+ valorRemocacAlvenaria2.getText().toString() +" - "+ valorRemocacAlvenaria2_1.getText().toString() + "    R$"+ (varRemoverAlvenaria2 + varRemoverAlvenaria2_1)+"0",boldServicosPrestados));
+            if (varRemoverTanque2 > 0 || varRemoverTanque2_1 > 0)
+                document.add(new Paragraph("Remover Tanque: "+ valorRemocaoTanque2.getText().toString() +" - "+ valorRemocaoTanque2_1.getText().toString() + "    R$"+ (varRemoverTanque2 + varRemoverTanque2_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x2_2 > 0 || varRemoverCaixinha4x2_2 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x2 : "+ valorRasgarCaixinha4x2_2.getText().toString() +" - "+ valorRasgarCaixinha4x2_2_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x2_2 + varRemoverCaixinha4x2_2_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x4_2 > 0 || varRemoverCaixinha4x4_2 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x4 : "+ valorRasgarCaixinha4x4_2.getText().toString() +" - "+ valorRasgarCaixinha4x2_2_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x4_2 + varRemoverCaixinha4x4_2_1)+"0",boldServicosPrestados));
+            if (varRemoverHidraulica2 > 0 || varRemoverHidraulica2_1 > 0)
+                document.add(new Paragraph("Rasgar  Hidráulica : "+ valorRasgarHidraulica2.getText().toString() +" - "+ valorRasgarHidraulica2_1.getText().toString() + "    R$"+ (varRemoverHidraulica2 + varRemoverHidraulica2_1)+"0",boldServicosPrestados));
+            if (varRemoverGesso2 > 0 || varRemoverGesso2_1 > 0)
+                document.add(new Paragraph("Remover Gesso : "+ valorRemoverGesso2.getText().toString() +" - "+ valorRemoverGesso2_1.getText().toString() + "    R$"+ (varRemoverGesso2 + varRemoverGesso2_1)+"0",boldServicosPrestados));
+            if (varRemoverVasoSanitario2 > 0 || varRemoverVasoSanitario2_1 > 0)
+                document.add(new Paragraph("Remover Vaso Sanitário : "+ valorRemoverVaso2.getText().toString() +" - "+ valorRemoverVaso2_1.getText().toString() + "    R$"+ (varRemoverVasoSanitario2 + varRemoverVasoSanitario2_1)+"0",boldServicosPrestados));
+            if (varRemoverVao2 > 0 || varRemoverVao2_1 > 0)
+                document.add(new Paragraph("Remover Vão para Nicho : "+ valorRemoverVao2.getText().toString() +" - "+ valorRemoverVao2_1.getText().toString() + "    R$"+ (varRemoverVao2 + varRemoverVao2_1)+"0",boldServicosPrestados));
+
+        }
+         else{
+
+         }
 
 
-        document.add(new LineSeparator());
+
+       // document.add(new LineSeparator());
         document.close();
         previewPdf();
 
