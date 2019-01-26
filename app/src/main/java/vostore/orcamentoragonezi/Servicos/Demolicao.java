@@ -1,6 +1,8 @@
 package vostore.orcamentoragonezi.Servicos;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.Manifest;
 import android.content.SharedPreferences;
@@ -111,6 +113,16 @@ public class Demolicao extends AppCompatActivity {
     private   double varRemoverRevestimentoParede5_1 = 0;
     private   double varRemoverRevestimentoParede6 = 0;
     private   double varRemoverRevestimentoParede6_1 = 0;
+    private   double varRemoverRevestimentoParede7 = 0;
+    private   double varRemoverRevestimentoParede7_1 = 0;
+    private   double varRemoverRevestimentoParede8 = 0;
+    private   double varRemoverRevestimentoParede8_1 = 0;
+    private   double varRemoverRevestimentoParede9 = 0;
+    private   double varRemoverRevestimentoParede9_1 = 0;
+    private   double varRemoverRevestimentoParede10 = 0;
+    private   double varRemoverRevestimentoParede10_1 = 0;
+    private   double varRemoverRevestimentoParede11 = 0;
+    private   double varRemoverRevestimentoParede11_1 = 0;
     private  double varRemoverPiso = 0;
     private  double varRemoverPiso1 = 0;
     private  double varRemoverPiso2 = 0;
@@ -123,6 +135,16 @@ public class Demolicao extends AppCompatActivity {
     private  double varRemoverPiso5_1 = 0;
     private  double varRemoverPiso6 = 0;
     private  double varRemoverPiso6_1 = 0;
+    private  double varRemoverPiso7 = 0;
+    private  double varRemoverPiso7_1 = 0;
+    private  double varRemoverPiso8 = 0;
+    private  double varRemoverPiso8_1 = 0;
+    private  double varRemoverPiso9 = 0;
+    private  double varRemoverPiso9_1 = 0;
+    private  double varRemoverPiso10 = 0;
+    private  double varRemoverPiso10_1 = 0;
+    private  double varRemoverPiso11 = 0;
+    private  double varRemoverPiso11_1= 0;
     private  double varRemoverPia = 0;
     private  double varRemoverPia1 = 0;
     private  double varRemoverPia2 = 0;
@@ -135,6 +157,16 @@ public class Demolicao extends AppCompatActivity {
     private  double varRemoverPia5_1 = 0;
     private  double varRemoverPia6 = 0;
     private  double varRemoverPia6_1 = 0;
+    private  double varRemoverPia7 = 0;
+    private  double varRemoverPia7_1 = 0;
+    private  double varRemoverPia8 = 0;
+    private  double varRemoverPia8_1 = 0;
+    private  double varRemoverPia9 = 0;
+    private  double varRemoverPia9_1 = 0;
+    private  double varRemoverPia10 = 0;
+    private  double varRemoverPia10_1 = 0;
+    private  double varRemoverPia11 = 0;
+    private  double varRemoverPia11_1 = 0;
     private  double varRemoverAlvenaria =0;
     private   double varRemoverAlvenaria1 = 0;
     private   double varRemoverAlvenaria2 = 0;
@@ -147,6 +179,16 @@ public class Demolicao extends AppCompatActivity {
     private   double varRemoverAlvenaria5_1 = 0;
     private   double varRemoverAlvenaria6 = 0;
     private   double varRemoverAlvenaria6_1 = 0;
+    private   double varRemoverAlvenaria7 = 0;
+    private   double varRemoverAlvenaria7_1 = 0;
+    private   double varRemoverAlvenaria8 = 0;
+    private   double varRemoverAlvenaria8_1 = 0;
+    private   double varRemoverAlvenaria9 = 0;
+    private   double varRemoverAlvenaria9_1 = 0;
+    private   double varRemoverAlvenaria10 = 0;
+    private   double varRemoverAlvenaria10_1 = 0;
+    private   double varRemoverAlvenaria11 = 0;
+    private   double varRemoverAlvenaria11_1 = 0;
     private   double varRemoverTanque = 0;
     private   double varRemoverTanque1 = 0;
     private   double varRemoverTanque2 = 0;
@@ -159,6 +201,16 @@ public class Demolicao extends AppCompatActivity {
     private   double varRemoverTanque5_1 = 0;
     private   double varRemoverTanque6 = 0;
     private   double varRemoverTanque6_1 = 0;
+    private   double varRemoverTanque7 = 0;
+    private   double varRemoverTanque7_1 = 0;
+    private   double varRemoverTanque8 = 0;
+    private   double varRemoverTanque8_1 = 0;
+    private   double varRemoverTanque9 = 0;
+    private   double varRemoverTanque9_1 = 0;
+    private   double varRemoverTanque10 = 0;
+    private   double varRemoverTanque10_1 = 0;
+    private   double varRemoverTanque11 = 0;
+    private   double varRemoverTanque11_1 = 0;
     private   double  varRemoverCaixinha4x2 = 0;
     private   double  varRemoverCaixinha4x2_1 = 0;
     private   double  varRemoverCaixinha4x2_2 = 0;
@@ -171,6 +223,16 @@ public class Demolicao extends AppCompatActivity {
     private   double  varRemoverCaixinha4x2_5_1 = 0;
     private   double  varRemoverCaixinha4x2_6 = 0;
     private   double  varRemoverCaixinha4x2_6_1 = 0;
+    private   double  varRemoverCaixinha4x2_7 = 0;
+    private   double  varRemoverCaixinha4x2_7_1 = 0;
+    private   double  varRemoverCaixinha4x2_8 = 0;
+    private   double  varRemoverCaixinha4x2_8_1 = 0;
+    private   double  varRemoverCaixinha4x2_9 = 0;
+    private   double  varRemoverCaixinha4x2_9_1 = 0;
+    private   double  varRemoverCaixinha4x2_10 = 0;
+    private   double  varRemoverCaixinha4x2_10_1 = 0;
+    private   double  varRemoverCaixinha4x2_11 = 0;
+    private   double  varRemoverCaixinha4x2_11_1 = 0;
     private   double  varRemoverCaixinha4x4 = 0;
     private   double  varRemoverCaixinha4x4_1 = 0;
     private   double  varRemoverCaixinha4x4_2 = 0;
@@ -183,6 +245,16 @@ public class Demolicao extends AppCompatActivity {
     private   double  varRemoverCaixinha4x4_5_1 = 0;
     private   double  varRemoverCaixinha4x4_6 = 0;
     private   double  varRemoverCaixinha4x4_6_1 = 0;
+    private   double  varRemoverCaixinha4x4_7 = 0;
+    private   double  varRemoverCaixinha4x4_7_1 = 0;
+    private   double  varRemoverCaixinha4x4_8 = 0;
+    private   double  varRemoverCaixinha4x4_8_1 = 0;
+    private   double  varRemoverCaixinha4x4_9 = 0;
+    private   double  varRemoverCaixinha4x4_9_1 = 0;
+    private   double  varRemoverCaixinha4x4_10 = 0;
+    private   double  varRemoverCaixinha4x4_10_1 = 0;
+    private   double  varRemoverCaixinha4x4_11 = 0;
+    private   double  varRemoverCaixinha4x4_11_1 = 0;
     private   double  varRemoverHidraulica = 0;
     private   double  varRemoverHidraulica1 = 0;
     private   double  varRemoverHidraulica2 = 0;
@@ -195,6 +267,16 @@ public class Demolicao extends AppCompatActivity {
     private   double  varRemoverHidraulica5_1 = 0;
     private   double  varRemoverHidraulica6 = 0;
     private   double  varRemoverHidraulica6_1 = 0;
+    private   double  varRemoverHidraulica7 = 0;
+    private   double  varRemoverHidraulica7_1 = 0;
+    private   double  varRemoverHidraulica8 = 0;
+    private   double  varRemoverHidraulica8_1 = 0;
+    private   double  varRemoverHidraulica9 = 0;
+    private   double  varRemoverHidraulica9_1 = 0;
+    private   double  varRemoverHidraulica10 = 0;
+    private   double  varRemoverHidraulica10_1 = 0;
+    private   double  varRemoverHidraulica11 = 0;
+    private   double  varRemoverHidraulica11_1 = 0;
     private   double  varRemoverGesso = 0;
     private   double  varRemoverGesso1 = 0;
     private   double  varRemoverGesso2 = 0;
@@ -207,6 +289,16 @@ public class Demolicao extends AppCompatActivity {
     private   double  varRemoverGesso5_1 = 0;
     private   double  varRemoverGesso6 = 0;
     private   double  varRemoverGesso6_1 = 0;
+    private   double  varRemoverGesso7 = 0;
+    private   double  varRemoverGesso7_1 = 0;
+    private   double  varRemoverGesso8 = 0;
+    private   double  varRemoverGesso8_1 = 0;
+    private   double  varRemoverGesso9 = 0;
+    private   double  varRemoverGesso9_1 = 0;
+    private   double  varRemoverGesso10 = 0;
+    private   double  varRemoverGesso10_1 = 0;
+    private   double  varRemoverGesso11 = 0;
+    private   double  varRemoverGesso11_1 = 0;
     private   double varRemoverVasoSanitario = 0;
     private   double varRemoverVasoSanitario1 = 0;
     private   double varRemoverVasoSanitario2 = 0;
@@ -219,6 +311,16 @@ public class Demolicao extends AppCompatActivity {
     private   double varRemoverVasoSanitario5_1 = 0;
     private   double varRemoverVasoSanitario6 = 0;
     private   double varRemoverVasoSanitario6_1 = 0;
+    private   double varRemoverVasoSanitario7 = 0;
+    private   double varRemoverVasoSanitario7_1 = 0;
+    private   double varRemoverVasoSanitario8 = 0;
+    private   double varRemoverVasoSanitario8_1 = 0;
+    private   double varRemoverVasoSanitario9 = 0;
+    private   double varRemoverVasoSanitario9_1 = 0;
+    private   double varRemoverVasoSanitario10 = 0;
+    private   double varRemoverVasoSanitario10_1 = 0;
+    private   double varRemoverVasoSanitario11 = 0;
+    private   double varRemoverVasoSanitario11_1 = 0;
     private   double  varRemoverVao = 0;
     private   double  varRemoverVao1 = 0;
     private   double  varRemoverVao2 = 0;
@@ -231,13 +333,23 @@ public class Demolicao extends AppCompatActivity {
     private   double  varRemoverVao5_1 = 0;
     private   double  varRemoverVao6 = 0;
     private   double  varRemoverVao6_1 = 0;
+    private   double  varRemoverVao7 = 0;
+    private   double  varRemoverVao7_1 = 0;
+    private   double  varRemoverVao8 = 0;
+    private   double  varRemoverVao8_1 = 0;
+    private   double  varRemoverVao9 = 0;
+    private   double  varRemoverVao9_1 = 0;
+    private   double  varRemoverVao10 = 0;
+    private   double  varRemoverVao10_1 = 0;
+    private   double  varRemoverVao11 = 0;
+    private   double  varRemoverVao11_1 = 0;
 
 
 
     //Criacao do PDF
     private static final String TAG = "PdfCreatorActivity";
     final DecimalFormat decimalFormat = new DecimalFormat("0000");
-
+    private String nomeCliente;
     private File pdfFile;
     private String alterarNumeroNota;
 
@@ -246,6 +358,16 @@ public class Demolicao extends AppCompatActivity {
     private double valorTotalCozinha;
     private double valorTotalBanheiro1;
     private double valorTotalBanheiro2;
+    private double valorTotalAreaServico;
+    private   double valorTotalLavabo;
+    private    double valorTotalSacadaVaranda;
+    private    double valorTotalSalaJantar;
+    private     double valorTotalSalaEstar;
+    private     double valorTotalQuarto1;
+    private     double valorTotalQuarto2;
+    private     double valorTotalQuarto3;
+    private     double total;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -962,57 +1084,57 @@ public class Demolicao extends AppCompatActivity {
 
                 //Calculando Valores Aréa de Serviço
 
-                double varRemoverRevestimentoParede3 = Double.parseDouble(valorRevestimentoParede3.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverRevestimentoParede3_1 = Double.parseDouble(valorRevestimentoParede3_1.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverPiso3 = Double.parseDouble(valorRemocaoPiso3.getText().toString()) * precoRemoverPiso;
-                double varRemoverPiso3_1 = Double.parseDouble(valorRemocaoPiso3_1.getText().toString()) * precoRemoverPiso;
-                double varRemoverPia3 = Integer.parseInt(valorRemocaoPia3.getText().toString()) * precoRemoverPia;
-                double varRemoverPia3_1 = Integer.parseInt(valorRemocaoPia3_1.getText().toString()) * precoRemoverPia;
-                double varRemoverAlvenaria3 = Double.parseDouble(valorRemocacAlvenaria3.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverAlvenaria3_1 = Double.parseDouble(valorRemocacAlvenaria3_1.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverTanque3 = Integer.parseInt(valorRemocaoTanque3.getText().toString()) * precoRemoverTanque;
-                double varRemoverTanque3_1 = Integer.parseInt(valorRemocaoTanque3_1.getText().toString()) * precoRemoverTanque;
-                double  varRemoverCaixinha4x2_3 = Integer.parseInt(valorRasgarCaixinha4x2_3.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x2_3_1 = Integer.parseInt(valorRasgarCaixinha4x2_3_1.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x4_3 = Integer.parseInt(valorRasgarCaixinha4x4_3.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverCaixinha4x4_3_1 = Integer.parseInt(valorRasgarCaixinha4x4_3_1.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverHidraulica3 = Integer.parseInt(valorRasgarHidraulica3.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverHidraulica3_1 = Integer.parseInt(valorRasgarHidraulica3_1.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverGesso3 = Integer.parseInt(valorRemoverGesso3.getText().toString()) * precoRemoverGesso;
-                double  varRemoverGesso3_1 = Integer.parseInt(valorRemoverGesso3_1.getText().toString()) * precoRemoverGesso;
-                double varRemoverVasoSanitario3 = Integer.parseInt(valorRemoverVaso3.getText().toString()) * precoRemoverVasoSanitario;
-                double varRemoverVasoSanitario3_1 = Integer.parseInt(valorRemoverVaso3_1.getText().toString()) * precoRemoverVasoSanitario;
-                double  varRemoverVao3 = Integer.parseInt(valorRemoverVao3.getText().toString()) * precoRemoverVao;
-                double  varRemoverVao3_1 = Integer.parseInt(valorRemoverVao3_1.getText().toString()) * precoRemoverVao;
+                 varRemoverRevestimentoParede3 = Double.parseDouble(valorRevestimentoParede3.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverRevestimentoParede3_1 = Double.parseDouble(valorRevestimentoParede3_1.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverPiso3 = Double.parseDouble(valorRemocaoPiso3.getText().toString()) * precoRemoverPiso;
+                 varRemoverPiso3_1 = Double.parseDouble(valorRemocaoPiso3_1.getText().toString()) * precoRemoverPiso;
+                 varRemoverPia3 = Integer.parseInt(valorRemocaoPia3.getText().toString()) * precoRemoverPia;
+                 varRemoverPia3_1 = Integer.parseInt(valorRemocaoPia3_1.getText().toString()) * precoRemoverPia;
+                 varRemoverAlvenaria3 = Double.parseDouble(valorRemocacAlvenaria3.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverAlvenaria3_1 = Double.parseDouble(valorRemocacAlvenaria3_1.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverTanque3 = Integer.parseInt(valorRemocaoTanque3.getText().toString()) * precoRemoverTanque;
+                 varRemoverTanque3_1 = Integer.parseInt(valorRemocaoTanque3_1.getText().toString()) * precoRemoverTanque;
+                  varRemoverCaixinha4x2_3 = Integer.parseInt(valorRasgarCaixinha4x2_3.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x2_3_1 = Integer.parseInt(valorRasgarCaixinha4x2_3_1.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x4_3 = Integer.parseInt(valorRasgarCaixinha4x4_3.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverCaixinha4x4_3_1 = Integer.parseInt(valorRasgarCaixinha4x4_3_1.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverHidraulica3 = Integer.parseInt(valorRasgarHidraulica3.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverHidraulica3_1 = Integer.parseInt(valorRasgarHidraulica3_1.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverGesso3 = Integer.parseInt(valorRemoverGesso3.getText().toString()) * precoRemoverGesso;
+                  varRemoverGesso3_1 = Integer.parseInt(valorRemoverGesso3_1.getText().toString()) * precoRemoverGesso;
+                 varRemoverVasoSanitario3 = Integer.parseInt(valorRemoverVaso3.getText().toString()) * precoRemoverVasoSanitario;
+                 varRemoverVasoSanitario3_1 = Integer.parseInt(valorRemoverVaso3_1.getText().toString()) * precoRemoverVasoSanitario;
+                  varRemoverVao3 = Integer.parseInt(valorRemoverVao3.getText().toString()) * precoRemoverVao;
+                  varRemoverVao3_1 = Integer.parseInt(valorRemoverVao3_1.getText().toString()) * precoRemoverVao;
 
 
-                double valorTotalAreaServico = varRemoverRevestimentoParede3 + varRemoverRevestimentoParede3_1 +  varRemoverPiso3 + varRemoverPiso3_1 + varRemoverPia3 + varRemoverPia3_1 + varRemoverAlvenaria3 + varRemoverAlvenaria3_1 + varRemoverTanque3 + varRemoverTanque3_1 + varRemoverCaixinha4x2_3 + varRemoverCaixinha4x2_3_1 + varRemoverCaixinha4x4_3 + varRemoverCaixinha4x4_3_1 + varRemoverHidraulica3 + varRemoverHidraulica3_1 + varRemoverGesso3 + varRemoverGesso3_1 + varRemoverVasoSanitario3 + varRemoverVasoSanitario3_1 + varRemoverVao3 + varRemoverVao3_1;
+                valorTotalAreaServico = varRemoverRevestimentoParede3 + varRemoverRevestimentoParede3_1 +  varRemoverPiso3 + varRemoverPiso3_1 + varRemoverPia3 + varRemoverPia3_1 + varRemoverAlvenaria3 + varRemoverAlvenaria3_1 + varRemoverTanque3 + varRemoverTanque3_1 + varRemoverCaixinha4x2_3 + varRemoverCaixinha4x2_3_1 + varRemoverCaixinha4x4_3 + varRemoverCaixinha4x4_3_1 + varRemoverHidraulica3 + varRemoverHidraulica3_1 + varRemoverGesso3 + varRemoverGesso3_1 + varRemoverVasoSanitario3 + varRemoverVasoSanitario3_1 + varRemoverVao3 + varRemoverVao3_1;
 
 
                 //Calculando Valores Banheiro 2
 
-                double varRemoverRevestimentoParede4 = Double.parseDouble(valorRevestimentoParede4.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverRevestimentoParede4_1 = Double.parseDouble(valorRevestimentoParede4_1.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverPiso4 = Double.parseDouble(valorRemocaoPiso4.getText().toString()) * precoRemoverPiso;
-                double varRemoverPiso4_1 = Double.parseDouble(valorRemocaoPiso4_1.getText().toString()) * precoRemoverPiso;
-                double varRemoverPia4 = Integer.parseInt(valorRemocaoPia4.getText().toString()) * precoRemoverPia;
-                double varRemoverPia4_1 = Integer.parseInt(valorRemocaoPia4_1.getText().toString()) * precoRemoverPia;
-                double varRemoverAlvenaria4 = Double.parseDouble(valorRemocacAlvenaria4.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverAlvenaria4_1 = Double.parseDouble(valorRemocacAlvenaria4_1.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverTanque4 = Integer.parseInt(valorRemocaoTanque4.getText().toString()) * precoRemoverTanque;
-                double varRemoverTanque4_1 = Integer.parseInt(valorRemocaoTanque4_1.getText().toString()) * precoRemoverTanque;
-                double  varRemoverCaixinha4x2_4 = Integer.parseInt(valorRasgarCaixinha4x2_4.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x2_4_1 = Integer.parseInt(valorRasgarCaixinha4x2_4_1.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x4_4 = Integer.parseInt(valorRasgarCaixinha4x4_4.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverCaixinha4x4_4_1 = Integer.parseInt(valorRasgarCaixinha4x4_4_1.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverHidraulica4 = Integer.parseInt(valorRasgarHidraulica4.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverHidraulica4_1 = Integer.parseInt(valorRasgarHidraulica4_1.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverGesso4 = Integer.parseInt(valorRemoverGesso4.getText().toString()) * precoRemoverGesso;
-                double  varRemoverGesso4_1 = Integer.parseInt(valorRemoverGesso4_1.getText().toString()) * precoRemoverGesso;
-                double varRemoverVasoSanitario4 = Integer.parseInt(valorRemoverVaso4.getText().toString()) * precoRemoverVasoSanitario;
-                double varRemoverVasoSanitario4_1 = Integer.parseInt(valorRemoverVaso4_1.getText().toString()) * precoRemoverVasoSanitario;
-                double  varRemoverVao4 = Integer.parseInt(valorRemoverVao4.getText().toString()) * precoRemoverVao;
-                double  varRemoverVao4_1 = Integer.parseInt(valorRemoverVao4_1.getText().toString()) * precoRemoverVao;
+                 varRemoverRevestimentoParede4 = Double.parseDouble(valorRevestimentoParede4.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverRevestimentoParede4_1 = Double.parseDouble(valorRevestimentoParede4_1.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverPiso4 = Double.parseDouble(valorRemocaoPiso4.getText().toString()) * precoRemoverPiso;
+                 varRemoverPiso4_1 = Double.parseDouble(valorRemocaoPiso4_1.getText().toString()) * precoRemoverPiso;
+                 varRemoverPia4 = Integer.parseInt(valorRemocaoPia4.getText().toString()) * precoRemoverPia;
+                 varRemoverPia4_1 = Integer.parseInt(valorRemocaoPia4_1.getText().toString()) * precoRemoverPia;
+                 varRemoverAlvenaria4 = Double.parseDouble(valorRemocacAlvenaria4.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverAlvenaria4_1 = Double.parseDouble(valorRemocacAlvenaria4_1.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverTanque4 = Integer.parseInt(valorRemocaoTanque4.getText().toString()) * precoRemoverTanque;
+                 varRemoverTanque4_1 = Integer.parseInt(valorRemocaoTanque4_1.getText().toString()) * precoRemoverTanque;
+                  varRemoverCaixinha4x2_4 = Integer.parseInt(valorRasgarCaixinha4x2_4.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x2_4_1 = Integer.parseInt(valorRasgarCaixinha4x2_4_1.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x4_4 = Integer.parseInt(valorRasgarCaixinha4x4_4.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverCaixinha4x4_4_1 = Integer.parseInt(valorRasgarCaixinha4x4_4_1.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverHidraulica4 = Integer.parseInt(valorRasgarHidraulica4.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverHidraulica4_1 = Integer.parseInt(valorRasgarHidraulica4_1.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverGesso4 = Integer.parseInt(valorRemoverGesso4.getText().toString()) * precoRemoverGesso;
+                  varRemoverGesso4_1 = Integer.parseInt(valorRemoverGesso4_1.getText().toString()) * precoRemoverGesso;
+                 varRemoverVasoSanitario4 = Integer.parseInt(valorRemoverVaso4.getText().toString()) * precoRemoverVasoSanitario;
+                 varRemoverVasoSanitario4_1 = Integer.parseInt(valorRemoverVaso4_1.getText().toString()) * precoRemoverVasoSanitario;
+                  varRemoverVao4 = Integer.parseInt(valorRemoverVao4.getText().toString()) * precoRemoverVao;
+                  varRemoverVao4_1 = Integer.parseInt(valorRemoverVao4_1.getText().toString()) * precoRemoverVao;
 
 
                valorTotalBanheiro2 = varRemoverRevestimentoParede4 + varRemoverRevestimentoParede4_1 +  varRemoverPiso4 + varRemoverPiso4_1 + varRemoverPia4 + varRemoverPia4_1 + varRemoverAlvenaria4 + varRemoverAlvenaria4_1 + varRemoverTanque4 + varRemoverTanque4_1 + varRemoverCaixinha4x2_4 + varRemoverCaixinha4x2_4_1 + varRemoverCaixinha4x4_4 + varRemoverCaixinha4x4_4_1 + varRemoverHidraulica4 + varRemoverHidraulica4_1 + varRemoverGesso4 + varRemoverGesso4_1 + varRemoverVasoSanitario4 + varRemoverVasoSanitario4_1 + varRemoverVao4 + varRemoverVao4_1;
@@ -1020,213 +1142,239 @@ public class Demolicao extends AppCompatActivity {
 
                 //Calculando Valores Lavabo
 
-                double varRemoverRevestimentoParede5 = Double.parseDouble(valorRevestimentoParede5.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverRevestimentoParede5_1 = Double.parseDouble(valorRevestimentoParede5_1.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverPiso5 = Double.parseDouble(valorRemocaoPiso5.getText().toString()) * precoRemoverPiso;
-                double varRemoverPiso5_1 = Double.parseDouble(valorRemocaoPiso5_1.getText().toString()) * precoRemoverPiso;
-                double varRemoverPia5 = Integer.parseInt(valorRemocaoPia5.getText().toString()) * precoRemoverPia;
-                double varRemoverPia5_1 = Integer.parseInt(valorRemocaoPia5_1.getText().toString()) * precoRemoverPia;
-                double varRemoverAlvenaria5 = Double.parseDouble(valorRemocacAlvenaria5.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverAlvenaria5_1 = Double.parseDouble(valorRemocacAlvenaria5_1.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverTanque5 = Integer.parseInt(valorRemocaoTanque5.getText().toString()) * precoRemoverTanque;
-                double varRemoverTanque5_1 = Integer.parseInt(valorRemocaoTanque5_1.getText().toString()) * precoRemoverTanque;
-                double  varRemoverCaixinha4x2_5 = Integer.parseInt(valorRasgarCaixinha4x2_5.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x2_5_1 = Integer.parseInt(valorRasgarCaixinha4x2_5_1.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x4_5 = Integer.parseInt(valorRasgarCaixinha4x4_5.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverCaixinha4x4_5_1 = Integer.parseInt(valorRasgarCaixinha4x4_5_1.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverHidraulica5 = Integer.parseInt(valorRasgarHidraulica5.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverHidraulica5_1 = Integer.parseInt(valorRasgarHidraulica5_1.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverGesso5 = Integer.parseInt(valorRemoverGesso5.getText().toString()) * precoRemoverGesso;
-                double  varRemoverGesso5_1 = Integer.parseInt(valorRemoverGesso5_1.getText().toString()) * precoRemoverGesso;
-                double varRemoverVasoSanitario5 = Integer.parseInt(valorRemoverVaso5.getText().toString()) * precoRemoverVasoSanitario;
-                double varRemoverVasoSanitario5_1 = Integer.parseInt(valorRemoverVaso5_1.getText().toString()) * precoRemoverVasoSanitario;
-                double  varRemoverVao5 = Integer.parseInt(valorRemoverVao5.getText().toString()) * precoRemoverVao;
-                double  varRemoverVao5_1 = Integer.parseInt(valorRemoverVao5_1.getText().toString()) * precoRemoverVao;
+                 varRemoverRevestimentoParede5 = Double.parseDouble(valorRevestimentoParede5.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverRevestimentoParede5_1 = Double.parseDouble(valorRevestimentoParede5_1.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverPiso5 = Double.parseDouble(valorRemocaoPiso5.getText().toString()) * precoRemoverPiso;
+                 varRemoverPiso5_1 = Double.parseDouble(valorRemocaoPiso5_1.getText().toString()) * precoRemoverPiso;
+                 varRemoverPia5 = Integer.parseInt(valorRemocaoPia5.getText().toString()) * precoRemoverPia;
+                 varRemoverPia5_1 = Integer.parseInt(valorRemocaoPia5_1.getText().toString()) * precoRemoverPia;
+                 varRemoverAlvenaria5 = Double.parseDouble(valorRemocacAlvenaria5.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverAlvenaria5_1 = Double.parseDouble(valorRemocacAlvenaria5_1.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverTanque5 = Integer.parseInt(valorRemocaoTanque5.getText().toString()) * precoRemoverTanque;
+                 varRemoverTanque5_1 = Integer.parseInt(valorRemocaoTanque5_1.getText().toString()) * precoRemoverTanque;
+                  varRemoverCaixinha4x2_5 = Integer.parseInt(valorRasgarCaixinha4x2_5.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x2_5_1 = Integer.parseInt(valorRasgarCaixinha4x2_5_1.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x4_5 = Integer.parseInt(valorRasgarCaixinha4x4_5.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverCaixinha4x4_5_1 = Integer.parseInt(valorRasgarCaixinha4x4_5_1.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverHidraulica5 = Integer.parseInt(valorRasgarHidraulica5.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverHidraulica5_1 = Integer.parseInt(valorRasgarHidraulica5_1.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverGesso5 = Integer.parseInt(valorRemoverGesso5.getText().toString()) * precoRemoverGesso;
+                  varRemoverGesso5_1 = Integer.parseInt(valorRemoverGesso5_1.getText().toString()) * precoRemoverGesso;
+                 varRemoverVasoSanitario5 = Integer.parseInt(valorRemoverVaso5.getText().toString()) * precoRemoverVasoSanitario;
+                 varRemoverVasoSanitario5_1 = Integer.parseInt(valorRemoverVaso5_1.getText().toString()) * precoRemoverVasoSanitario;
+                  varRemoverVao5 = Integer.parseInt(valorRemoverVao5.getText().toString()) * precoRemoverVao;
+                  varRemoverVao5_1 = Integer.parseInt(valorRemoverVao5_1.getText().toString()) * precoRemoverVao;
 
 
-                double valorTotalLavabo = varRemoverRevestimentoParede5 + varRemoverRevestimentoParede5_1 +  varRemoverPiso5 + varRemoverPiso5_1 + varRemoverPia5 + varRemoverPia5_1 + varRemoverAlvenaria5 + varRemoverAlvenaria5_1 + varRemoverTanque5 + varRemoverTanque5_1 + varRemoverCaixinha4x2_5 + varRemoverCaixinha4x2_5_1 + varRemoverCaixinha4x4_5 + varRemoverCaixinha4x4_5_1 + varRemoverHidraulica5 + varRemoverHidraulica5_1 + varRemoverGesso5 + varRemoverGesso5_1 + varRemoverVasoSanitario5 + varRemoverVasoSanitario5_1 + varRemoverVao5 + varRemoverVao5_1;
+                valorTotalLavabo = varRemoverRevestimentoParede5 + varRemoverRevestimentoParede5_1 +  varRemoverPiso5 + varRemoverPiso5_1 + varRemoverPia5 + varRemoverPia5_1 + varRemoverAlvenaria5 + varRemoverAlvenaria5_1 + varRemoverTanque5 + varRemoverTanque5_1 + varRemoverCaixinha4x2_5 + varRemoverCaixinha4x2_5_1 + varRemoverCaixinha4x4_5 + varRemoverCaixinha4x4_5_1 + varRemoverHidraulica5 + varRemoverHidraulica5_1 + varRemoverGesso5 + varRemoverGesso5_1 + varRemoverVasoSanitario5 + varRemoverVasoSanitario5_1 + varRemoverVao5 + varRemoverVao5_1;
 
                 //Calculando Valores Sacada Varanda
 
-                double varRemoverRevestimentoParede6 = Double.parseDouble(valorRevestimentoParede6.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverRevestimentoParede6_1 = Double.parseDouble(valorRevestimentoParede6_1.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverPiso6 = Double.parseDouble(valorRemocaoPiso6.getText().toString()) * precoRemoverPiso;
-                double varRemoverPiso6_1 = Double.parseDouble(valorRemocaoPiso6_1.getText().toString()) * precoRemoverPiso;
-                double varRemoverPia6 = Integer.parseInt(valorRemocaoPia6.getText().toString()) * precoRemoverPia;
-                double varRemoverPia6_1 = Integer.parseInt(valorRemocaoPia6_1.getText().toString()) * precoRemoverPia;
-                double varRemoverAlvenaria6 = Double.parseDouble(valorRemocacAlvenaria6.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverAlvenaria6_1 = Double.parseDouble(valorRemocacAlvenaria6_1.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverTanque6 = Integer.parseInt(valorRemocaoTanque6.getText().toString()) * precoRemoverTanque;
-                double varRemoverTanque6_1 = Integer.parseInt(valorRemocaoTanque6_1.getText().toString()) * precoRemoverTanque;
-                double  varRemoverCaixinha4x2_6 = Integer.parseInt(valorRasgarCaixinha4x2_6.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x2_6_1 = Integer.parseInt(valorRasgarCaixinha4x2_6_1.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x4_6 = Integer.parseInt(valorRasgarCaixinha4x4_6.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverCaixinha4x4_6_1 = Integer.parseInt(valorRasgarCaixinha4x4_6_1.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverHidraulica6 = Integer.parseInt(valorRasgarHidraulica6.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverHidraulica6_1 = Integer.parseInt(valorRasgarHidraulica6_1.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverGesso6 = Integer.parseInt(valorRemoverGesso6.getText().toString()) * precoRemoverGesso;
-                double  varRemoverGesso6_1 = Integer.parseInt(valorRemoverGesso6_1.getText().toString()) * precoRemoverGesso;
-                double varRemoverVasoSanitario6 = Integer.parseInt(valorRemoverVaso6.getText().toString()) * precoRemoverVasoSanitario;
-                double varRemoverVasoSanitario6_1 = Integer.parseInt(valorRemoverVaso6_1.getText().toString()) * precoRemoverVasoSanitario;
-                double  varRemoverVao6 = Integer.parseInt(valorRemoverVao6.getText().toString()) * precoRemoverVao;
-                double  varRemoverVao6_1 = Integer.parseInt(valorRemoverVao6_1.getText().toString()) * precoRemoverVao;
+                 varRemoverRevestimentoParede6 = Double.parseDouble(valorRevestimentoParede6.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverRevestimentoParede6_1 = Double.parseDouble(valorRevestimentoParede6_1.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverPiso6 = Double.parseDouble(valorRemocaoPiso6.getText().toString()) * precoRemoverPiso;
+                 varRemoverPiso6_1 = Double.parseDouble(valorRemocaoPiso6_1.getText().toString()) * precoRemoverPiso;
+                 varRemoverPia6 = Integer.parseInt(valorRemocaoPia6.getText().toString()) * precoRemoverPia;
+                 varRemoverPia6_1 = Integer.parseInt(valorRemocaoPia6_1.getText().toString()) * precoRemoverPia;
+                 varRemoverAlvenaria6 = Double.parseDouble(valorRemocacAlvenaria6.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverAlvenaria6_1 = Double.parseDouble(valorRemocacAlvenaria6_1.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverTanque6 = Integer.parseInt(valorRemocaoTanque6.getText().toString()) * precoRemoverTanque;
+                 varRemoverTanque6_1 = Integer.parseInt(valorRemocaoTanque6_1.getText().toString()) * precoRemoverTanque;
+                  varRemoverCaixinha4x2_6 = Integer.parseInt(valorRasgarCaixinha4x2_6.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x2_6_1 = Integer.parseInt(valorRasgarCaixinha4x2_6_1.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x4_6 = Integer.parseInt(valorRasgarCaixinha4x4_6.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverCaixinha4x4_6_1 = Integer.parseInt(valorRasgarCaixinha4x4_6_1.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverHidraulica6 = Integer.parseInt(valorRasgarHidraulica6.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverHidraulica6_1 = Integer.parseInt(valorRasgarHidraulica6_1.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverGesso6 = Integer.parseInt(valorRemoverGesso6.getText().toString()) * precoRemoverGesso;
+                  varRemoverGesso6_1 = Integer.parseInt(valorRemoverGesso6_1.getText().toString()) * precoRemoverGesso;
+                 varRemoverVasoSanitario6 = Integer.parseInt(valorRemoverVaso6.getText().toString()) * precoRemoverVasoSanitario;
+                 varRemoverVasoSanitario6_1 = Integer.parseInt(valorRemoverVaso6_1.getText().toString()) * precoRemoverVasoSanitario;
+                  varRemoverVao6 = Integer.parseInt(valorRemoverVao6.getText().toString()) * precoRemoverVao;
+                  varRemoverVao6_1 = Integer.parseInt(valorRemoverVao6_1.getText().toString()) * precoRemoverVao;
 
 
-                double valorTotalSacadaVaranda= varRemoverRevestimentoParede6 + varRemoverRevestimentoParede6_1 +  varRemoverPiso6 + varRemoverPiso6_1 + varRemoverPia6 + varRemoverPia6_1 + varRemoverAlvenaria6 + varRemoverAlvenaria6_1 + varRemoverTanque6 + varRemoverTanque6_1 + varRemoverCaixinha4x2_6 + varRemoverCaixinha4x2_6_1 + varRemoverCaixinha4x4_6 + varRemoverCaixinha4x4_6_1 + varRemoverHidraulica6 + varRemoverHidraulica6_1 + varRemoverGesso6 + varRemoverGesso6_1 + varRemoverVasoSanitario6 + varRemoverVasoSanitario6_1 + varRemoverVao6 + varRemoverVao6_1;
+             valorTotalSacadaVaranda= varRemoverRevestimentoParede6 + varRemoverRevestimentoParede6_1 +  varRemoverPiso6 + varRemoverPiso6_1 + varRemoverPia6 + varRemoverPia6_1 + varRemoverAlvenaria6 + varRemoverAlvenaria6_1 + varRemoverTanque6 + varRemoverTanque6_1 + varRemoverCaixinha4x2_6 + varRemoverCaixinha4x2_6_1 + varRemoverCaixinha4x4_6 + varRemoverCaixinha4x4_6_1 + varRemoverHidraulica6 + varRemoverHidraulica6_1 + varRemoverGesso6 + varRemoverGesso6_1 + varRemoverVasoSanitario6 + varRemoverVasoSanitario6_1 + varRemoverVao6 + varRemoverVao6_1;
 
                 //Calculando Valores Sala de Jantar
 
-                double varRemoverRevestimentoParede7 = Double.parseDouble(valorRevestimentoParede7.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverRevestimentoParede7_1 = Double.parseDouble(valorRevestimentoParede7_1.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverPiso7 = Double.parseDouble(valorRemocaoPiso7.getText().toString()) * precoRemoverPiso;
-                double varRemoverPiso7_1 = Double.parseDouble(valorRemocaoPiso7_1.getText().toString()) * precoRemoverPiso;
-                double varRemoverPia7 = Integer.parseInt(valorRemocaoPia7.getText().toString()) * precoRemoverPia;
-                double varRemoverPia7_1 = Integer.parseInt(valorRemocaoPia7_1.getText().toString()) * precoRemoverPia;
-                double varRemoverAlvenaria7 = Double.parseDouble(valorRemocacAlvenaria7.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverAlvenaria7_1 = Double.parseDouble(valorRemocacAlvenaria7_1.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverTanque7 = Integer.parseInt(valorRemocaoTanque7.getText().toString()) * precoRemoverTanque;
-                double varRemoverTanque7_1 = Integer.parseInt(valorRemocaoTanque7_1.getText().toString()) * precoRemoverTanque;
-                double  varRemoverCaixinha4x2_7 = Integer.parseInt(valorRasgarCaixinha4x2_7.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x2_7_1 = Integer.parseInt(valorRasgarCaixinha4x2_7_1.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x4_7 = Integer.parseInt(valorRasgarCaixinha4x4_7.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverCaixinha4x4_7_1 = Integer.parseInt(valorRasgarCaixinha4x4_7_1.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverHidraulica7 = Integer.parseInt(valorRasgarHidraulica7.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverHidraulica7_1 = Integer.parseInt(valorRasgarHidraulica7_1.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverGesso7 = Integer.parseInt(valorRemoverGesso7.getText().toString()) * precoRemoverGesso;
-                double  varRemoverGesso7_1 = Integer.parseInt(valorRemoverGesso7_1.getText().toString()) * precoRemoverGesso;
-                double varRemoverVasoSanitario7 = Integer.parseInt(valorRemoverVaso7.getText().toString()) * precoRemoverVasoSanitario;
-                double varRemoverVasoSanitario7_1 = Integer.parseInt(valorRemoverVaso7_1.getText().toString()) * precoRemoverVasoSanitario;
-                double  varRemoverVao7 = Integer.parseInt(valorRemoverVao7.getText().toString()) * precoRemoverVao;
-                double  varRemoverVao7_1 = Integer.parseInt(valorRemoverVao7_1.getText().toString()) * precoRemoverVao;
+                 varRemoverRevestimentoParede7 = Double.parseDouble(valorRevestimentoParede7.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverRevestimentoParede7_1 = Double.parseDouble(valorRevestimentoParede7_1.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverPiso7 = Double.parseDouble(valorRemocaoPiso7.getText().toString()) * precoRemoverPiso;
+                 varRemoverPiso7_1 = Double.parseDouble(valorRemocaoPiso7_1.getText().toString()) * precoRemoverPiso;
+                 varRemoverPia7 = Integer.parseInt(valorRemocaoPia7.getText().toString()) * precoRemoverPia;
+                 varRemoverPia7_1 = Integer.parseInt(valorRemocaoPia7_1.getText().toString()) * precoRemoverPia;
+                 varRemoverAlvenaria7 = Double.parseDouble(valorRemocacAlvenaria7.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverAlvenaria7_1 = Double.parseDouble(valorRemocacAlvenaria7_1.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverTanque7 = Integer.parseInt(valorRemocaoTanque7.getText().toString()) * precoRemoverTanque;
+                 varRemoverTanque7_1 = Integer.parseInt(valorRemocaoTanque7_1.getText().toString()) * precoRemoverTanque;
+                  varRemoverCaixinha4x2_7 = Integer.parseInt(valorRasgarCaixinha4x2_7.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x2_7_1 = Integer.parseInt(valorRasgarCaixinha4x2_7_1.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x4_7 = Integer.parseInt(valorRasgarCaixinha4x4_7.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverCaixinha4x4_7_1 = Integer.parseInt(valorRasgarCaixinha4x4_7_1.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverHidraulica7 = Integer.parseInt(valorRasgarHidraulica7.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverHidraulica7_1 = Integer.parseInt(valorRasgarHidraulica7_1.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverGesso7 = Integer.parseInt(valorRemoverGesso7.getText().toString()) * precoRemoverGesso;
+                  varRemoverGesso7_1 = Integer.parseInt(valorRemoverGesso7_1.getText().toString()) * precoRemoverGesso;
+                 varRemoverVasoSanitario7 = Integer.parseInt(valorRemoverVaso7.getText().toString()) * precoRemoverVasoSanitario;
+                 varRemoverVasoSanitario7_1 = Integer.parseInt(valorRemoverVaso7_1.getText().toString()) * precoRemoverVasoSanitario;
+                  varRemoverVao7 = Integer.parseInt(valorRemoverVao7.getText().toString()) * precoRemoverVao;
+                  varRemoverVao7_1 = Integer.parseInt(valorRemoverVao7_1.getText().toString()) * precoRemoverVao;
 
 
-                double valorTotalSalaJantar= varRemoverRevestimentoParede7 + varRemoverRevestimentoParede7_1 +  varRemoverPiso7 + varRemoverPiso7_1 + varRemoverPia7 + varRemoverPia7_1 + varRemoverAlvenaria7 + varRemoverAlvenaria7_1 + varRemoverTanque7 + varRemoverTanque7_1 + varRemoverCaixinha4x2_7 + varRemoverCaixinha4x2_7_1 + varRemoverCaixinha4x4_7 + varRemoverCaixinha4x4_7_1 + varRemoverHidraulica7 + varRemoverHidraulica7_1 + varRemoverGesso7 + varRemoverGesso7_1 + varRemoverVasoSanitario7 + varRemoverVasoSanitario7_1 + varRemoverVao7 + varRemoverVao7_1;
+                valorTotalSalaJantar= varRemoverRevestimentoParede7 + varRemoverRevestimentoParede7_1 +  varRemoverPiso7 + varRemoverPiso7_1 + varRemoverPia7 + varRemoverPia7_1 + varRemoverAlvenaria7 + varRemoverAlvenaria7_1 + varRemoverTanque7 + varRemoverTanque7_1 + varRemoverCaixinha4x2_7 + varRemoverCaixinha4x2_7_1 + varRemoverCaixinha4x4_7 + varRemoverCaixinha4x4_7_1 + varRemoverHidraulica7 + varRemoverHidraulica7_1 + varRemoverGesso7 + varRemoverGesso7_1 + varRemoverVasoSanitario7 + varRemoverVasoSanitario7_1 + varRemoverVao7 + varRemoverVao7_1;
 
                 //Calculando Valores Sala de Estar
 
-                double varRemoverRevestimentoParede8 = Double.parseDouble(valorRevestimentoParede8.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverRevestimentoParede8_1 = Double.parseDouble(valorRevestimentoParede8_1.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverPiso8 = Double.parseDouble(valorRemocaoPiso8.getText().toString()) * precoRemoverPiso;
-                double varRemoverPiso8_1 = Double.parseDouble(valorRemocaoPiso8_1.getText().toString()) * precoRemoverPiso;
-                double varRemoverPia8 = Integer.parseInt(valorRemocaoPia8.getText().toString()) * precoRemoverPia;
-                double varRemoverPia8_1 = Integer.parseInt(valorRemocaoPia8_1.getText().toString()) * precoRemoverPia;
-                double varRemoverAlvenaria8= Double.parseDouble(valorRemocacAlvenaria8.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverAlvenaria8_1 = Double.parseDouble(valorRemocacAlvenaria8_1.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverTanque8 = Integer.parseInt(valorRemocaoTanque8.getText().toString()) * precoRemoverTanque;
-                double varRemoverTanque8_1 = Integer.parseInt(valorRemocaoTanque8_1.getText().toString()) * precoRemoverTanque;
-                double  varRemoverCaixinha4x2_8 = Integer.parseInt(valorRasgarCaixinha4x2_8.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x2_8_1 = Integer.parseInt(valorRasgarCaixinha4x2_8_1.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x4_8 = Integer.parseInt(valorRasgarCaixinha4x4_8.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverCaixinha4x4_8_1 = Integer.parseInt(valorRasgarCaixinha4x4_8_1.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverHidraulica8 = Integer.parseInt(valorRasgarHidraulica8.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverHidraulica8_1 = Integer.parseInt(valorRasgarHidraulica8_1.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverGesso8 = Integer.parseInt(valorRemoverGesso8.getText().toString()) * precoRemoverGesso;
-                double  varRemoverGesso8_1 = Integer.parseInt(valorRemoverGesso8_1.getText().toString()) * precoRemoverGesso;
-                double varRemoverVasoSanitario8 = Integer.parseInt(valorRemoverVaso8.getText().toString()) * precoRemoverVasoSanitario;
-                double varRemoverVasoSanitario8_1 = Integer.parseInt(valorRemoverVaso8_1.getText().toString()) * precoRemoverVasoSanitario;
-                double  varRemoverVao8 = Integer.parseInt(valorRemoverVao8.getText().toString()) * precoRemoverVao;
-                double  varRemoverVao8_1 = Integer.parseInt(valorRemoverVao8_1.getText().toString()) * precoRemoverVao;
+                 varRemoverRevestimentoParede8 = Double.parseDouble(valorRevestimentoParede8.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverRevestimentoParede8_1 = Double.parseDouble(valorRevestimentoParede8_1.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverPiso8 = Double.parseDouble(valorRemocaoPiso8.getText().toString()) * precoRemoverPiso;
+                 varRemoverPiso8_1 = Double.parseDouble(valorRemocaoPiso8_1.getText().toString()) * precoRemoverPiso;
+                 varRemoverPia8 = Integer.parseInt(valorRemocaoPia8.getText().toString()) * precoRemoverPia;
+                 varRemoverPia8_1 = Integer.parseInt(valorRemocaoPia8_1.getText().toString()) * precoRemoverPia;
+                 varRemoverAlvenaria8= Double.parseDouble(valorRemocacAlvenaria8.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverAlvenaria8_1 = Double.parseDouble(valorRemocacAlvenaria8_1.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverTanque8 = Integer.parseInt(valorRemocaoTanque8.getText().toString()) * precoRemoverTanque;
+                 varRemoverTanque8_1 = Integer.parseInt(valorRemocaoTanque8_1.getText().toString()) * precoRemoverTanque;
+                  varRemoverCaixinha4x2_8 = Integer.parseInt(valorRasgarCaixinha4x2_8.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x2_8_1 = Integer.parseInt(valorRasgarCaixinha4x2_8_1.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x4_8 = Integer.parseInt(valorRasgarCaixinha4x4_8.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverCaixinha4x4_8_1 = Integer.parseInt(valorRasgarCaixinha4x4_8_1.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverHidraulica8 = Integer.parseInt(valorRasgarHidraulica8.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverHidraulica8_1 = Integer.parseInt(valorRasgarHidraulica8_1.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverGesso8 = Integer.parseInt(valorRemoverGesso8.getText().toString()) * precoRemoverGesso;
+                  varRemoverGesso8_1 = Integer.parseInt(valorRemoverGesso8_1.getText().toString()) * precoRemoverGesso;
+                 varRemoverVasoSanitario8 = Integer.parseInt(valorRemoverVaso8.getText().toString()) * precoRemoverVasoSanitario;
+                 varRemoverVasoSanitario8_1 = Integer.parseInt(valorRemoverVaso8_1.getText().toString()) * precoRemoverVasoSanitario;
+                  varRemoverVao8 = Integer.parseInt(valorRemoverVao8.getText().toString()) * precoRemoverVao;
+                  varRemoverVao8_1 = Integer.parseInt(valorRemoverVao8_1.getText().toString()) * precoRemoverVao;
 
 
-                double valorTotalSalaEstar= varRemoverRevestimentoParede8 + varRemoverRevestimentoParede8_1 +  varRemoverPiso8 + varRemoverPiso8_1 + varRemoverPia8 + varRemoverPia8_1 + varRemoverAlvenaria8 + varRemoverAlvenaria8_1 + varRemoverTanque8 + varRemoverTanque8_1 + varRemoverCaixinha4x2_8 + varRemoverCaixinha4x2_8_1 + varRemoverCaixinha4x4_8 + varRemoverCaixinha4x4_8_1 + varRemoverHidraulica8 + varRemoverHidraulica8_1 + varRemoverGesso8 + varRemoverGesso8_1 + varRemoverVasoSanitario8 + varRemoverVasoSanitario8_1 + varRemoverVao8 + varRemoverVao8_1;
+             valorTotalSalaEstar= varRemoverRevestimentoParede8 + varRemoverRevestimentoParede8_1 +  varRemoverPiso8 + varRemoverPiso8_1 + varRemoverPia8 + varRemoverPia8_1 + varRemoverAlvenaria8 + varRemoverAlvenaria8_1 + varRemoverTanque8 + varRemoverTanque8_1 + varRemoverCaixinha4x2_8 + varRemoverCaixinha4x2_8_1 + varRemoverCaixinha4x4_8 + varRemoverCaixinha4x4_8_1 + varRemoverHidraulica8 + varRemoverHidraulica8_1 + varRemoverGesso8 + varRemoverGesso8_1 + varRemoverVasoSanitario8 + varRemoverVasoSanitario8_1 + varRemoverVao8 + varRemoverVao8_1;
 
                 //Calculando Valores Quarto1
 
-                double varRemoverRevestimentoParede9 = Double.parseDouble(valorRevestimentoParede9.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverRevestimentoParede9_1 = Double.parseDouble(valorRevestimentoParede9_1.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverPiso9 = Double.parseDouble(valorRemocaoPiso9.getText().toString()) * precoRemoverPiso;
-                double varRemoverPiso9_1 = Double.parseDouble(valorRemocaoPiso9_1.getText().toString()) * precoRemoverPiso;
-                double varRemoverPia9 = Integer.parseInt(valorRemocaoPia9.getText().toString()) * precoRemoverPia;
-                double varRemoverPia9_1 = Integer.parseInt(valorRemocaoPia9_1.getText().toString()) * precoRemoverPia;
-                double varRemoverAlvenaria9= Double.parseDouble(valorRemocacAlvenaria9.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverAlvenaria9_1 = Double.parseDouble(valorRemocacAlvenaria9_1.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverTanque9 = Integer.parseInt(valorRemocaoTanque9.getText().toString()) * precoRemoverTanque;
-                double varRemoverTanque9_1 = Integer.parseInt(valorRemocaoTanque9_1.getText().toString()) * precoRemoverTanque;
-                double  varRemoverCaixinha4x2_9 = Integer.parseInt(valorRasgarCaixinha4x2_9.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x2_9_1 = Integer.parseInt(valorRasgarCaixinha4x2_9_1.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x4_9 = Integer.parseInt(valorRasgarCaixinha4x4_9.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverCaixinha4x4_9_1 = Integer.parseInt(valorRasgarCaixinha4x4_9_1.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverHidraulica9 = Integer.parseInt(valorRasgarHidraulica9.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverHidraulica9_1 = Integer.parseInt(valorRasgarHidraulica9_1.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverGesso9 = Integer.parseInt(valorRemoverGesso9.getText().toString()) * precoRemoverGesso;
-                double  varRemoverGesso9_1 = Integer.parseInt(valorRemoverGesso9_1.getText().toString()) * precoRemoverGesso;
-                double varRemoverVasoSanitario9 = Integer.parseInt(valorRemoverVaso9.getText().toString()) * precoRemoverVasoSanitario;
-                double varRemoverVasoSanitario9_1 = Integer.parseInt(valorRemoverVaso9_1.getText().toString()) * precoRemoverVasoSanitario;
-                double  varRemoverVao9 = Integer.parseInt(valorRemoverVao9.getText().toString()) * precoRemoverVao;
-                double  varRemoverVao9_1 = Integer.parseInt(valorRemoverVao9_1.getText().toString()) * precoRemoverVao;
+                 varRemoverRevestimentoParede9 = Double.parseDouble(valorRevestimentoParede9.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverRevestimentoParede9_1 = Double.parseDouble(valorRevestimentoParede9_1.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverPiso9 = Double.parseDouble(valorRemocaoPiso9.getText().toString()) * precoRemoverPiso;
+                 varRemoverPiso9_1 = Double.parseDouble(valorRemocaoPiso9_1.getText().toString()) * precoRemoverPiso;
+                 varRemoverPia9 = Integer.parseInt(valorRemocaoPia9.getText().toString()) * precoRemoverPia;
+                 varRemoverPia9_1 = Integer.parseInt(valorRemocaoPia9_1.getText().toString()) * precoRemoverPia;
+                 varRemoverAlvenaria9= Double.parseDouble(valorRemocacAlvenaria9.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverAlvenaria9_1 = Double.parseDouble(valorRemocacAlvenaria9_1.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverTanque9 = Integer.parseInt(valorRemocaoTanque9.getText().toString()) * precoRemoverTanque;
+                 varRemoverTanque9_1 = Integer.parseInt(valorRemocaoTanque9_1.getText().toString()) * precoRemoverTanque;
+                  varRemoverCaixinha4x2_9 = Integer.parseInt(valorRasgarCaixinha4x2_9.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x2_9_1 = Integer.parseInt(valorRasgarCaixinha4x2_9_1.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x4_9 = Integer.parseInt(valorRasgarCaixinha4x4_9.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverCaixinha4x4_9_1 = Integer.parseInt(valorRasgarCaixinha4x4_9_1.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverHidraulica9 = Integer.parseInt(valorRasgarHidraulica9.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverHidraulica9_1 = Integer.parseInt(valorRasgarHidraulica9_1.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverGesso9 = Integer.parseInt(valorRemoverGesso9.getText().toString()) * precoRemoverGesso;
+                  varRemoverGesso9_1 = Integer.parseInt(valorRemoverGesso9_1.getText().toString()) * precoRemoverGesso;
+                 varRemoverVasoSanitario9 = Integer.parseInt(valorRemoverVaso9.getText().toString()) * precoRemoverVasoSanitario;
+                 varRemoverVasoSanitario9_1 = Integer.parseInt(valorRemoverVaso9_1.getText().toString()) * precoRemoverVasoSanitario;
+                  varRemoverVao9 = Integer.parseInt(valorRemoverVao9.getText().toString()) * precoRemoverVao;
+                  varRemoverVao9_1 = Integer.parseInt(valorRemoverVao9_1.getText().toString()) * precoRemoverVao;
 
 
-                double valorTotalQuarto1= varRemoverRevestimentoParede9 + varRemoverRevestimentoParede9_1 +  varRemoverPiso9 + varRemoverPiso9_1 + varRemoverPia9 + varRemoverPia9_1 + varRemoverAlvenaria9 + varRemoverAlvenaria9_1 + varRemoverTanque9 + varRemoverTanque9_1 + varRemoverCaixinha4x2_9 + varRemoverCaixinha4x2_9_1 + varRemoverCaixinha4x4_9 + varRemoverCaixinha4x4_9_1 + varRemoverHidraulica9 + varRemoverHidraulica9_1 + varRemoverGesso9 + varRemoverGesso9_1 + varRemoverVasoSanitario9 + varRemoverVasoSanitario9_1 + varRemoverVao9 + varRemoverVao9_1;
+                 valorTotalQuarto1= varRemoverRevestimentoParede9 + varRemoverRevestimentoParede9_1 +  varRemoverPiso9 + varRemoverPiso9_1 + varRemoverPia9 + varRemoverPia9_1 + varRemoverAlvenaria9 + varRemoverAlvenaria9_1 + varRemoverTanque9 + varRemoverTanque9_1 + varRemoverCaixinha4x2_9 + varRemoverCaixinha4x2_9_1 + varRemoverCaixinha4x4_9 + varRemoverCaixinha4x4_9_1 + varRemoverHidraulica9 + varRemoverHidraulica9_1 + varRemoverGesso9 + varRemoverGesso9_1 + varRemoverVasoSanitario9 + varRemoverVasoSanitario9_1 + varRemoverVao9 + varRemoverVao9_1;
 
                 //Calculando Valores Quarto2
 
-                double varRemoverRevestimentoParede10 = Double.parseDouble(valorRevestimentoParede10.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverRevestimentoParede10_1 = Double.parseDouble(valorRevestimentoParede10_1.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverPiso10 = Double.parseDouble(valorRemocaoPiso10.getText().toString()) * precoRemoverPiso;
-                double varRemoverPiso10_1 = Double.parseDouble(valorRemocaoPiso10_1.getText().toString()) * precoRemoverPiso;
-                double varRemoverPia10 = Integer.parseInt(valorRemocaoPia10.getText().toString()) * precoRemoverPia;
-                double varRemoverPia10_1 = Integer.parseInt(valorRemocaoPia10_1.getText().toString()) * precoRemoverPia;
-                double varRemoverAlvenaria10= Double.parseDouble(valorRemocacAlvenaria10.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverAlvenaria10_1 = Double.parseDouble(valorRemocacAlvenaria10_1.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverTanque10 = Integer.parseInt(valorRemocaoTanque10.getText().toString()) * precoRemoverTanque;
-                double varRemoverTanque10_1 = Integer.parseInt(valorRemocaoTanque10_1.getText().toString()) * precoRemoverTanque;
-                double  varRemoverCaixinha4x2_10 = Integer.parseInt(valorRasgarCaixinha4x2_10.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x2_10_1 = Integer.parseInt(valorRasgarCaixinha4x2_10_1.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x4_10 = Integer.parseInt(valorRasgarCaixinha4x4_10.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverCaixinha4x4_10_1 = Integer.parseInt(valorRasgarCaixinha4x4_10_1.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverHidraulica10 = Integer.parseInt(valorRasgarHidraulica10.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverHidraulica10_1 = Integer.parseInt(valorRasgarHidraulica10_1.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverGesso10 = Integer.parseInt(valorRemoverGesso10.getText().toString()) * precoRemoverGesso;
-                double  varRemoverGesso10_1 = Integer.parseInt(valorRemoverGesso10_1.getText().toString()) * precoRemoverGesso;
-                double varRemoverVasoSanitario10 = Integer.parseInt(valorRemoverVaso10.getText().toString()) * precoRemoverVasoSanitario;
-                double varRemoverVasoSanitario10_1 = Integer.parseInt(valorRemoverVaso10_1.getText().toString()) * precoRemoverVasoSanitario;
-                double  varRemoverVao10 = Integer.parseInt(valorRemoverVao10.getText().toString()) * precoRemoverVao;
-                double  varRemoverVao10_1 = Integer.parseInt(valorRemoverVao10_1.getText().toString()) * precoRemoverVao;
+                 varRemoverRevestimentoParede10 = Double.parseDouble(valorRevestimentoParede10.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverRevestimentoParede10_1 = Double.parseDouble(valorRevestimentoParede10_1.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverPiso10 = Double.parseDouble(valorRemocaoPiso10.getText().toString()) * precoRemoverPiso;
+                 varRemoverPiso10_1 = Double.parseDouble(valorRemocaoPiso10_1.getText().toString()) * precoRemoverPiso;
+                 varRemoverPia10 = Integer.parseInt(valorRemocaoPia10.getText().toString()) * precoRemoverPia;
+                 varRemoverPia10_1 = Integer.parseInt(valorRemocaoPia10_1.getText().toString()) * precoRemoverPia;
+                 varRemoverAlvenaria10= Double.parseDouble(valorRemocacAlvenaria10.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverAlvenaria10_1 = Double.parseDouble(valorRemocacAlvenaria10_1.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverTanque10 = Integer.parseInt(valorRemocaoTanque10.getText().toString()) * precoRemoverTanque;
+                 varRemoverTanque10_1 = Integer.parseInt(valorRemocaoTanque10_1.getText().toString()) * precoRemoverTanque;
+                  varRemoverCaixinha4x2_10 = Integer.parseInt(valorRasgarCaixinha4x2_10.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x2_10_1 = Integer.parseInt(valorRasgarCaixinha4x2_10_1.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x4_10 = Integer.parseInt(valorRasgarCaixinha4x4_10.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverCaixinha4x4_10_1 = Integer.parseInt(valorRasgarCaixinha4x4_10_1.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverHidraulica10 = Integer.parseInt(valorRasgarHidraulica10.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverHidraulica10_1 = Integer.parseInt(valorRasgarHidraulica10_1.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverGesso10 = Integer.parseInt(valorRemoverGesso10.getText().toString()) * precoRemoverGesso;
+                  varRemoverGesso10_1 = Integer.parseInt(valorRemoverGesso10_1.getText().toString()) * precoRemoverGesso;
+                 varRemoverVasoSanitario10 = Integer.parseInt(valorRemoverVaso10.getText().toString()) * precoRemoverVasoSanitario;
+                 varRemoverVasoSanitario10_1 = Integer.parseInt(valorRemoverVaso10_1.getText().toString()) * precoRemoverVasoSanitario;
+                  varRemoverVao10 = Integer.parseInt(valorRemoverVao10.getText().toString()) * precoRemoverVao;
+                  varRemoverVao10_1 = Integer.parseInt(valorRemoverVao10_1.getText().toString()) * precoRemoverVao;
 
 
-                double valorTotalQuarto2= varRemoverRevestimentoParede10 + varRemoverRevestimentoParede10_1 +  varRemoverPiso10 + varRemoverPiso10_1 + varRemoverPia10 + varRemoverPia10_1 + varRemoverAlvenaria10 + varRemoverAlvenaria10_1 + varRemoverTanque10 + varRemoverTanque10_1 + varRemoverCaixinha4x2_10 + varRemoverCaixinha4x2_10_1 + varRemoverCaixinha4x4_10 + varRemoverCaixinha4x4_10_1 + varRemoverHidraulica10 + varRemoverHidraulica10_1 + varRemoverGesso10 + varRemoverGesso10_1 + varRemoverVasoSanitario10 + varRemoverVasoSanitario10_1 + varRemoverVao10 + varRemoverVao10_1;
+                 valorTotalQuarto2= varRemoverRevestimentoParede10 + varRemoverRevestimentoParede10_1 +  varRemoverPiso10 + varRemoverPiso10_1 + varRemoverPia10 + varRemoverPia10_1 + varRemoverAlvenaria10 + varRemoverAlvenaria10_1 + varRemoverTanque10 + varRemoverTanque10_1 + varRemoverCaixinha4x2_10 + varRemoverCaixinha4x2_10_1 + varRemoverCaixinha4x4_10 + varRemoverCaixinha4x4_10_1 + varRemoverHidraulica10 + varRemoverHidraulica10_1 + varRemoverGesso10 + varRemoverGesso10_1 + varRemoverVasoSanitario10 + varRemoverVasoSanitario10_1 + varRemoverVao10 + varRemoverVao10_1;
 
                 //Calculando Valores Quarto3
 
-                double varRemoverRevestimentoParede11 = Double.parseDouble(valorRevestimentoParede11.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverRevestimentoParede11_1 = Double.parseDouble(valorRevestimentoParede11_1.getText().toString()) * precoRemoverRevestimentoParede;
-                double varRemoverPiso11 = Double.parseDouble(valorRemocaoPiso11.getText().toString()) * precoRemoverPiso;
-                double varRemoverPiso11_1 = Double.parseDouble(valorRemocaoPiso11_1.getText().toString()) * precoRemoverPiso;
-                double varRemoverPia11 = Integer.parseInt(valorRemocaoPia11.getText().toString()) * precoRemoverPia;
-                double varRemoverPia11_1 = Integer.parseInt(valorRemocaoPia11_1.getText().toString()) * precoRemoverPia;
-                double varRemoverAlvenaria11= Double.parseDouble(valorRemocacAlvenaria11.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverAlvenaria11_1 = Double.parseDouble(valorRemocacAlvenaria11_1.getText().toString()) * precoRemoverAlvenaria;
-                double varRemoverTanque11 = Integer.parseInt(valorRemocaoTanque11.getText().toString()) * precoRemoverTanque;
-                double varRemoverTanque11_1 = Integer.parseInt(valorRemocaoTanque11_1.getText().toString()) * precoRemoverTanque;
-                double  varRemoverCaixinha4x2_11 = Integer.parseInt(valorRasgarCaixinha4x2_11.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x2_11_1 = Integer.parseInt(valorRasgarCaixinha4x2_11_1.getText().toString()) * precoRasgarCaixinha4x2;
-                double  varRemoverCaixinha4x4_11 = Integer.parseInt(valorRasgarCaixinha4x4_11.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverCaixinha4x4_11_1 = Integer.parseInt(valorRasgarCaixinha4x4_11_1.getText().toString()) * precoRasgarCaixinha4x4;
-                double  varRemoverHidraulica11 = Integer.parseInt(valorRasgarHidraulica11.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverHidraulica11_1 = Integer.parseInt(valorRasgarHidraulica11_1.getText().toString()) * precoRemoverHidraulica;
-                double  varRemoverGesso11 = Integer.parseInt(valorRemoverGesso11.getText().toString()) * precoRemoverGesso;
-                double  varRemoverGesso11_1 = Integer.parseInt(valorRemoverGesso11_1.getText().toString()) * precoRemoverGesso;
-                double varRemoverVasoSanitario11 = Integer.parseInt(valorRemoverVaso11.getText().toString()) * precoRemoverVasoSanitario;
-                double varRemoverVasoSanitario11_1 = Integer.parseInt(valorRemoverVaso11_1.getText().toString()) * precoRemoverVasoSanitario;
-                double  varRemoverVao11 = Integer.parseInt(valorRemoverVao11.getText().toString()) * precoRemoverVao;
-                double  varRemoverVao11_1 = Integer.parseInt(valorRemoverVao11_1.getText().toString()) * precoRemoverVao;
+                 varRemoverRevestimentoParede11 = Double.parseDouble(valorRevestimentoParede11.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverRevestimentoParede11_1 = Double.parseDouble(valorRevestimentoParede11_1.getText().toString()) * precoRemoverRevestimentoParede;
+                 varRemoverPiso11 = Double.parseDouble(valorRemocaoPiso11.getText().toString()) * precoRemoverPiso;
+                 varRemoverPiso11_1 = Double.parseDouble(valorRemocaoPiso11_1.getText().toString()) * precoRemoverPiso;
+                 varRemoverPia11 = Integer.parseInt(valorRemocaoPia11.getText().toString()) * precoRemoverPia;
+                 varRemoverPia11_1 = Integer.parseInt(valorRemocaoPia11_1.getText().toString()) * precoRemoverPia;
+                 varRemoverAlvenaria11= Double.parseDouble(valorRemocacAlvenaria11.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverAlvenaria11_1 = Double.parseDouble(valorRemocacAlvenaria11_1.getText().toString()) * precoRemoverAlvenaria;
+                 varRemoverTanque11 = Integer.parseInt(valorRemocaoTanque11.getText().toString()) * precoRemoverTanque;
+                 varRemoverTanque11_1 = Integer.parseInt(valorRemocaoTanque11_1.getText().toString()) * precoRemoverTanque;
+                  varRemoverCaixinha4x2_11 = Integer.parseInt(valorRasgarCaixinha4x2_11.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x2_11_1 = Integer.parseInt(valorRasgarCaixinha4x2_11_1.getText().toString()) * precoRasgarCaixinha4x2;
+                  varRemoverCaixinha4x4_11 = Integer.parseInt(valorRasgarCaixinha4x4_11.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverCaixinha4x4_11_1 = Integer.parseInt(valorRasgarCaixinha4x4_11_1.getText().toString()) * precoRasgarCaixinha4x4;
+                  varRemoverHidraulica11 = Integer.parseInt(valorRasgarHidraulica11.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverHidraulica11_1 = Integer.parseInt(valorRasgarHidraulica11_1.getText().toString()) * precoRemoverHidraulica;
+                  varRemoverGesso11 = Integer.parseInt(valorRemoverGesso11.getText().toString()) * precoRemoverGesso;
+                  varRemoverGesso11_1 = Integer.parseInt(valorRemoverGesso11_1.getText().toString()) * precoRemoverGesso;
+                 varRemoverVasoSanitario11 = Integer.parseInt(valorRemoverVaso11.getText().toString()) * precoRemoverVasoSanitario;
+                 varRemoverVasoSanitario11_1 = Integer.parseInt(valorRemoverVaso11_1.getText().toString()) * precoRemoverVasoSanitario;
+                  varRemoverVao11 = Integer.parseInt(valorRemoverVao11.getText().toString()) * precoRemoverVao;
+                  varRemoverVao11_1 = Integer.parseInt(valorRemoverVao11_1.getText().toString()) * precoRemoverVao;
 
-                double valorTotalQuarto3= varRemoverRevestimentoParede11 + varRemoverRevestimentoParede11_1 +  varRemoverPiso11 + varRemoverPiso11_1 + varRemoverPia11 + varRemoverPia11_1 + varRemoverAlvenaria11 + varRemoverAlvenaria11_1 + varRemoverTanque11 + varRemoverTanque11_1 + varRemoverCaixinha4x2_11 + varRemoverCaixinha4x2_11_1 + varRemoverCaixinha4x4_11 + varRemoverCaixinha4x4_11_1 + varRemoverHidraulica11 + varRemoverHidraulica11_1 + varRemoverGesso11 + varRemoverGesso11_1 + varRemoverVasoSanitario11 + varRemoverVasoSanitario11_1 + varRemoverVao11 + varRemoverVao11_1;
-
-
+                 valorTotalQuarto3= varRemoverRevestimentoParede11 + varRemoverRevestimentoParede11_1 +  varRemoverPiso11 + varRemoverPiso11_1 + varRemoverPia11 + varRemoverPia11_1 + varRemoverAlvenaria11 + varRemoverAlvenaria11_1 + varRemoverTanque11 + varRemoverTanque11_1 + varRemoverCaixinha4x2_11 + varRemoverCaixinha4x2_11_1 + varRemoverCaixinha4x4_11 + varRemoverCaixinha4x4_11_1 + varRemoverHidraulica11 + varRemoverHidraulica11_1 + varRemoverGesso11 + varRemoverGesso11_1 + varRemoverVasoSanitario11 + varRemoverVasoSanitario11_1 + varRemoverVao11 + varRemoverVao11_1;
 
 
-                double total = valorTotalCozinha + valorTotalBanheiro1 + valorTotalBanheiro2 + valorTotalBanheiro2 + valorTotalLavabo + valorTotalSacadaVaranda + valorTotalSalaEstar + valorTotalSalaJantar + valorTotalQuarto1 + valorTotalQuarto2 + valorTotalQuarto3;
+
+
+                 total = valorTotalCozinha + valorTotalBanheiro1 + valorTotalBanheiro2 + valorTotalBanheiro2 + valorTotalLavabo + valorTotalSacadaVaranda + valorTotalSalaEstar + valorTotalSalaJantar + valorTotalQuarto1 + valorTotalQuarto2 + valorTotalQuarto3;
                 Toast.makeText(mContext, "R$"+ total, Toast.LENGTH_SHORT).show();
 
 
-                try {
-                    createPdfWrapper();
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                } catch (DocumentException e) {
-                    e.printStackTrace();
-                }
+                View view = getLayoutInflater().inflate(R.layout.layout_edt, null);
+                AlertDialog.Builder alert = new AlertDialog.Builder(Demolicao.this);
+                alert.setTitle("Nome do Cliente");
+                final  EditText input = new EditText(Demolicao.this);
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.MATCH_PARENT);
+                input.setLayoutParams(lp);
+                alert.setView(input);
+
+
+                alert.setPositiveButton("Prosseguir",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // Write your code here to execute after dialog
+
+                                nomeCliente = input.getText().toString();
+
+                                try {
+                                    createPdfWrapper();
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                } catch (DocumentException e) {
+                                    e.printStackTrace();
+                                }
+
+                            }
+                        });
+
+
+                alert.create();
+                alert.show();
+
             }
         });
 
@@ -1254,6 +1402,7 @@ public class Demolicao extends AppCompatActivity {
 
         Font bold = FontFactory.getFont("Times-Roman, Bold", 14, Font.BOLD);
         Font boldTitulo = FontFactory.getFont("Times-Roman, Bold", 22, Font.BOLD);
+        Font boldTotal= FontFactory.getFont("Times-Roman, Bold", 17, Font.BOLD);
         Font boldServicos = FontFactory.getFont("Times-Roman, Bold", 14, Font.BOLD);
         Font boldServicosPrestados = FontFactory.getFont("Times-Roman, Bold", 12, Font.NORMAL);
         Font fontData = FontFactory.getFont("Times-Roman, Bold", 10, Font.BOLD);
@@ -1282,6 +1431,7 @@ public class Demolicao extends AppCompatActivity {
         Paragraph dataParagrafo = new Paragraph(String.valueOf(now), fontData);
         dataParagrafo.setAlignment(Element.ALIGN_LEFT);
         Paragraph espacoBranco = new Paragraph("", boldTitulo);
+        Paragraph valorTotal = new Paragraph("TOTAL R$ "+ total+"0", boldTotal);
         Paragraph paragrafoCozinha = new Paragraph("Cozinha", boldServicos);
         Paragraph paragrafoBanheiro = new Paragraph("Banheiro", boldServicos);
         Paragraph paragrafoAreaServico = new Paragraph("Área de Serviço", boldServicos);
@@ -1310,6 +1460,7 @@ public class Demolicao extends AppCompatActivity {
 
         //Alinhar paragrafos
         titulo.setAlignment(Element.ALIGN_CENTER);
+        valorTotal.setAlignment(Element.ALIGN_CENTER);
         //Valores de Banheiro
        // banheiro.add(new Paragraph ("Remover revestimento 1"));
         //Valores de Cozinha
@@ -1321,6 +1472,9 @@ public class Demolicao extends AppCompatActivity {
          document.add(dataParagrafo);
          document.addTitle("Orçamento de Demolição");
          document.add(new Paragraph("Número da nota:000"+numeroNotaExibir));
+
+            if (nomeCliente.length() > 0)
+                document.add(new Paragraph("yCliente: "+ nomeCliente));
          document.add(Chunk.NEWLINE);
          document.add(Chunk.NEWLINE);
          document.add(Chunk.NEWLINE);
@@ -1369,9 +1523,9 @@ public class Demolicao extends AppCompatActivity {
                 document.add(new Paragraph("Remover Alvenaria: "+ valorRemocacAlvenaria2.getText().toString() +" - "+ valorRemocacAlvenaria2_1.getText().toString() + "    R$"+ (varRemoverAlvenaria2 + varRemoverAlvenaria2_1)+"0",boldServicosPrestados));
             if (varRemoverTanque2 > 0 || varRemoverTanque2_1 > 0)
                 document.add(new Paragraph("Remover Tanque: "+ valorRemocaoTanque2.getText().toString() +" - "+ valorRemocaoTanque2_1.getText().toString() + "    R$"+ (varRemoverTanque2 + varRemoverTanque2_1)+"0",boldServicosPrestados));
-            if (varRemoverCaixinha4x2_2 > 0 || varRemoverCaixinha4x2_2 > 0)
+            if (varRemoverCaixinha4x2_2 > 0 || varRemoverCaixinha4x2_2_1 > 0)
                 document.add(new Paragraph("Rasgar Caixinha 4x2 : "+ valorRasgarCaixinha4x2_2.getText().toString() +" - "+ valorRasgarCaixinha4x2_2_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x2_2 + varRemoverCaixinha4x2_2_1)+"0",boldServicosPrestados));
-            if (varRemoverCaixinha4x4_2 > 0 || varRemoverCaixinha4x4_2 > 0)
+            if (varRemoverCaixinha4x4_2 > 0 || varRemoverCaixinha4x4_2_1 > 0)
                 document.add(new Paragraph("Rasgar Caixinha 4x4 : "+ valorRasgarCaixinha4x4_2.getText().toString() +" - "+ valorRasgarCaixinha4x2_2_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x4_2 + varRemoverCaixinha4x4_2_1)+"0",boldServicosPrestados));
             if (varRemoverHidraulica2 > 0 || varRemoverHidraulica2_1 > 0)
                 document.add(new Paragraph("Rasgar  Hidráulica : "+ valorRasgarHidraulica2.getText().toString() +" - "+ valorRasgarHidraulica2_1.getText().toString() + "    R$"+ (varRemoverHidraulica2 + varRemoverHidraulica2_1)+"0",boldServicosPrestados));
@@ -1383,12 +1537,247 @@ public class Demolicao extends AppCompatActivity {
                 document.add(new Paragraph("Remover Vão para Nicho : "+ valorRemoverVao2.getText().toString() +" - "+ valorRemoverVao2_1.getText().toString() + "    R$"+ (varRemoverVao2 + varRemoverVao2_1)+"0",boldServicosPrestados));
 
         }
-         else{
+        if (valorTotalAreaServico > 0){
+            document.add(paragrafoAreaServico);
+            if (varRemoverRevestimentoParede3 > 0 || varRemoverRevestimentoParede3_1 > 0)
+                document.add(new Paragraph("Remover Revestimento de Parede: "+ valorRevestimentoParede3.getText().toString() +" - "+ valorRevestimentoParede3_1.getText().toString() + "    R$"+ (varRemoverRevestimentoParede3 + varRemoverRevestimentoParede3_1)+"0",boldServicosPrestados));
+            if (varRemoverPiso3 > 0 || varRemoverPiso3_1 > 0)
+                document.add(new Paragraph("Remover Piso: "+ valorRemocaoPiso3.getText().toString() +" - "+ valorRemocaoPiso3_1.getText().toString() + "    R$"+ (varRemoverPiso3 + varRemoverPiso3_1)+"0",boldServicosPrestados));
+            if (varRemoverPia3 > 0 || varRemoverPia3_1 > 0)
+                document.add(new Paragraph("Remover Pia: "+ valorRemocaoPia3.getText().toString() +" - "+ valorRemocaoPia3_1.getText().toString() + "    R$"+ (varRemoverPia3 + varRemoverPia3_1)+"0",boldServicosPrestados));
+            if (varRemoverAlvenaria3 > 0 || varRemoverAlvenaria3_1 > 0)
+                document.add(new Paragraph("Remover Alvenaria: "+ valorRemocacAlvenaria3.getText().toString() +" - "+ valorRemocacAlvenaria3_1.getText().toString() + "    R$"+ (varRemoverAlvenaria3 + varRemoverAlvenaria3_1)+"0",boldServicosPrestados));
+            if (varRemoverTanque3 > 0 || varRemoverTanque3_1 > 0)
+                document.add(new Paragraph("Remover Tanque: "+ valorRemocaoTanque3.getText().toString() +" - "+ valorRemocaoTanque3_1.getText().toString() + "    R$"+ (varRemoverTanque3 + varRemoverTanque3_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x2_3 > 0 || varRemoverCaixinha4x2_3_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x2 : "+ valorRasgarCaixinha4x2_3.getText().toString() +" - "+ valorRasgarCaixinha4x2_3_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x2_3 + varRemoverCaixinha4x2_3_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x4_3 > 0 || varRemoverCaixinha4x4_3_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x4 : "+ valorRasgarCaixinha4x4_3.getText().toString() +" - "+ valorRasgarCaixinha4x2_3_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x4_3 + varRemoverCaixinha4x4_3_1)+"0",boldServicosPrestados));
+            if (varRemoverHidraulica3 > 0 || varRemoverHidraulica3_1 > 0)
+                document.add(new Paragraph("Rasgar  Hidráulica : "+ valorRasgarHidraulica3.getText().toString() +" - "+ valorRasgarHidraulica3_1.getText().toString() + "    R$"+ (varRemoverHidraulica3 + varRemoverHidraulica3_1)+"0",boldServicosPrestados));
+            if (varRemoverGesso3 > 0 || varRemoverGesso3_1 > 0)
+                document.add(new Paragraph("Remover Gesso : "+ valorRemoverGesso3.getText().toString() +" - "+ valorRemoverGesso3_1.getText().toString() + "    R$"+ (varRemoverGesso3 + varRemoverGesso3_1)+"0",boldServicosPrestados));
+            if (varRemoverVasoSanitario3 > 0 || varRemoverVasoSanitario3_1 > 0)
+                document.add(new Paragraph("Remover Vaso Sanitário : "+ valorRemoverVaso3.getText().toString() +" - "+ valorRemoverVaso3_1.getText().toString() + "    R$"+ (varRemoverVasoSanitario3 + varRemoverVasoSanitario3_1)+"0",boldServicosPrestados));
+            if (varRemoverVao3 > 0 || varRemoverVao3_1 > 0)
+                document.add(new Paragraph("Remover Vão para Nicho : "+ valorRemoverVao3.getText().toString() +" - "+ valorRemoverVao3_1.getText().toString() + "    R$"+ (varRemoverVao3 + varRemoverVao3_1)+"0",boldServicosPrestados));
 
-         }
+        }
+        if (valorTotalBanheiro2 > 0){
+            document.add(paragrafoBanheiro2);
+            if (varRemoverRevestimentoParede4 > 0 || varRemoverRevestimentoParede4_1 > 0)
+                document.add(new Paragraph("Remover Revestimento de Parede: "+ valorRevestimentoParede4.getText().toString() +" - "+ valorRevestimentoParede4_1.getText().toString() + "    R$"+ (varRemoverRevestimentoParede4 + varRemoverRevestimentoParede4_1)+"0",boldServicosPrestados));
+            if (varRemoverPiso4 > 0 || varRemoverPiso4_1 > 0)
+                document.add(new Paragraph("Remover Piso: "+ valorRemocaoPiso4.getText().toString() +" - "+ valorRemocaoPiso4_1.getText().toString() + "    R$"+ (varRemoverPiso4 + varRemoverPiso4_1)+"0",boldServicosPrestados));
+            if (varRemoverPia4 > 0 || varRemoverPia4_1 > 0)
+                document.add(new Paragraph("Remover Pia: "+ valorRemocaoPia4.getText().toString() +" - "+ valorRemocaoPia4_1.getText().toString() + "    R$"+ (varRemoverPia4 + varRemoverPia4_1)+"0",boldServicosPrestados));
+            if (varRemoverAlvenaria4 > 0 || varRemoverAlvenaria4_1 > 0)
+                document.add(new Paragraph("Remover Alvenaria: "+ valorRemocacAlvenaria4.getText().toString() +" - "+ valorRemocacAlvenaria4_1.getText().toString() + "    R$"+ (varRemoverAlvenaria4 + varRemoverAlvenaria4_1)+"0",boldServicosPrestados));
+            if (varRemoverTanque4 > 0 || varRemoverTanque4_1 > 0)
+                document.add(new Paragraph("Remover Tanque: "+ valorRemocaoTanque4.getText().toString() +" - "+ valorRemocaoTanque4_1.getText().toString() + "    R$"+ (varRemoverTanque4 + varRemoverTanque4_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x2_4 > 0 || varRemoverCaixinha4x2_4_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x2 : "+ valorRasgarCaixinha4x2_4.getText().toString() +" - "+ valorRasgarCaixinha4x2_4_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x2_4 + varRemoverCaixinha4x2_4_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x4_4 > 0 || varRemoverCaixinha4x4_4_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x4 : "+ valorRasgarCaixinha4x4_4.getText().toString() +" - "+ valorRasgarCaixinha4x2_4_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x4_4 + varRemoverCaixinha4x4_4_1)+"0",boldServicosPrestados));
+            if (varRemoverHidraulica4 > 0 || varRemoverHidraulica4_1 > 0)
+                document.add(new Paragraph("Rasgar  Hidráulica : "+ valorRasgarHidraulica4.getText().toString() +" - "+ valorRasgarHidraulica4_1.getText().toString() + "    R$"+ (varRemoverHidraulica4 + varRemoverHidraulica4_1)+"0",boldServicosPrestados));
+            if (varRemoverGesso4 > 0 || varRemoverGesso4_1 > 0)
+                document.add(new Paragraph("Remover Gesso : "+ valorRemoverGesso4.getText().toString() +" - "+ valorRemoverGesso4_1.getText().toString() + "    R$"+ (varRemoverGesso4 + varRemoverGesso4_1)+"0",boldServicosPrestados));
+            if (varRemoverVasoSanitario4 > 0 || varRemoverVasoSanitario4_1 > 0)
+                document.add(new Paragraph("Remover Vaso Sanitário : "+ valorRemoverVaso4.getText().toString() +" - "+ valorRemoverVaso4_1.getText().toString() + "    R$"+ (varRemoverVasoSanitario4 + varRemoverVasoSanitario4_1)+"0",boldServicosPrestados));
+            if (varRemoverVao4 > 0 || varRemoverVao4_1 > 0)
+                document.add(new Paragraph("Remover Vão para Nicho : "+ valorRemoverVao4.getText().toString() +" - "+ valorRemoverVao4_1.getText().toString() + "    R$"+ (varRemoverVao4 + varRemoverVao4_1)+"0",boldServicosPrestados));
+
+        }
+        if (valorTotalLavabo > 0){
+            document.add(paragrafoLavabo);
+            if (varRemoverRevestimentoParede5 > 0 || varRemoverRevestimentoParede5_1 > 0)
+                document.add(new Paragraph("Remover Revestimento de Parede: "+ valorRevestimentoParede5.getText().toString() +" - "+ valorRevestimentoParede5_1.getText().toString() + "    R$"+ (varRemoverRevestimentoParede5 + varRemoverRevestimentoParede5_1)+"0",boldServicosPrestados));
+            if (varRemoverPiso5 > 0 || varRemoverPiso5_1 > 0)
+                document.add(new Paragraph("Remover Piso: "+ valorRemocaoPiso5.getText().toString() +" - "+ valorRemocaoPiso5_1.getText().toString() + "    R$"+ (varRemoverPiso5 + varRemoverPiso5_1)+"0",boldServicosPrestados));
+            if (varRemoverPia5 > 0 || varRemoverPia5_1 > 0)
+                document.add(new Paragraph("Remover Pia: "+ valorRemocaoPia5.getText().toString() +" - "+ valorRemocaoPia5_1.getText().toString() + "    R$"+ (varRemoverPia5 + varRemoverPia5_1)+"0",boldServicosPrestados));
+            if (varRemoverAlvenaria5 > 0 || varRemoverAlvenaria5_1 > 0)
+                document.add(new Paragraph("Remover Alvenaria: "+ valorRemocacAlvenaria5.getText().toString() +" - "+ valorRemocacAlvenaria5_1.getText().toString() + "    R$"+ (varRemoverAlvenaria5 + varRemoverAlvenaria5_1)+"0",boldServicosPrestados));
+            if (varRemoverTanque5 > 0 || varRemoverTanque5_1 > 0)
+                document.add(new Paragraph("Remover Tanque: "+ valorRemocaoTanque5.getText().toString() +" - "+ valorRemocaoTanque5_1.getText().toString() + "    R$"+ (varRemoverTanque5 + varRemoverTanque5_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x2_5 > 0 || varRemoverCaixinha4x2_5_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x2 : "+ valorRasgarCaixinha4x2_5.getText().toString() +" - "+ valorRasgarCaixinha4x2_5_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x2_5 + varRemoverCaixinha4x2_5_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x4_5 > 0 || varRemoverCaixinha4x4_5_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x4 : "+ valorRasgarCaixinha4x4_5.getText().toString() +" - "+ valorRasgarCaixinha4x2_5_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x4_5 + varRemoverCaixinha4x4_5_1)+"0",boldServicosPrestados));
+            if (varRemoverHidraulica5 > 0 || varRemoverHidraulica5_1 > 0)
+                document.add(new Paragraph("Rasgar  Hidráulica : "+ valorRasgarHidraulica5.getText().toString() +" - "+ valorRasgarHidraulica5_1.getText().toString() + "    R$"+ (varRemoverHidraulica5 + varRemoverHidraulica5_1)+"0",boldServicosPrestados));
+            if (varRemoverGesso5 > 0 || varRemoverGesso5_1 > 0)
+                document.add(new Paragraph("Remover Gesso : "+ valorRemoverGesso5.getText().toString() +" - "+ valorRemoverGesso5_1.getText().toString() + "    R$"+ (varRemoverGesso5 + varRemoverGesso5_1)+"0",boldServicosPrestados));
+            if (varRemoverVasoSanitario5 > 0 || varRemoverVasoSanitario5_1 > 0)
+                document.add(new Paragraph("Remover Vaso Sanitário : "+ valorRemoverVaso5.getText().toString() +" - "+ valorRemoverVaso5_1.getText().toString() + "    R$"+ (varRemoverVasoSanitario5 + varRemoverVasoSanitario5_1)+"0",boldServicosPrestados));
+            if (varRemoverVao5 > 0 || varRemoverVao5_1 > 0)
+                document.add(new Paragraph("Remover Vão para Nicho : "+ valorRemoverVao5.getText().toString() +" - "+ valorRemoverVao5_1.getText().toString() + "    R$"+ (varRemoverVao5 + varRemoverVao5_1)+"0",boldServicosPrestados));
+
+        }
+
+        if ( valorTotalSacadaVaranda > 0){
+            document.add(paragrafoSacadaVaranda);
+            if (varRemoverRevestimentoParede6 > 0 || varRemoverRevestimentoParede6_1 > 0)
+                document.add(new Paragraph("Remover Revestimento de Parede: "+ valorRevestimentoParede6.getText().toString() +" - "+ valorRevestimentoParede6_1.getText().toString() + "    R$"+ (varRemoverRevestimentoParede6 + varRemoverRevestimentoParede6_1)+"0",boldServicosPrestados));
+            if (varRemoverPiso6 > 0 || varRemoverPiso6_1 > 0)
+                document.add(new Paragraph("Remover Piso: "+ valorRemocaoPiso6.getText().toString() +" - "+ valorRemocaoPiso6_1.getText().toString() + "    R$"+ (varRemoverPiso6 + varRemoverPiso6_1)+"0",boldServicosPrestados));
+            if (varRemoverPia6 > 0 || varRemoverPia6_1 > 0)
+                document.add(new Paragraph("Remover Pia: "+ valorRemocaoPia6.getText().toString() +" - "+ valorRemocaoPia6_1.getText().toString() + "    R$"+ (varRemoverPia6 + varRemoverPia6_1)+"0",boldServicosPrestados));
+            if (varRemoverAlvenaria6 > 0 || varRemoverAlvenaria6_1 > 0)
+                document.add(new Paragraph("Remover Alvenaria: "+ valorRemocacAlvenaria6.getText().toString() +" - "+ valorRemocacAlvenaria6_1.getText().toString() + "    R$"+ (varRemoverAlvenaria6 + varRemoverAlvenaria6_1)+"0",boldServicosPrestados));
+            if (varRemoverTanque6 > 0 || varRemoverTanque6_1 > 0)
+                document.add(new Paragraph("Remover Tanque: "+ valorRemocaoTanque6.getText().toString() +" - "+ valorRemocaoTanque6_1.getText().toString() + "    R$"+ (varRemoverTanque6 + varRemoverTanque6_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x2_6 > 0 || varRemoverCaixinha4x2_6_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x2 : "+ valorRasgarCaixinha4x2_6.getText().toString() +" - "+ valorRasgarCaixinha4x2_6_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x2_6 + varRemoverCaixinha4x2_6_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x4_6 > 0 || varRemoverCaixinha4x4_6_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x4 : "+ valorRasgarCaixinha4x4_6.getText().toString() +" - "+ valorRasgarCaixinha4x2_6_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x4_6 + varRemoverCaixinha4x4_6_1)+"0",boldServicosPrestados));
+            if (varRemoverHidraulica6 > 0 || varRemoverHidraulica6_1 > 0)
+                document.add(new Paragraph("Rasgar  Hidráulica : "+ valorRasgarHidraulica6.getText().toString() +" - "+ valorRasgarHidraulica6_1.getText().toString() + "    R$"+ (varRemoverHidraulica6 + varRemoverHidraulica6_1)+"0",boldServicosPrestados));
+            if (varRemoverGesso6 > 0 || varRemoverGesso6_1 > 0)
+                document.add(new Paragraph("Remover Gesso : "+ valorRemoverGesso6.getText().toString() +" - "+ valorRemoverGesso6_1.getText().toString() + "    R$"+ (varRemoverGesso6 + varRemoverGesso6_1)+"0",boldServicosPrestados));
+            if (varRemoverVasoSanitario6 > 0 || varRemoverVasoSanitario6_1 > 0)
+                document.add(new Paragraph("Remover Vaso Sanitário : "+ valorRemoverVaso6.getText().toString() +" - "+ valorRemoverVaso6_1.getText().toString() + "    R$"+ (varRemoverVasoSanitario6 + varRemoverVasoSanitario6_1)+"0",boldServicosPrestados));
+            if (varRemoverVao6 > 0 || varRemoverVao6_1 > 0)
+                document.add(new Paragraph("Remover Vão para Nicho : "+ valorRemoverVao6.getText().toString() +" - "+ valorRemoverVao6_1.getText().toString() + "    R$"+ (varRemoverVao6 + varRemoverVao6_1)+"0",boldServicosPrestados));
+
+        }
+        if ( valorTotalSalaJantar > 0){
+            document.add(paragrafoSalaJantar);
+            if (varRemoverRevestimentoParede7 > 0 || varRemoverRevestimentoParede7_1 > 0)
+                document.add(new Paragraph("Remover Revestimento de Parede: "+ valorRevestimentoParede7.getText().toString() +" - "+ valorRevestimentoParede7_1.getText().toString() + "    R$"+ (varRemoverRevestimentoParede7 + varRemoverRevestimentoParede7_1)+"0",boldServicosPrestados));
+            if (varRemoverPiso7 > 0 || varRemoverPiso7_1 > 0)
+                document.add(new Paragraph("Remover Piso: "+ valorRemocaoPiso7.getText().toString() +" - "+ valorRemocaoPiso7_1.getText().toString() + "    R$"+ (varRemoverPiso7 + varRemoverPiso7_1)+"0",boldServicosPrestados));
+            if (varRemoverPia7 > 0 || varRemoverPia7_1 > 0)
+                document.add(new Paragraph("Remover Pia: "+ valorRemocaoPia7.getText().toString() +" - "+ valorRemocaoPia7_1.getText().toString() + "    R$"+ (varRemoverPia7 + varRemoverPia7_1)+"0",boldServicosPrestados));
+            if (varRemoverAlvenaria7 > 0 || varRemoverAlvenaria7_1 > 0)
+                document.add(new Paragraph("Remover Alvenaria: "+ valorRemocacAlvenaria7.getText().toString() +" - "+ valorRemocacAlvenaria7_1.getText().toString() + "    R$"+ (varRemoverAlvenaria7 + varRemoverAlvenaria7_1)+"0",boldServicosPrestados));
+            if (varRemoverTanque7 > 0 || varRemoverTanque7_1 > 0)
+                document.add(new Paragraph("Remover Tanque: "+ valorRemocaoTanque7.getText().toString() +" - "+ valorRemocaoTanque7_1.getText().toString() + "    R$"+ (varRemoverTanque7 + varRemoverTanque7_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x2_7 > 0 || varRemoverCaixinha4x2_7_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x2 : "+ valorRasgarCaixinha4x2_7.getText().toString() +" - "+ valorRasgarCaixinha4x2_7_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x2_7 + varRemoverCaixinha4x2_7_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x4_7 > 0 || varRemoverCaixinha4x4_7_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x4 : "+ valorRasgarCaixinha4x4_7.getText().toString() +" - "+ valorRasgarCaixinha4x2_7_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x4_7 + varRemoverCaixinha4x4_7_1)+"0",boldServicosPrestados));
+            if (varRemoverHidraulica7 > 0 || varRemoverHidraulica7_1 > 0)
+                document.add(new Paragraph("Rasgar  Hidráulica : "+ valorRasgarHidraulica7.getText().toString() +" - "+ valorRasgarHidraulica7_1.getText().toString() + "    R$"+ (varRemoverHidraulica7 + varRemoverHidraulica7_1)+"0",boldServicosPrestados));
+            if (varRemoverGesso7 > 0 || varRemoverGesso7_1 > 0)
+                document.add(new Paragraph("Remover Gesso : "+ valorRemoverGesso7.getText().toString() +" - "+ valorRemoverGesso7_1.getText().toString() + "    R$"+ (varRemoverGesso7 + varRemoverGesso7_1)+"0",boldServicosPrestados));
+            if (varRemoverVasoSanitario7 > 0 || varRemoverVasoSanitario7_1 > 0)
+                document.add(new Paragraph("Remover Vaso Sanitário : "+ valorRemoverVaso7.getText().toString() +" - "+ valorRemoverVaso7_1.getText().toString() + "    R$"+ (varRemoverVasoSanitario7 + varRemoverVasoSanitario7_1)+"0",boldServicosPrestados));
+            if (varRemoverVao7 > 0 || varRemoverVao7_1 > 0)
+                document.add(new Paragraph("Remover Vão para Nicho : "+ valorRemoverVao7.getText().toString() +" - "+ valorRemoverVao7_1.getText().toString() + "    R$"+ (varRemoverVao7 + varRemoverVao7_1)+"0",boldServicosPrestados));
+
+        }
+        if ( valorTotalSalaEstar > 0){
+            document.add(paragrafoSalaEstar);
+            if (varRemoverRevestimentoParede8 > 0 || varRemoverRevestimentoParede8_1 > 0)
+                document.add(new Paragraph("Remover Revestimento de Parede: "+ valorRevestimentoParede8.getText().toString() +" - "+ valorRevestimentoParede8_1.getText().toString() + "    R$"+ (varRemoverRevestimentoParede8 + varRemoverRevestimentoParede8_1)+"0",boldServicosPrestados));
+            if (varRemoverPiso8 > 0 || varRemoverPiso8_1 > 0)
+                document.add(new Paragraph("Remover Piso: "+ valorRemocaoPiso8.getText().toString() +" - "+ valorRemocaoPiso8_1.getText().toString() + "    R$"+ (varRemoverPiso8 + varRemoverPiso8_1)+"0",boldServicosPrestados));
+            if (varRemoverPia8 > 0 || varRemoverPia8_1 > 0)
+                document.add(new Paragraph("Remover Pia: "+ valorRemocaoPia8.getText().toString() +" - "+ valorRemocaoPia8_1.getText().toString() + "    R$"+ (varRemoverPia8 + varRemoverPia8_1)+"0",boldServicosPrestados));
+            if (varRemoverAlvenaria8 > 0 || varRemoverAlvenaria8_1 > 0)
+                document.add(new Paragraph("Remover Alvenaria: "+ valorRemocacAlvenaria8.getText().toString() +" - "+ valorRemocacAlvenaria8_1.getText().toString() + "    R$"+ (varRemoverAlvenaria8 + varRemoverAlvenaria8_1)+"0",boldServicosPrestados));
+            if (varRemoverTanque8 > 0 || varRemoverTanque8_1 > 0)
+                document.add(new Paragraph("Remover Tanque: "+ valorRemocaoTanque8.getText().toString() +" - "+ valorRemocaoTanque8_1.getText().toString() + "    R$"+ (varRemoverTanque8 + varRemoverTanque8_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x2_8 > 0 || varRemoverCaixinha4x2_8_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x2 : "+ valorRasgarCaixinha4x2_8.getText().toString() +" - "+ valorRasgarCaixinha4x2_8_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x2_8 + varRemoverCaixinha4x2_8_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x4_8 > 0 || varRemoverCaixinha4x4_8_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x4 : "+ valorRasgarCaixinha4x4_8.getText().toString() +" - "+ valorRasgarCaixinha4x2_8_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x4_8 + varRemoverCaixinha4x4_8_1)+"0",boldServicosPrestados));
+            if (varRemoverHidraulica8 > 0 || varRemoverHidraulica8_1 > 0)
+                document.add(new Paragraph("Rasgar  Hidráulica : "+ valorRasgarHidraulica8.getText().toString() +" - "+ valorRasgarHidraulica8_1.getText().toString() + "    R$"+ (varRemoverHidraulica8 + varRemoverHidraulica8_1)+"0",boldServicosPrestados));
+            if (varRemoverGesso8 > 0 || varRemoverGesso8_1 > 0)
+                document.add(new Paragraph("Remover Gesso : "+ valorRemoverGesso8.getText().toString() +" - "+ valorRemoverGesso8_1.getText().toString() + "    R$"+ (varRemoverGesso8 + varRemoverGesso8_1)+"0",boldServicosPrestados));
+            if (varRemoverVasoSanitario8 > 0 || varRemoverVasoSanitario8_1 > 0)
+                document.add(new Paragraph("Remover Vaso Sanitário : "+ valorRemoverVaso8.getText().toString() +" - "+ valorRemoverVaso8_1.getText().toString() + "    R$"+ (varRemoverVasoSanitario8 + varRemoverVasoSanitario8_1)+"0",boldServicosPrestados));
+            if (varRemoverVao8 > 0 || varRemoverVao8_1 > 0)
+                document.add(new Paragraph("Remover Vão para Nicho : "+ valorRemoverVao8.getText().toString() +" - "+ valorRemoverVao8_1.getText().toString() + "    R$"+ (varRemoverVao8 + varRemoverVao8_1)+"0",boldServicosPrestados));
+
+        }
+        if ( valorTotalQuarto1 > 0){
+            document.add(paragrafoQuarto1);
+            if (varRemoverRevestimentoParede9 > 0 || varRemoverRevestimentoParede9_1 > 0)
+                document.add(new Paragraph("Remover Revestimento de Parede: "+ valorRevestimentoParede9.getText().toString() +" - "+ valorRevestimentoParede9_1.getText().toString() + "    R$"+ (varRemoverRevestimentoParede9 + varRemoverRevestimentoParede9_1)+"0",boldServicosPrestados));
+            if (varRemoverPiso9 > 0 || varRemoverPiso9_1 > 0)
+                document.add(new Paragraph("Remover Piso: "+ valorRemocaoPiso9.getText().toString() +" - "+ valorRemocaoPiso9_1.getText().toString() + "    R$"+ (varRemoverPiso9 + varRemoverPiso9_1)+"0",boldServicosPrestados));
+            if (varRemoverPia9 > 0 || varRemoverPia9_1 > 0)
+                document.add(new Paragraph("Remover Pia: "+ valorRemocaoPia9.getText().toString() +" - "+ valorRemocaoPia9_1.getText().toString() + "    R$"+ (varRemoverPia9 + varRemoverPia9_1)+"0",boldServicosPrestados));
+            if (varRemoverAlvenaria9 > 0 || varRemoverAlvenaria9_1 > 0)
+                document.add(new Paragraph("Remover Alvenaria: "+ valorRemocacAlvenaria9.getText().toString() +" - "+ valorRemocacAlvenaria9_1.getText().toString() + "    R$"+ (varRemoverAlvenaria9 + varRemoverAlvenaria9_1)+"0",boldServicosPrestados));
+            if (varRemoverTanque9 > 0 || varRemoverTanque9_1 > 0)
+                document.add(new Paragraph("Remover Tanque: "+ valorRemocaoTanque9.getText().toString() +" - "+ valorRemocaoTanque9_1.getText().toString() + "    R$"+ (varRemoverTanque9 + varRemoverTanque9_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x2_9 > 0 || varRemoverCaixinha4x2_9_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x2 : "+ valorRasgarCaixinha4x2_9.getText().toString() +" - "+ valorRasgarCaixinha4x2_9_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x2_9 + varRemoverCaixinha4x2_9_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x4_9 > 0 || varRemoverCaixinha4x4_9_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x4 : "+ valorRasgarCaixinha4x4_9.getText().toString() +" - "+ valorRasgarCaixinha4x2_9_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x4_9 + varRemoverCaixinha4x4_9_1)+"0",boldServicosPrestados));
+            if (varRemoverHidraulica9 > 0 || varRemoverHidraulica9_1 > 0)
+                document.add(new Paragraph("Rasgar  Hidráulica : "+ valorRasgarHidraulica9.getText().toString() +" - "+ valorRasgarHidraulica9_1.getText().toString() + "    R$"+ (varRemoverHidraulica9 + varRemoverHidraulica9_1)+"0",boldServicosPrestados));
+            if (varRemoverGesso9 > 0 || varRemoverGesso9_1 > 0)
+                document.add(new Paragraph("Remover Gesso : "+ valorRemoverGesso9.getText().toString() +" - "+ valorRemoverGesso9_1.getText().toString() + "    R$"+ (varRemoverGesso9 + varRemoverGesso9_1)+"0",boldServicosPrestados));
+            if (varRemoverVasoSanitario9 > 0 || varRemoverVasoSanitario9_1 > 0)
+                document.add(new Paragraph("Remover Vaso Sanitário : "+ valorRemoverVaso9.getText().toString() +" - "+ valorRemoverVaso9_1.getText().toString() + "    R$"+ (varRemoverVasoSanitario9 + varRemoverVasoSanitario9_1)+"0",boldServicosPrestados));
+            if (varRemoverVao9 > 0 || varRemoverVao9_1 > 0)
+                document.add(new Paragraph("Remover Vão para Nicho : "+ valorRemoverVao9.getText().toString() +" - "+ valorRemoverVao9_1.getText().toString() + "    R$"+ (varRemoverVao9 + varRemoverVao9_1)+"0",boldServicosPrestados));
+
+        }
+        if ( valorTotalQuarto2 > 0){
+            document.add(paragrafoQuarto2);
+            if (varRemoverRevestimentoParede10 > 0 || varRemoverRevestimentoParede10_1 > 0)
+                document.add(new Paragraph("Remover Revestimento de Parede: "+ valorRevestimentoParede10.getText().toString() +" - "+ valorRevestimentoParede10_1.getText().toString() + "    R$"+ (varRemoverRevestimentoParede10 + varRemoverRevestimentoParede10_1)+"0",boldServicosPrestados));
+            if (varRemoverPiso10 > 0 || varRemoverPiso10_1 > 0)
+                document.add(new Paragraph("Remover Piso: "+ valorRemocaoPiso10.getText().toString() +" - "+ valorRemocaoPiso10_1.getText().toString() + "    R$"+ (varRemoverPiso10 + varRemoverPiso10_1)+"0",boldServicosPrestados));
+            if (varRemoverPia10 > 0 || varRemoverPia10_1 > 0)
+                document.add(new Paragraph("Remover Pia: "+ valorRemocaoPia10.getText().toString() +" - "+ valorRemocaoPia10_1.getText().toString() + "    R$"+ (varRemoverPia10 + varRemoverPia10_1)+"0",boldServicosPrestados));
+            if (varRemoverAlvenaria10 > 0 || varRemoverAlvenaria10_1 > 0)
+                document.add(new Paragraph("Remover Alvenaria: "+ valorRemocacAlvenaria10.getText().toString() +" - "+ valorRemocacAlvenaria10_1.getText().toString() + "    R$"+ (varRemoverAlvenaria10 + varRemoverAlvenaria10_1)+"0",boldServicosPrestados));
+            if (varRemoverTanque10 > 0 || varRemoverTanque10_1 > 0)
+                document.add(new Paragraph("Remover Tanque: "+ valorRemocaoTanque10.getText().toString() +" - "+ valorRemocaoTanque10_1.getText().toString() + "    R$"+ (varRemoverTanque10 + varRemoverTanque10_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x2_10 > 0 || varRemoverCaixinha4x2_10_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x2 : "+ valorRasgarCaixinha4x2_10.getText().toString() +" - "+ valorRasgarCaixinha4x2_10_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x2_10 + varRemoverCaixinha4x2_10_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x4_10 > 0 || varRemoverCaixinha4x4_10_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x4 : "+ valorRasgarCaixinha4x4_10.getText().toString() +" - "+ valorRasgarCaixinha4x2_10_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x4_10 + varRemoverCaixinha4x4_10_1)+"0",boldServicosPrestados));
+            if (varRemoverHidraulica10 > 0 || varRemoverHidraulica10_1 > 0)
+                document.add(new Paragraph("Rasgar  Hidráulica : "+ valorRasgarHidraulica10.getText().toString() +" - "+ valorRasgarHidraulica10_1.getText().toString() + "    R$"+ (varRemoverHidraulica10 + varRemoverHidraulica10_1)+"0",boldServicosPrestados));
+            if (varRemoverGesso10 > 0 || varRemoverGesso10_1 > 0)
+                document.add(new Paragraph("Remover Gesso : "+ valorRemoverGesso10.getText().toString() +" - "+ valorRemoverGesso10_1.getText().toString() + "    R$"+ (varRemoverGesso10 + varRemoverGesso10_1)+"0",boldServicosPrestados));
+            if (varRemoverVasoSanitario10 > 0 || varRemoverVasoSanitario10_1 > 0)
+                document.add(new Paragraph("Remover Vaso Sanitário : "+ valorRemoverVaso10.getText().toString() +" - "+ valorRemoverVaso10_1.getText().toString() + "    R$"+ (varRemoverVasoSanitario10 + varRemoverVasoSanitario10_1)+"0",boldServicosPrestados));
+            if (varRemoverVao10 > 0 || varRemoverVao10_1 > 0)
+                document.add(new Paragraph("Remover Vão para Nicho : "+ valorRemoverVao10.getText().toString() +" - "+ valorRemoverVao10_1.getText().toString() + "    R$"+ (varRemoverVao10 + varRemoverVao10_1)+"0",boldServicosPrestados));
+
+        }
+        if ( valorTotalQuarto3 > 0){
+            document.add(paragrafoQuarto3);
+            if (varRemoverRevestimentoParede11 > 0 || varRemoverRevestimentoParede11_1 > 0)
+                document.add(new Paragraph("Remover Revestimento de Parede: "+ valorRevestimentoParede11.getText().toString() +" - "+ valorRevestimentoParede11_1.getText().toString() + "    R$"+ (varRemoverRevestimentoParede11 + varRemoverRevestimentoParede11_1)+"0",boldServicosPrestados));
+            if (varRemoverPiso11 > 0 || varRemoverPiso11_1 > 0)
+                document.add(new Paragraph("Remover Piso: "+ valorRemocaoPiso11.getText().toString() +" - "+ valorRemocaoPiso11_1.getText().toString() + "    R$"+ (varRemoverPiso11 + varRemoverPiso11_1)+"0",boldServicosPrestados));
+            if (varRemoverPia11 > 0 || varRemoverPia11_1 > 0)
+                document.add(new Paragraph("Remover Pia: "+ valorRemocaoPia11.getText().toString() +" - "+ valorRemocaoPia11_1.getText().toString() + "    R$"+ (varRemoverPia11 + varRemoverPia11_1)+"0",boldServicosPrestados));
+            if (varRemoverAlvenaria11 > 0 || varRemoverAlvenaria11_1 > 0)
+                document.add(new Paragraph("Remover Alvenaria: "+ valorRemocacAlvenaria11.getText().toString() +" - "+ valorRemocacAlvenaria11_1.getText().toString() + "    R$"+ (varRemoverAlvenaria11 + varRemoverAlvenaria11_1)+"0",boldServicosPrestados));
+            if (varRemoverTanque11 > 0 || varRemoverTanque11_1 > 0)
+                document.add(new Paragraph("Remover Tanque: "+ valorRemocaoTanque11.getText().toString() +" - "+ valorRemocaoTanque11_1.getText().toString() + "    R$"+ (varRemoverTanque11 + varRemoverTanque11_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x2_11 > 0 || varRemoverCaixinha4x2_11_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x2 : "+ valorRasgarCaixinha4x2_11.getText().toString() +" - "+ valorRasgarCaixinha4x2_11_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x2_11 + varRemoverCaixinha4x2_11_1)+"0",boldServicosPrestados));
+            if (varRemoverCaixinha4x4_11 > 0 || varRemoverCaixinha4x4_11_1 > 0)
+                document.add(new Paragraph("Rasgar Caixinha 4x4 : "+ valorRasgarCaixinha4x4_11.getText().toString() +" - "+ valorRasgarCaixinha4x2_11_1.getText().toString() + "    R$"+ (varRemoverCaixinha4x4_11 + varRemoverCaixinha4x4_11_1)+"0",boldServicosPrestados));
+            if (varRemoverHidraulica11 > 0 || varRemoverHidraulica11_1 > 0)
+                document.add(new Paragraph("Rasgar  Hidráulica : "+ valorRasgarHidraulica11.getText().toString() +" - "+ valorRasgarHidraulica11_1.getText().toString() + "    R$"+ (varRemoverHidraulica11 + varRemoverHidraulica11_1)+"0",boldServicosPrestados));
+            if (varRemoverGesso11 > 0 || varRemoverGesso11_1 > 0)
+                document.add(new Paragraph("Remover Gesso : "+ valorRemoverGesso11.getText().toString() +" - "+ valorRemoverGesso11_1.getText().toString() + "    R$"+ (varRemoverGesso11 + varRemoverGesso11_1)+"0",boldServicosPrestados));
+            if (varRemoverVasoSanitario11 > 0 || varRemoverVasoSanitario11_1 > 0)
+                document.add(new Paragraph("Remover Vaso Sanitário : "+ valorRemoverVaso11.getText().toString() +" - "+ valorRemoverVaso11_1.getText().toString() + "    R$"+ (varRemoverVasoSanitario11 + varRemoverVasoSanitario11_1)+"0",boldServicosPrestados));
+            if (varRemoverVao11 > 0 || varRemoverVao11_1 > 0)
+                document.add(new Paragraph("Remover Vão para Nicho : "+ valorRemoverVao11.getText().toString() +" - "+ valorRemoverVao11_1.getText().toString() + "    R$"+ (varRemoverVao11 + varRemoverVao11_1)+"0",boldServicosPrestados));
+
+        }
 
 
 
+
+
+        document.add(valorTotal);
        // document.add(new LineSeparator());
         document.close();
         previewPdf();
@@ -1517,4 +1906,5 @@ public class Demolicao extends AppCompatActivity {
             paragraph.add(new Paragraph(""));
         }
     }
+
 }
