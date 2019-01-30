@@ -38,7 +38,8 @@
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:screenOrientation="userPortrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity android:name=".Splash" />
         <activity android:name=".ActivitysNavigation.Orcamentos" />
         <activity android:name=".ActivitysNavigation.Parcelamento" />

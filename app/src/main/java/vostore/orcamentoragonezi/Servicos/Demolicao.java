@@ -8,6 +8,7 @@ import android.Manifest;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -38,7 +39,11 @@ import com.itextpdf.text.FontFactory;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.Rectangle;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.text.pdf.parser.Matrix;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -389,7 +394,7 @@ public class Demolicao extends AppCompatActivity {
         checker = new PermissionsChecker(this);
 
         //Botao Gerar Relatorio
-        btn_finish = findViewById(R.id.btnFinishDemolicao);
+        btn_finish = findViewById(R.id.btnFinalizar);
         relativeLayout = findViewById(R.id.layout_demolicao);
 
         //Fazendo cast/ instanciando os checklists aos seus respectivos views
@@ -1400,7 +1405,11 @@ public class Demolicao extends AppCompatActivity {
            // Log.i(TAG, "Created a new directory for PDF");
         }
 
-        Font bold = FontFactory.getFont("Times-Roman, Bold", 14, Font.BOLD);
+
+
+        Font fonteEndereco = FontFactory.getFont("Times-Roman", 14, Font.NORMAL);
+        Font fonteOrcamento = FontFactory.getFont("Times-Roman", 13, Font.NORMAL);
+        Font bold = FontFactory.getFont("Times-Roman, Bold", 15, Font.BOLD);
         Font boldTitulo = FontFactory.getFont("Times-Roman, Bold", 22, Font.BOLD);
         Font boldTotal= FontFactory.getFont("Times-Roman, Bold", 17, Font.BOLD);
         Font boldServicos = FontFactory.getFont("Times-Roman, Bold", 14, Font.BOLD);
@@ -1413,9 +1422,13 @@ public class Demolicao extends AppCompatActivity {
         document.open();
 
 
+
+
+
         //Adicionando Logo
         Drawable d = getResources ().getDrawable (R.drawable.logodoc);
         Bitmap bitmap = ((BitmapDrawable)d).getBitmap();
+        Bitmap resizedBitmap = Bitmap.createScaledBitmap(                bitmap, 500, 80, true);
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
         byte[] bitmapData = stream.toByteArray();
@@ -1427,12 +1440,14 @@ public class Demolicao extends AppCompatActivity {
             e.printStackTrace();
         }
 
+
         //Data
         Paragraph dataParagrafo = new Paragraph(String.valueOf(now), fontData);
         dataParagrafo.setAlignment(Element.ALIGN_LEFT);
         Paragraph espacoBranco = new Paragraph("", boldTitulo);
+        Paragraph tituloParagrafo = new Paragraph("Orçamento Demolição", boldTitulo);
         Paragraph valorTotal = new Paragraph("TOTAL R$ "+ total+"0", boldTotal);
-        Paragraph paragrafoCozinha = new Paragraph("Cozinha", boldServicos);
+        Paragraph paragrafoCozinha = new Paragraph("Cozinha                                                                                Total R$"+ valorTotalCozinha+"0", boldServicos);
         Paragraph paragrafoBanheiro = new Paragraph("Banheiro", boldServicos);
         Paragraph paragrafoAreaServico = new Paragraph("Área de Serviço", boldServicos);
         Paragraph paragrafoBanheiro2 = new Paragraph("Banheiro Suíte", boldServicos);
@@ -1448,6 +1463,127 @@ public class Demolicao extends AppCompatActivity {
 
         Paragraph paragrafoServicos = new Paragraph("Quarto Suíte", boldServicosPrestados);
 
+
+        //Tabela Endereco
+        PdfPTable table = new PdfPTable(2);
+        table.setWidthPercentage(100);
+        table.setWidths(new int[]{1, 2});
+
+        //Adicionando logo e retirando a borda
+        PdfPCell cell2 = new PdfPCell();
+        cell2.addElement(image);
+        cell2.setBorder(Rectangle.NO_BORDER);
+
+        //Adicionando a logo no documento com o texto do endereço no lado direito
+        table.addCell(cell2);
+        try {
+            table.addCell(createTextCell("RAGONEZI - Engenharia e Reformas\nTEL: (19) 97402-3202 - Engº Felipe / (19) 99112-2676 Engº Fabio\n" +
+                    "ragoneziengenharia@gmail.com\nRua João Burato, 88 - Barão Geraldo - Campinas/SP"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        //Adicionando titulo
+
+        PdfPTable tableOrcamento = new PdfPTable(2);
+        tableOrcamento.setWidthPercentage(100.0f);
+        tableOrcamento.setWidths(new int[]{1, 2});
+        PdfPCell cellOrcamento = new PdfPCell();
+        PdfPCell cellNumeroNota = new PdfPCell();
+        PdfPCell cellBranco = new PdfPCell();
+        PdfPCell cellBranco2 = new PdfPCell();
+
+
+        Paragraph paragrafoOrcamento = new Paragraph("ORÇAMENTO 000"+alterarNumeroNota, fonteOrcamento);
+        Paragraph paragrafobranco = new Paragraph("", fonteOrcamento);
+
+       // paragrafoOrcamento.setLeading(1f);
+        Paragraph paragrafoNumeroNota = new Paragraph("000"+alterarNumeroNota, bold);
+        //paragrafoNumeroNota.setLeading(1f);
+        paragrafoOrcamento.setAlignment(Element.ALIGN_RIGHT);
+        paragrafoNumeroNota.setAlignment(Element.ALIGN_RIGHT);
+        cellOrcamento.addElement(paragrafoOrcamento);
+
+        cellBranco.setVerticalAlignment(Element.ALIGN_BOTTOM);
+        cellBranco2.setVerticalAlignment(Element.ALIGN_BOTTOM);
+        cellOrcamento.setVerticalAlignment(Element.ALIGN_BOTTOM);
+        cellNumeroNota.setVerticalAlignment(Element.ALIGN_BOTTOM);
+        cellOrcamento.setBorder(Rectangle.NO_BORDER);
+        cellBranco.setBorder(Rectangle.NO_BORDER);
+        cellBranco2.setBorder(Rectangle.NO_BORDER);
+        //cellNumeroNota.setBorder(Rectangle.NO_BORDER);
+        cellNumeroNota.addElement(paragrafoNumeroNota);
+        cellOrcamento.addElement(paragrafoNumeroNota);
+        cellBranco.addElement(paragrafobranco);
+        cellBranco2.addElement(paragrafobranco);
+        //tableOrcamento.addCell(cellBranco);
+       // tableOrcamento.addCell(cellBranco2);
+        tableOrcamento.addCell(cellOrcamento);
+        //tableOrcamento.addCell(cellNumeroNota);
+
+
+
+        //Nome do Cliente
+
+        PdfPTable tableNomeCliente = new PdfPTable(2);
+        tableNomeCliente.setWidthPercentage(100);
+        tableNomeCliente.setWidths(new int[]{1, 2});
+        PdfPCell cellNomeCliente = new PdfPCell();
+        PdfPCell cellCliente = new PdfPCell();
+
+        cellCliente.setBorder(Rectangle.NO_BORDER);
+        cellNomeCliente.setBorder(Rectangle.NO_BORDER);
+
+
+
+
+
+        Paragraph paragrafoCliente = new Paragraph(nomeCliente, fonteOrcamento);
+
+
+
+
+
+
+
+        //Rodape
+        PdfPTable tableProposta = new PdfPTable(1);
+        tableNomeCliente.setWidthPercentage(100);
+        tableNomeCliente.setWidths(new int[]{2, 1});
+        PdfPCell cellProposta = new PdfPCell();
+        PdfPCell cellTextao = new PdfPCell();
+
+        cellCliente.setBorder(Rectangle.NO_BORDER);
+        cellNomeCliente.setBorder(Rectangle.NO_BORDER);
+
+        Paragraph paragrafoDisposicao = new Paragraph("Fico à disposição para qualquer dúvida e negociação\n" +
+                "Atenciosamente, Eng° Felipe Ragonezi\n" +
+                "RAGONEZI – Engenharia e Reformas\n", fonteOrcamento);
+        paragrafoDisposicao.setAlignment(Element.ALIGN_RIGHT);
+        Paragraph paragrafoProposta = new Paragraph("Proposta", bold);
+        paragrafoProposta.setAlignment(Element.ALIGN_CENTER);
+        Paragraph paragrafoTextao = new Paragraph("Todos os serviços citados serão acompanhados por um engenheiro capacitado e credenciado. Nota fiscal para todos os itens apresentados.\n" +
+                "Forma de pagamento 40% na entrada, fechamento de contrato + 60% na conclusão do processo.\n" +
+                "São aceitos pagamentos com cartão de débito e crédito, tambem poderá ser efetuado o pagamento por boleto bancário e/ou transferência.\n" +
+                "Esses valor não estão inclusos os materiais que serão usados.\n", fonteOrcamento);
+        paragrafoTextao.setAlignment(Element.ALIGN_CENTER);
+
+
+        cellProposta.addElement(paragrafoProposta);
+        cellTextao.addElement(paragrafoTextao);
+        tableProposta.addCell(cellProposta);
+        tableProposta.addCell(cellTextao);
+
+
+
+
+
+
+
+
+
+        //
+
+
         espacoBranco.add(new Paragraph("", boldTitulo));
         espacoBranco.add(new Paragraph("", boldTitulo));
         //Paragrafos
@@ -1460,6 +1596,7 @@ public class Demolicao extends AppCompatActivity {
 
         //Alinhar paragrafos
         titulo.setAlignment(Element.ALIGN_CENTER);
+        tituloParagrafo.setAlignment(Element.ALIGN_CENTER);
         valorTotal.setAlignment(Element.ALIGN_CENTER);
         //Valores de Banheiro
        // banheiro.add(new Paragraph ("Remover revestimento 1"));
@@ -1469,16 +1606,32 @@ public class Demolicao extends AppCompatActivity {
 
         String numeroNotaExibir = Integer.toString(numeroNotaAtual);
 
-         document.add(dataParagrafo);
-         document.addTitle("Orçamento de Demolição");
-         document.add(new Paragraph("Número da nota:000"+numeroNotaExibir));
+        // document.add(image);
+         document.add(table);
+         document.add(Chunk.NEWLINE);
+         document.add(tableOrcamento);
 
-            if (nomeCliente.length() > 0)
-                document.add(new Paragraph("yCliente: "+ nomeCliente));
+         //document.add(dataParagrafo);
+         //document.addTitle("Orçamento de Demolição");
+         //document.add(new Paragraph("Número da nota:000"+numeroNotaExibir));
+
+        if (nomeCliente.length() > 0) {
+
+            Paragraph paragrafoNomeCliente = new Paragraph("Nome do Cliente:" + nomeCliente, bold);
+            cellNomeCliente.addElement(paragrafoNomeCliente);
+            tableNomeCliente.addCell(cellNomeCliente);
+            document.add(tableNomeCliente);
+        }else{
+            Paragraph paragrafoNomeCliente = new Paragraph("Nome do Cliente:____________________________ " , bold);
+            cellNomeCliente.addElement(paragrafoNomeCliente);
+            tableNomeCliente.addCell(cellNomeCliente);
+            document.add(tableNomeCliente);
+
+        }
          document.add(Chunk.NEWLINE);
          document.add(Chunk.NEWLINE);
          document.add(Chunk.NEWLINE);
-         document.add(image);
+         //document.add(image);
          document.add(Chunk.NEWLINE);
          document.add(titulo);
          document.add(Chunk.NEWLINE);
@@ -1486,11 +1639,16 @@ public class Demolicao extends AppCompatActivity {
          document.add(Chunk.NEWLINE);
 
          if (valorTotalCozinha > 0){
-             document.add(paragrafoCozinha);
+             PdfPTable tableCozinha = new PdfPTable(1);
+             tableCozinha.setWidthPercentage(100);
+             PdfPCell cellCozinha;
+
+             tableCozinha.addCell(paragrafoCozinha);
+             document.add(tableCozinha);
              if (varRemoverRevestimentoParede > 0 || varRemoverRevestimentoParede1 > 0)
-                 document.add(new Paragraph("Remover Revestimento de Parede: "+ valorRevestimentoParede1.getText().toString() +" - "+ valorRevestimentoParede1_1.getText().toString() + "    R$"+ (varRemoverRevestimentoParede1 + varRemoverRevestimentoParede)+"0",boldServicosPrestados));
+                 document.add(new Paragraph(">>>Remover Revestimento de Parede: " + (varRemoverRevestimentoParede + varRemoverRevestimentoParede1)+" m² -----" + "R$"+ (varRemoverRevestimentoParede1 + varRemoverRevestimentoParede)+"0",boldServicosPrestados));
              if (varRemoverPiso > 0 || varRemoverPiso1 > 0)
-                document.add(new Paragraph("Remover Piso: "+ valorRemocaoPiso1.getText().toString() +" - "+ valorRemocaoPiso1_1.getText().toString() + "    R$"+ (varRemoverPiso + varRemoverPiso1)+"0",boldServicosPrestados));
+                document.add(new Paragraph(">>>Remover Piso: "+ (varRemoverPiso + varRemoverPiso1)+" m² -----" + "R$"+ (varRemoverPiso + varRemoverPiso1)+"0",boldServicosPrestados));
              if (varRemoverPia > 0 || varRemoverPia1 > 0)
                 document.add(new Paragraph("Remover Pia: "+ valorRemocaoPia1.getText().toString() +" - "+ valorRemocaoPia1_1.getText().toString() + "    R$"+ (varRemoverPia + varRemoverPia1)+"0",boldServicosPrestados));
              if (varRemoverAlvenaria > 0 || varRemoverAlvenaria1 > 0)
@@ -1509,6 +1667,7 @@ public class Demolicao extends AppCompatActivity {
                 document.add(new Paragraph("Remover Vaso Sanitário : "+ valorRemoverVaso1.getText().toString() +" - "+ valorRemoverVaso1_1.getText().toString() + "    R$"+ (varRemoverVasoSanitario1 + varRemoverVasoSanitario)+"0",boldServicosPrestados));
              if (varRemoverVao > 0 || varRemoverVao1 > 0)
                 document.add(new Paragraph("Remover Vão para Nicho : "+ valorRemoverVao1.getText().toString() +" - "+ valorRemoverVao1_1.getText().toString() + "    R$"+ (varRemoverVao1 + varRemoverVao)+"0",boldServicosPrestados));
+
 
          }
         if (valorTotalBanheiro1 > 0){
@@ -1566,7 +1725,7 @@ public class Demolicao extends AppCompatActivity {
         if (valorTotalBanheiro2 > 0){
             document.add(paragrafoBanheiro2);
             if (varRemoverRevestimentoParede4 > 0 || varRemoverRevestimentoParede4_1 > 0)
-                document.add(new Paragraph("Remover Revestimento de Parede: "+ valorRevestimentoParede4.getText().toString() +" - "+ valorRevestimentoParede4_1.getText().toString() + "    R$"+ (varRemoverRevestimentoParede4 + varRemoverRevestimentoParede4_1)+"0",boldServicosPrestados));
+                document.add(new Paragraph("Remover Revestimento de Parede: "    + valorRevestimentoParede4.getText().toString() +" - "+ valorRevestimentoParede4_1.getText().toString() + "    R$"+ (varRemoverRevestimentoParede4 + varRemoverRevestimentoParede4_1)+"0",boldServicosPrestados));
             if (varRemoverPiso4 > 0 || varRemoverPiso4_1 > 0)
                 document.add(new Paragraph("Remover Piso: "+ valorRemocaoPiso4.getText().toString() +" - "+ valorRemocaoPiso4_1.getText().toString() + "    R$"+ (varRemoverPiso4 + varRemoverPiso4_1)+"0",boldServicosPrestados));
             if (varRemoverPia4 > 0 || varRemoverPia4_1 > 0)
@@ -1776,9 +1935,18 @@ public class Demolicao extends AppCompatActivity {
 
 
 
-
+        document.add(Chunk.NEWLINE);
         document.add(valorTotal);
+        document.add(Chunk.NEWLINE);
+
+         document.add(tableProposta);
+        document.add(Chunk.NEWLINE);
+         document.add(new Paragraph("- Validade desde documento 30 dias a contar da data de envio.\n" +
+                 "- Itens não listados acima acordar valor em outra planilha.\n" +
+                 "- Este orçamento não tem validade para itens orçados separadamente.\n"));
        // document.add(new LineSeparator());
+        document.add(Chunk.NEWLINE);
+        document.add(paragrafoDisposicao);
         document.close();
         previewPdf();
 
@@ -1905,6 +2073,22 @@ public class Demolicao extends AppCompatActivity {
         for(int i=0; i<number; i++){
             paragraph.add(new Paragraph(""));
         }
+    }
+    public static PdfPCell createImageCell(String path) throws DocumentException, IOException {
+        Image img = Image.getInstance(path);
+        PdfPCell cell = new PdfPCell(img, true);
+        return cell;
+    }
+    public static PdfPCell createTextCell(String text) throws DocumentException, IOException {
+        double tamanhoFonte = 9.5;
+        Font fonteEndereco = FontFactory.getFont("Times-Roman", (float) tamanhoFonte, Font.NORMAL);
+        PdfPCell cell = new PdfPCell();
+        Paragraph p = new Paragraph(text, fonteEndereco);
+        p.setAlignment(Element.ALIGN_RIGHT);
+        cell.addElement(p);
+        cell.setVerticalAlignment(Element.ALIGN_BOTTOM);
+        cell.setBorder(Rectangle.NO_BORDER);
+        return cell;
     }
 
 }
