@@ -108,8 +108,14 @@ public class Main2Activity extends AppCompatActivity
              private RelativeLayout relativeLayout;
              private Document document;
              private CheckBox checkBoxCozinha;
+             private CheckBox  checkBoxPinturaCozinha,checkBoxPinturaBanheiroSocial,checkBoxPinturaAreaServico,checkBoxPinturaBanheiroSuite,checkBoxPinturaLavabo,checkBoxPinturaSacadaVaranda,checkBoxPinturaSalaJantar,checkBoxPinturaSalaEstar,checkBoxPinturaQuartoSuite,checkBoxPinturaQuarto1,checkBoxPinturaQuarto2;
+             private CheckBox  checkBoxHidraulicaCozinha,checkBoxHidraulicaBanheiroSocial,checkBoxHidraulicaAreaServico,checkBoxHidraulicaBanheiroSuite,checkBoxHidraulicaLavabo,checkBoxHidraulicaSacadaVaranda,checkBoxHidraulicaSalaJantar,checkBoxHidraulicaSalaEstar,checkBoxHidraulicaQuartoSuite,checkBoxHidraulicaQuarto1,checkBoxHidraulicaQuarto2;
+             private CheckBox checkBoxRevestimentoCozinha,checkBoxRevestimentoBanheiroSocial,checkBoxRevestimentoAreaServico,checkBoxRevestimentoBanheiroSuite,checkBoxRevestimentoLavabo,checkBoxRevestimentoSacadaVaranda,checkBoxRevestimentoSalaJantar,checkBoxRevestimentoSalaEstar,checkBoxRevestimentoQuartoSuite,checkBoxRevestimentoQuarto1,checkBoxRevestimentoQuarto2;
              private CheckBox checkBoxBanheiroSocial,checkBoxAreaServico,checkBoxBanheiroSuite,checkBoxLavabo,checkBoxSacadaVaranda,checkBoxSalaJantar,checkBoxSalaEstar,checkBoxQuartoSuite,checkBoxQuarto1,checkBoxQuarto2;
              private LinearLayout linearLayout1,linearLayout2,linearLayout3,linearLayout4,linearLayout5,linearLayout6,linearLayout7,linearLayout8,linearLayout9,linearLayout10,linearLayout11;
+             private LinearLayout linearLayoutPintura1,linearLayoutPintura2,linearLayoutPintura3,linearLayoutPintura4,linearLayoutPintura5,linearLayoutPintura6,linearLayoutPintura7,linearLayoutPintura8,linearLayoutPintura9,linearLayoutPintura10,linearLayoutPintura11;
+             private LinearLayout linearLayoutHidraulica1,linearLayoutHidraulica2,linearLayoutHidraulica3,linearLayoutHidraulica4,linearLayoutHidraulica5,linearLayoutHidraulica6,linearLayoutHidraulica7,linearLayoutHidraulica8,linearLayoutHidraulica9,linearLayoutHidraulica10,linearLayoutHidraulica11;
+             private LinearLayout linearLayoutRevestimento1,linearLayoutRevestimento2,linearLayoutRevestimento3,linearLayoutRevestimento4,linearLayoutRevestimento5,linearLayoutRevestimento6,linearLayoutRevestimento7,linearLayoutRevestimento8,linearLayoutRevestimento9,linearLayoutRevestimento10,linearLayoutRevestimento11;
              private EditText valorRevestimentoParede1,valorRevestimentoParede1_1,valorRemocaoPiso1,valorRemocaoPiso1_1,valorRemocaoPia1,valorRemocaoPia1_1,valorRemocacAlvenaria1,valorRemocacAlvenaria1_1,valorRemocaoTanque1,valorRemocaoTanque1_1,valorRasgarCaixinha4x2_1,valorRasgarCaixinha4x2_1_1,valorRasgarCaixinha4x4_1,valorRasgarCaixinha4x4_1_1,valorRasgarHidraulica1,valorRasgarHidraulica1_1,valorRemoverGesso1,valorRemoverGesso1_1,valorRemoverVaso1,valorRemoverVaso1_1,valorRemoverVao1,valorRemoverVao1_1,
                      valorRevestimentoParede2,valorRevestimentoParede2_1,valorRemocaoPiso2,valorRemocaoPiso2_1,valorRemocaoPia2,valorRemocaoPia2_1,valorRemocacAlvenaria2,valorRemocacAlvenaria2_1,valorRemocaoTanque2,valorRemocaoTanque2_1,valorRasgarCaixinha4x2_2,valorRasgarCaixinha4x2_2_1,valorRasgarCaixinha4x4_2,valorRasgarCaixinha4x4_2_1,valorRasgarHidraulica2,valorRasgarHidraulica2_1,valorRemoverGesso2,valorRemoverGesso2_1,valorRemoverVaso2,valorRemoverVaso2_1,valorRemoverVao2,valorRemoverVao2_1,
                      valorRevestimentoParede3,valorRevestimentoParede3_1,valorRemocaoPiso3,valorRemocaoPiso3_1,valorRemocaoPia3,valorRemocaoPia3_1,valorRemocacAlvenaria3,valorRemocacAlvenaria3_1,valorRemocaoTanque3,valorRemocaoTanque3_1,valorRasgarCaixinha4x2_3,valorRasgarCaixinha4x2_3_1,valorRasgarCaixinha4x4_3,valorRasgarCaixinha4x4_3_1,valorRasgarHidraulica3,valorRasgarHidraulica3_1,valorRemoverGesso3,valorRemoverGesso3_1,valorRemoverVaso3,valorRemoverVaso3_1,valorRemoverVao3,valorRemoverVao3_1,
@@ -147,10 +153,10 @@ public class Main2Activity extends AppCompatActivity
 
 
              //Pintura
-             private EditText valorPinturaPorta1,valorPinturaPorta1_1,valorPinturaPorta2,valorPinturaPorta2_1,valorPinturaPorta3,valorPinturaPorta3_1,valorPinturaPorta4,valorPinturaPorta4_1,
-                     valorPinturaJanela1,valorPinturaJanela1_1,valorPinturaJanela2,valorPinturaJanela2_1,valorPinturaJanela3,valorPinturaJanela3_1,valorPinturaJanela4,valorPinturaJanela4_1,
-                     valorPinturaEfeitoDecorativo1,valorPinturaEfeitoDecorativo1_1,valorPinturaEfeitoDecorativo2,valorPinturaEfeitoDecorativo2_1,valorPinturaEfeitoDecorativo3,valorPinturaEfeitoDecorativo3_1,valorPinturaEfeitoDecorativo4,valorPinturaEfeitoDecorativo4_1,
-                     valorPinturaReparoGesso1,valorPinturaReparoGesso1_1,valorPinturaReparoGesso2,valorPinturaReparoGesso2_1,valorPinturaReparoGesso3,valorPinturaReparoGesso3_1,valorPinturaReparoGesso4,valorPinturaReparoGesso4_1;
+             private EditText valorPinturaPorta1,valorPinturaPorta1_1,valorPinturaPorta2,valorPinturaPorta2_1,valorPinturaPorta3,valorPinturaPorta3_1,valorPinturaPorta4,valorPinturaPorta4_1,valorPinturaPorta5,valorPinturaPorta5_1,valorPinturaPorta6,valorPinturaPorta6_1,valorPinturaPorta7,valorPinturaPorta7_1,valorPinturaPorta8,valorPinturaPorta8_1,valorPinturaPorta9,valorPinturaPorta9_1,valorPinturaPorta10,valorPinturaPorta10_1,valorPinturaPorta11,valorPinturaPorta11_1,
+                     valorPinturaJanela1,valorPinturaJanela1_1,valorPinturaJanela2,valorPinturaJanela2_1,valorPinturaJanela3,valorPinturaJanela3_1,valorPinturaJanela4,valorPinturaJanela4_1,valorPinturaJanela5,valorPinturaJanela5_1,valorPinturaJanela6,valorPinturaJanela6_1,valorPinturaJanela7,valorPinturaJanela7_1,valorPinturaJanela8,valorPinturaJanela8_1,valorPinturaJanela9,valorPinturaJanela9_1,valorPinturaJanela10,valorPinturaJanela10_1,valorPinturaJanela11,valorPinturaJanela11_1,
+             valorPinturaEfeitoDecorativo1,valorPinturaEfeitoDecorativo1_1,valorPinturaEfeitoDecorativo2,valorPinturaEfeitoDecorativo2_1,valorPinturaEfeitoDecorativo3,valorPinturaEfeitoDecorativo3_1,valorPinturaEfeitoDecorativo4,valorPinturaEfeitoDecorativo4_1,valorPinturaEfeitoDecorativo5,valorPinturaEfeitoDecorativo5_1,valorPinturaEfeitoDecorativo6,valorPinturaEfeitoDecorativo6_1,valorPinturaEfeitoDecorativo7,valorPinturaEfeitoDecorativo7_1,valorPinturaEfeitoDecorativo8,valorPinturaEfeitoDecorativo8_1,valorPinturaEfeitoDecorativo9,valorPinturaEfeitoDecorativo9_1,valorPinturaEfeitoDecorativo10,valorPinturaEfeitoDecorativo10_1,valorPinturaEfeitoDecorativo11,valorPinturaEfeitoDecorativo11_1,
+                 valorPinturaReparoGesso1,valorPinturaReparoGesso1_1,valorPinturaReparoGesso2,valorPinturaReparoGesso2_1,valorPinturaReparoGesso3,valorPinturaReparoGesso3_1,valorPinturaReparoGesso4,valorPinturaReparoGesso4_1,valorPinturaReparoGesso5,valorPinturaReparoGesso5_1,valorPinturaReparoGesso6,valorPinturaReparoGesso6_1,valorPinturaReparoGesso7,valorPinturaReparoGesso7_1,valorPinturaReparoGesso8,valorPinturaReparoGesso8_1,valorPinturaReparoGesso9,valorPinturaReparoGesso9_1,valorPinturaReparoGesso10,valorPinturaReparoGesso10_1,valorPinturaReparoGesso11,valorPinturaReparoGesso11_1;
              private Button btn_finish;
              PermissionsChecker checker;
              Context mContext;
@@ -972,7 +978,23 @@ public class Main2Activity extends AppCompatActivity
              private     double valorTotalQuarto1;
              private     double valorTotalQuarto2;
              private     double valorTotalQuarto3;
-             private     double total;
+             private     double totalDemolicao;
+
+             //Revestimento Valores Totais
+             private double valorTotalRevestimentoCozinha = 0;
+             private double valorTotalRevestimentoBanheiroSocial = 0;
+             private double valorTotalRevestimentoBanheiroSuite = 0;
+             private double valorTotalRevestimentoQuarto1 = 0;
+             private double valorTotalRevestimentoQuarto2 = 0;
+             private double valorTotalRevestimentoAreaServico = 0;
+             private double valorTotalRevestimentoLavabo = 0;
+             private double valorTotalRevestimentoSacada = 0;
+             private double valorTotalRevestimentoSalaJantar = 0;
+             private double valorTotalCategoriaRevestimento = 0;
+             private double valorTotalRevestimentoSalaEstar = 0;
+             private double valorTotalRevestimentoQuartoSuite = 0;
+
+
 
              @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -1031,6 +1053,41 @@ public class Main2Activity extends AppCompatActivity
                  checkBoxQuarto2 = findViewById(R.id.checkbox_quarto2);
                  checkBoxQuartoSuite = findViewById(R.id.checkbox_quartoSuite);
 
+                 //CheckBox Revestimento
+                 checkBoxRevestimentoCozinha = findViewById(R.id.checkboxRevestimento_cozinha);
+                 checkBoxRevestimentoBanheiroSocial = findViewById(R.id.checkboxRevestimento_banheiro_social);
+                 checkBoxRevestimentoBanheiroSuite = findViewById(R.id.checkboxRevestimento_banheiro_suite);
+                 checkBoxRevestimentoAreaServico = findViewById(R.id.checkboxRevestimento_areaservico);
+                 checkBoxRevestimentoLavabo = findViewById(R.id.checkboxRevestimento_banheiro_lavabo);
+                 checkBoxRevestimentoSalaEstar = findViewById(R.id.checkboxRevestimento_salaEstar);
+                 checkBoxRevestimentoSalaJantar = findViewById(R.id.checkboxRevestimento_salaJantar);
+                 checkBoxRevestimentoQuarto1 = findViewById(R.id.checkboxRevestimento_quarto1);
+                 checkBoxRevestimentoQuarto2= findViewById(R.id.checkboxRevestimento_quarto2);
+                 checkBoxRevestimentoQuartoSuite= findViewById(R.id.checkboxRevestimento_quartoSuite);
+                 checkBoxRevestimentoSacadaVaranda= findViewById(R.id.checkboxRevestimento_sacada);
+
+                 //CheckBox Hidraulica
+                 checkBoxHidraulicaCozinha = findViewById(R.id.checkboxHidraulica_cozinha);
+                 checkBoxHidraulicaBanheiroSocial = findViewById(R.id.checkboxHidraulica_banheiro_social);
+                 checkBoxHidraulicaBanheiroSuite = findViewById(R.id.checkboxHidraulica_banheiro_suite);
+                 checkBoxHidraulicaAreaServico = findViewById(R.id.checkboxHidraulica_areaservico);
+                 checkBoxHidraulicaLavabo = findViewById(R.id.checkboxHidraulica_banheiro_lavabo);
+                 checkBoxHidraulicaSacadaVaranda= findViewById(R.id.checkboxHidraulica_sacada);
+
+
+                 //Checkbox Pintura
+                 checkBoxPinturaCozinha = findViewById(R.id.checkboxPintura_cozinha);
+                 checkBoxPinturaBanheiroSocial = findViewById(R.id.checkboxPintura_banheiro_social);
+                 checkBoxPinturaBanheiroSuite = findViewById(R.id.checkboxPintura_banheiro_suite);
+                 checkBoxPinturaAreaServico = findViewById(R.id.checkboxPintura_areaservico);
+                 checkBoxPinturaLavabo = findViewById(R.id.checkboxPintura_banheiro_lavabo);
+                 checkBoxPinturaSalaEstar = findViewById(R.id.checkboxPintura_salaEstar);
+                 checkBoxPinturaSalaJantar = findViewById(R.id.checkboxPintura_salaJantar);
+                 checkBoxPinturaQuarto1 = findViewById(R.id.checkboxPintura_quarto1);
+                 checkBoxPinturaQuarto2= findViewById(R.id.checkboxPintura_quarto2);
+                 checkBoxPinturaQuartoSuite= findViewById(R.id.checkboxPintura_quartoSuite);
+                 checkBoxPinturaSacadaVaranda= findViewById(R.id.checkboxPintura_sacada);
+
 
                  //Cast dos LinearLayouts
                  linearLayout1 = findViewById(R.id.linearCozinha);
@@ -1046,7 +1103,48 @@ public class Main2Activity extends AppCompatActivity
                  linearLayout11 = findViewById(R.id.linearQuartoSuite);
 
 
-                 //Cast dos campos de valores
+                 //Linear Revestimento
+                 linearLayoutRevestimento1 = findViewById(R.id.linearRevestimentoCozinha);
+                 linearLayoutRevestimento2 = findViewById(R.id.linearRevestimentoBanheiroSocial);
+                 linearLayoutRevestimento3 = findViewById(R.id.linearRevestimentoAreaServico);
+                 linearLayoutRevestimento4 = findViewById(R.id.linearRevestimentoBanheiroSuite);
+                 linearLayoutRevestimento5 = findViewById(R.id.linearRevestimentoLavabo);
+                 linearLayoutRevestimento6 = findViewById(R.id.linearRevestimentoSacada);
+                 linearLayoutRevestimento7 = findViewById(R.id.linearRevestimentoSalaJantar);
+                 linearLayoutRevestimento8 = findViewById(R.id.linearRevestimentoSalaEstar);
+                 linearLayoutRevestimento9 = findViewById(R.id.linearRevestimentoQuarto1);
+                 linearLayoutRevestimento10 = findViewById(R.id.linearRevestimentoQuarto2);
+                 linearLayoutRevestimento11 = findViewById(R.id.linearRevestimentoQuartoSuite);
+
+
+
+                 //Linear Hidraulica
+
+                 linearLayoutHidraulica1 = findViewById(R.id.linearHidraulicaCozinha);
+                 linearLayoutHidraulica2 = findViewById(R.id.linearHidraulicaBanheiroSocial);
+                 linearLayoutHidraulica3 = findViewById(R.id.linearHidraulicaAreaServico);
+                 linearLayoutHidraulica4 = findViewById(R.id.linearHidraulicaBanheiroSuite);
+                 linearLayoutHidraulica5 = findViewById(R.id.linearHidraulicaLavabo);
+                 linearLayoutHidraulica6 = findViewById(R.id.linearHidraulicaSacada);
+                 linearLayoutHidraulica7 = findViewById(R.id.linearHidraulicaSalaJantar);
+                 linearLayoutHidraulica8 = findViewById(R.id.linearHidraulicaSalaEstar);
+                 linearLayoutHidraulica9 = findViewById(R.id.linearHidraulicaQuarto1);
+                 linearLayoutHidraulica10 = findViewById(R.id.linearHidraulicaQuarto2);
+                 linearLayoutHidraulica11 = findViewById(R.id.linearHidraulicaQuartoSuite);
+
+
+                 //Linear Pintura
+                 linearLayoutPintura1 = findViewById(R.id.linearCozinhaPintura);
+                 linearLayoutPintura2 = findViewById(R.id.linearPinturaBanheiroSocial);
+                 linearLayoutPintura3 = findViewById(R.id.linearPinturaAreaServico);
+                 linearLayoutPintura4 = findViewById(R.id.linearPinturaBanheiroSuite);
+                 linearLayoutPintura5 = findViewById(R.id.linearPinturaLavabo);
+                 linearLayoutPintura6 = findViewById(R.id.linearPinturaSacada);
+                 linearLayoutPintura7 = findViewById(R.id.linearPinturaSalaJantar);
+                 linearLayoutPintura8 = findViewById(R.id.linearPinturaSalaEstar);
+                 linearLayoutPintura9 = findViewById(R.id.linearPinturaQuarto1);
+                 linearLayoutPintura10 = findViewById(R.id.linearPinturaQuarto2);
+                 linearLayoutPintura11 = findViewById(R.id.linearPinturaQuartoSuite);
 
 
                  //Revestimento Parede
@@ -1484,6 +1582,345 @@ public class Main2Activity extends AppCompatActivity
                  valorRevestimento3D11_1 = findViewById(R.id.revestimento3D_11_1);
 
 
+                 //Valores Pintura
+
+                 valorPinturaPorta1 = findViewById(R.id.pinturaPorta);
+                 valorPinturaPorta1_1 = findViewById(R.id.pinturaPorta1);
+                 valorPinturaPorta2 = findViewById(R.id.pinturaPorta2);
+                 valorPinturaPorta2_1 = findViewById(R.id.pinturaPorta2_1);
+                 valorPinturaPorta3 = findViewById(R.id.pinturaPorta3);
+                 valorPinturaPorta3_1 = findViewById(R.id.pinturaPorta3_1);
+                 valorPinturaPorta4 = findViewById(R.id.pinturaPorta4);
+                 valorPinturaPorta4_1 = findViewById(R.id.pinturaPorta4_1);
+                 valorPinturaPorta5 = findViewById(R.id.pinturaPorta5);
+                 valorPinturaPorta5_1 = findViewById(R.id.pinturaPorta5_1);
+                 valorPinturaPorta6 = findViewById(R.id.pinturaPorta6);
+                 valorPinturaPorta6_1 = findViewById(R.id.pinturaPorta6_1);
+                 valorPinturaPorta7 = findViewById(R.id.pinturaPorta7);
+                 valorPinturaPorta7_1 = findViewById(R.id.pinturaPorta7_1);
+                 valorPinturaPorta8 = findViewById(R.id.pinturaPorta8);
+                 valorPinturaPorta8_1 = findViewById(R.id.pinturaPorta8_1);
+                 valorPinturaPorta9 = findViewById(R.id.pinturaPorta9);
+                 valorPinturaPorta9_1 = findViewById(R.id.pinturaPorta9_1);
+                 valorPinturaPorta10 = findViewById(R.id.pinturaPorta10);
+                 valorPinturaPorta10_1 = findViewById(R.id.pinturaPorta10_1);
+                 valorPinturaPorta11 = findViewById(R.id.pinturaPorta11);
+                 valorPinturaPorta11_1 = findViewById(R.id.pinturaPorta11_1);
+
+                 valorPinturaJanela1 = findViewById(R.id.pinturaJanela);
+                 valorPinturaJanela1_1 = findViewById(R.id.pinturaJanela1);
+                 valorPinturaJanela2 = findViewById(R.id.pinturaJanela2);
+                 valorPinturaJanela2_1 = findViewById(R.id.pinturaJanela2_1);
+                 valorPinturaJanela3 = findViewById(R.id.pinturaJanela3);
+                 valorPinturaJanela3_1 = findViewById(R.id.pinturaJanela3_2);
+                 valorPinturaJanela4 = findViewById(R.id.pinturaJanela4);
+                 valorPinturaJanela4_1 = findViewById(R.id.pinturaJanela4_1);
+                 valorPinturaJanela5 = findViewById(R.id.pinturaJanela5);
+                 valorPinturaJanela5_1 = findViewById(R.id.pinturaJanela5_1);
+                 valorPinturaJanela6 = findViewById(R.id.pinturaJanela6);
+                 valorPinturaJanela6_1 = findViewById(R.id.pinturaJanela6_1);
+                 valorPinturaJanela7 = findViewById(R.id.pinturaJanela7);
+                 valorPinturaJanela7_1 = findViewById(R.id.pinturaJanela7_1);
+                 valorPinturaJanela8 = findViewById(R.id.pinturaJanela8);
+                 valorPinturaJanela8_1 = findViewById(R.id.pinturaJanela8_1);
+                 valorPinturaJanela9 = findViewById(R.id.pinturaJanela9);
+                 valorPinturaJanela9_1 = findViewById(R.id.pinturaJanela9_1);
+                 valorPinturaJanela10 = findViewById(R.id.pinturaJanela10);
+                 valorPinturaJanela10_1 = findViewById(R.id.pinturaJanela10_1);
+                 valorPinturaJanela11 = findViewById(R.id.pinturaJanela11);
+                 valorPinturaJanela11_1 = findViewById(R.id.pinturaJanela11_1);
+
+
+                 valorPinturaEfeitoDecorativo1 = findViewById(R.id.pinturaEfeitoDecorativo);
+                 valorPinturaEfeitoDecorativo1_1 = findViewById(R.id.pinturaEfeitoDecorativo1);
+                 valorPinturaEfeitoDecorativo2 = findViewById(R.id.pinturaEfeitoDecorativo2);
+                 valorPinturaEfeitoDecorativo2_1 = findViewById(R.id.pinturaEfeitoDecorativo2_1);
+                 valorPinturaEfeitoDecorativo3 = findViewById(R.id.pinturaEfeitoDecorativo3);
+                 valorPinturaEfeitoDecorativo3_1 = findViewById(R.id.pinturaEfeitoDecorativo3_1);
+                 valorPinturaEfeitoDecorativo4 = findViewById(R.id.pinturaEfeitoDecorativo4);
+                 valorPinturaEfeitoDecorativo4_1 = findViewById(R.id.pinturaEfeitoDecorativo4_1);
+                 valorPinturaEfeitoDecorativo5 = findViewById(R.id.pinturaEfeitoDecorativo5);
+                 valorPinturaEfeitoDecorativo5_1 = findViewById(R.id.pinturaEfeitoDecorativo5_1);
+                 valorPinturaEfeitoDecorativo6 = findViewById(R.id.pinturaEfeitoDecorativo6);
+                 valorPinturaEfeitoDecorativo6_1 = findViewById(R.id.pinturaEfeitoDecorativo6_1);
+                 valorPinturaEfeitoDecorativo7 = findViewById(R.id.pinturaEfeitoDecorativo7);
+                 valorPinturaEfeitoDecorativo7_1 = findViewById(R.id.pinturaEfeitoDecorativo7_1);
+                 valorPinturaEfeitoDecorativo8 = findViewById(R.id.pinturaEfeitoDecorativo8);
+                 valorPinturaEfeitoDecorativo8_1 = findViewById(R.id.pinturaEfeitoDecorativo8_1);
+                 valorPinturaEfeitoDecorativo9 = findViewById(R.id.pinturaEfeitoDecorativo9);
+                 valorPinturaEfeitoDecorativo9_1 = findViewById(R.id.pinturaEfeitoDecorativo9_1);
+                 valorPinturaEfeitoDecorativo10 = findViewById(R.id.pinturaEfeitoDecorativo10);
+                 valorPinturaEfeitoDecorativo10_1 = findViewById(R.id.pinturaEfeitoDecorativo10_1);
+                 valorPinturaEfeitoDecorativo11 = findViewById(R.id.pinturaEfeitoDecorativo11);
+                 valorPinturaEfeitoDecorativo11_1 = findViewById(R.id.pinturaEfeitoDecorativo11_1);
+
+                 valorPinturaReparoGesso1 = findViewById(R.id.pinturaReparoGesso);
+                 valorPinturaReparoGesso1_1 = findViewById(R.id.pinturaReparoGesso1);
+                 valorPinturaReparoGesso2 = findViewById(R.id.pinturaReparoGesso2);
+                 valorPinturaReparoGesso2_1 = findViewById(R.id.pinturaReparoGesso2_1);
+                 valorPinturaReparoGesso3 = findViewById(R.id.pinturaReparoGesso3);
+                 valorPinturaReparoGesso3_1 = findViewById(R.id.pinturaReparoGesso2_3);
+                 valorPinturaReparoGesso4 = findViewById(R.id.pinturaReparoGesso4);
+                 valorPinturaReparoGesso4_1 = findViewById(R.id.pinturaReparoGesso4_1);
+                 valorPinturaReparoGesso5 = findViewById(R.id.pinturaReparoGesso5);
+                 valorPinturaReparoGesso5_1 = findViewById(R.id.pinturaReparoGesso5_1);
+                 valorPinturaReparoGesso6 = findViewById(R.id.pinturaReparoGesso6);
+                 valorPinturaReparoGesso6_1 = findViewById(R.id.pinturaReparoGesso6_1);
+                 valorPinturaReparoGesso7 = findViewById(R.id.pinturaReparoGesso7);
+                 valorPinturaReparoGesso7_1 = findViewById(R.id.pinturaReparoGesso7_1);
+                 valorPinturaReparoGesso8 = findViewById(R.id.pinturaReparoGesso8);
+                 valorPinturaReparoGesso8_1 = findViewById(R.id.pinturaReparoGesso8_1);
+                 valorPinturaReparoGesso9 = findViewById(R.id.pinturaReparoGesso9);
+                 valorPinturaReparoGesso9_1 = findViewById(R.id.pinturaReparoGesso9_1);
+                 valorPinturaReparoGesso10 = findViewById(R.id.pinturaReparoGesso10);
+                 valorPinturaReparoGesso10_1 = findViewById(R.id.pinturaReparoGesso10_1);
+                 valorPinturaReparoGesso11 = findViewById(R.id.pinturaReparoGesso11);
+                 valorPinturaReparoGesso11_1 = findViewById(R.id.pinturaReparoGesso11_1);
+
+
+
+                 //Hidraulica
+
+                 valorHidraulicaTorneiraEletrica1 = findViewById(R.id.torneiraEletrica);
+                 valorHidraulicaTorneiraEletrica1_1 = findViewById(R.id.torneiraEletrica1);
+                 valorHidraulicaTorneiraEletrica2 = findViewById(R.id.torneiraEletrica2);
+                 valorHidraulicaTorneiraEletrica2_1 = findViewById(R.id.torneiraEletrica2_1);
+                 valorHidraulicaTorneiraEletrica3 = findViewById(R.id.torneiraEletrica3);
+                 valorHidraulicaTorneiraEletrica3_1 = findViewById(R.id.torneiraEletrica3_1);
+                 valorHidraulicaTorneiraEletrica4 = findViewById(R.id.torneiraEletrica4);
+                 valorHidraulicaTorneiraEletrica4_1 = findViewById(R.id.torneiraEletrica4_1);
+                 valorHidraulicaTorneiraEletrica5 = findViewById(R.id.torneiraEletrica5);
+                 valorHidraulicaTorneiraEletrica5_1 = findViewById(R.id.torneiraEletrica5_1);
+                 valorHidraulicaTorneiraEletrica6 = findViewById(R.id.torneiraEletrica6);
+                 valorHidraulicaTorneiraEletrica6_1 = findViewById(R.id.torneiraEletrica6_1);
+                 valorHidraulicaTorneiraEletrica7 = findViewById(R.id.torneiraEletrica7);
+                 valorHidraulicaTorneiraEletrica7_1 = findViewById(R.id.torneiraEletrica7_1);
+                 valorHidraulicaTorneiraEletrica8 = findViewById(R.id.torneiraEletrica8);
+                 valorHidraulicaTorneiraEletrica8_1 = findViewById(R.id.torneiraEletrica8_1);
+                 valorHidraulicaTorneiraEletrica9 = findViewById(R.id.torneiraEletrica9);
+                 valorHidraulicaTorneiraEletrica9_1 = findViewById(R.id.torneiraEletrica9_1);
+                 valorHidraulicaTorneiraEletrica10 = findViewById(R.id.torneiraEletrica10);
+                 valorHidraulicaTorneiraEletrica10_1 = findViewById(R.id.torneiraEletrica10_1);
+                 valorHidraulicaTorneiraEletrica11 = findViewById(R.id.torneiraEletrica11);
+                 valorHidraulicaTorneiraEletrica11_1 = findViewById(R.id.torneiraEletrica11_1);
+
+
+                 valorHidraulicaTorneiraSimples1 = findViewById(R.id.torneiraSimples);
+                 valorHidraulicaTorneiraSimples1_1 = findViewById(R.id.torneiraSimples1);
+                 valorHidraulicaTorneiraSimples2 = findViewById(R.id.torneiraSimples2);
+                 valorHidraulicaTorneiraSimples2_1 = findViewById(R.id.torneiraSimples2_1);
+                 valorHidraulicaTorneiraSimples3 = findViewById(R.id.torneiraSimples3);
+                 valorHidraulicaTorneiraSimples3_1 = findViewById(R.id.torneiraSimples3_1);
+                 valorHidraulicaTorneiraSimples4 = findViewById(R.id.torneiraSimples4);
+                 valorHidraulicaTorneiraSimples4_1 = findViewById(R.id.torneiraSimples4_1);
+                 valorHidraulicaTorneiraSimples5 = findViewById(R.id.torneiraSimples5);
+                 valorHidraulicaTorneiraSimples5_1 = findViewById(R.id.torneiraSimples5_1);
+                 valorHidraulicaTorneiraSimples6 = findViewById(R.id.torneiraSimples6);
+                 valorHidraulicaTorneiraSimples6_1 = findViewById(R.id.torneiraSimples6_1);
+                 valorHidraulicaTorneiraSimples7 = findViewById(R.id.torneiraSimples7);
+                 valorHidraulicaTorneiraSimples7_1 = findViewById(R.id.torneiraSimples7_1);
+                 valorHidraulicaTorneiraSimples8 = findViewById(R.id.torneiraSimples8);
+                 valorHidraulicaTorneiraSimples8_1 = findViewById(R.id.torneiraSimples8_1);
+                 valorHidraulicaTorneiraSimples9 = findViewById(R.id.torneiraSimples9);
+                 valorHidraulicaTorneiraSimples9_1 = findViewById(R.id.torneiraSimples9_1);
+                 valorHidraulicaTorneiraSimples10 = findViewById(R.id.torneiraSimples10);
+                 valorHidraulicaTorneiraSimples10_1 = findViewById(R.id.torneiraSimples10_1);
+                 valorHidraulicaTorneiraSimples11 = findViewById(R.id.torneiraSimples11);
+                 valorHidraulicaTorneiraSimples11_1 = findViewById(R.id.torneiraSimples11_1);
+
+
+
+                 valorHidraulicaTorneiraMonocomando1 = findViewById(R.id.torneiraMonocomando);
+                 valorHidraulicaTorneiraMonocomando1_1 = findViewById(R.id.torneiraMonocomando1);
+                 valorHidraulicaTorneiraMonocomando2 = findViewById(R.id.torneiraMonocomando2);
+                 valorHidraulicaTorneiraMonocomando2_1 = findViewById(R.id.torneiraMonocomando2_1);
+                 valorHidraulicaTorneiraMonocomando3 = findViewById(R.id.torneiraMonocomando3);
+                 valorHidraulicaTorneiraMonocomando3_1 = findViewById(R.id.torneiraMonocomando3_2);
+                 valorHidraulicaTorneiraMonocomando4 = findViewById(R.id.torneiraMonocomando4);
+                 valorHidraulicaTorneiraMonocomando4_1 = findViewById(R.id.torneiraMonocomando4_1);
+                 valorHidraulicaTorneiraMonocomando5 = findViewById(R.id.torneiraMonocomando5);
+                 valorHidraulicaTorneiraMonocomando5_1 = findViewById(R.id.torneiraMonocomando5_1);
+                 valorHidraulicaTorneiraMonocomando6 = findViewById(R.id.torneiraMonocomando6);
+                 valorHidraulicaTorneiraMonocomando6_1 = findViewById(R.id.torneiraMonocomando6_1);
+                 valorHidraulicaTorneiraMonocomando7 = findViewById(R.id.torneiraMonocomando7);
+                 valorHidraulicaTorneiraMonocomando7_1 = findViewById(R.id.torneiraMonocomando7_1);
+                 valorHidraulicaTorneiraMonocomando8 = findViewById(R.id.torneiraMonocomando8);
+                 valorHidraulicaTorneiraMonocomando8_1 = findViewById(R.id.torneiraMonocomando8_1);
+                 valorHidraulicaTorneiraMonocomando9 = findViewById(R.id.torneiraMonocomando9);
+                 valorHidraulicaTorneiraMonocomando9_1 = findViewById(R.id.torneiraMonocomando9_1);
+                 valorHidraulicaTorneiraMonocomando10 = findViewById(R.id.torneiraMonocomando10);
+                 valorHidraulicaTorneiraMonocomando10_1 = findViewById(R.id.torneiraMonocomando10_1);
+                 valorHidraulicaTorneiraMonocomando11 = findViewById(R.id.torneiraMonocomando11);
+                 valorHidraulicaTorneiraMonocomando11_1 = findViewById(R.id.torneiraMonocomando11_1);
+
+
+                 valorHidraulicaValvulaSifao1 = findViewById(R.id.valvulaSifao);
+                 valorHidraulicaValvulaSifao1_1 = findViewById(R.id.valvulaSifao1);
+                 valorHidraulicaValvulaSifao2 = findViewById(R.id.valvulaSifao2);
+                 valorHidraulicaValvulaSifao2_1 = findViewById(R.id.valvulaSifao2_1);
+                 valorHidraulicaValvulaSifao3 = findViewById(R.id.valvulaSifao3);
+                 valorHidraulicaValvulaSifao3_1 = findViewById(R.id.valvulaSifao2_3);
+                 valorHidraulicaValvulaSifao4 = findViewById(R.id.valvulaSifao4);
+                 valorHidraulicaValvulaSifao4_1 = findViewById(R.id.valvulaSifao4_1);
+                 valorHidraulicaValvulaSifao5 = findViewById(R.id.valvulaSifao5);
+                 valorHidraulicaValvulaSifao5_1 = findViewById(R.id.valvulaSifao5_1);
+                 valorHidraulicaValvulaSifao6 = findViewById(R.id.valvulaSifao6);
+                 valorHidraulicaValvulaSifao6_1 = findViewById(R.id.valvulaSifao6_1);
+                 valorHidraulicaValvulaSifao7 = findViewById(R.id.valvulaSifao7);
+                 valorHidraulicaValvulaSifao7_1 = findViewById(R.id.valvulaSifao7_1);
+                 valorHidraulicaValvulaSifao8 = findViewById(R.id.valvulaSifao8);
+                 valorHidraulicaValvulaSifao8_1 = findViewById(R.id.valvulaSifao8_1);
+                 valorHidraulicaValvulaSifao9 = findViewById(R.id.valvulaSifao9);
+                 valorHidraulicaValvulaSifao9_1 = findViewById(R.id.valvulaSifao9_1);
+                 valorHidraulicaValvulaSifao10 = findViewById(R.id.valvulaSifao10);
+                 valorHidraulicaValvulaSifao10_1 = findViewById(R.id.valvulaSifao10_1);
+                 valorHidraulicaValvulaSifao11 = findViewById(R.id.valvulaSifao11);
+                 valorHidraulicaValvulaSifao11_1 = findViewById(R.id.valvulaSifao11_1);
+
+
+
+                 valorHidraulicaRegistroAcabamento1 = findViewById(R.id.registrosAcabamento);
+                 valorHidraulicaRegistroAcabamento1_1 = findViewById(R.id.registrosAcabamento1);
+                 valorHidraulicaRegistroAcabamento2 = findViewById(R.id.registrosAcabamento2);
+                 valorHidraulicaRegistroAcabamento2_1 = findViewById(R.id.registrosAcabamento2_1);
+                 valorHidraulicaRegistroAcabamento3 = findViewById(R.id.registrosAcabamento3);
+                 valorHidraulicaRegistroAcabamento3_1 = findViewById(R.id.registrosAcabamento2_3);
+                 valorHidraulicaRegistroAcabamento4 = findViewById(R.id.registrosAcabamento4);
+                 valorHidraulicaRegistroAcabamento4_1 = findViewById(R.id.registrosAcabamento4_1);
+                 valorHidraulicaRegistroAcabamento5 = findViewById(R.id.registrosAcabamento5);
+                 valorHidraulicaRegistroAcabamento5_1 = findViewById(R.id.registrosAcabamento5_1);
+                 valorHidraulicaRegistroAcabamento6 = findViewById(R.id.registrosAcabamento6);
+                 valorHidraulicaRegistroAcabamento6_1 = findViewById(R.id.registrosAcabamento6_1);
+                 valorHidraulicaRegistroAcabamento7 = findViewById(R.id.registrosAcabamento7);
+                 valorHidraulicaRegistroAcabamento7_1 = findViewById(R.id.registrosAcabamento7_1);
+                 valorHidraulicaRegistroAcabamento8 = findViewById(R.id.registrosAcabamento8);
+                 valorHidraulicaRegistroAcabamento8_1 = findViewById(R.id.registrosAcabamento8_1);
+                 valorHidraulicaRegistroAcabamento9 = findViewById(R.id.registrosAcabamento9);
+                 valorHidraulicaRegistroAcabamento9_1 = findViewById(R.id.registrosAcabamento9_1);
+                 valorHidraulicaRegistroAcabamento10 = findViewById(R.id.registrosAcabamento10);
+                 valorHidraulicaRegistroAcabamento10_1 = findViewById(R.id.registrosAcabamento10_1);
+                 valorHidraulicaRegistroAcabamento11 = findViewById(R.id.registrosAcabamento11);
+                 valorHidraulicaRegistroAcabamento11_1 = findViewById(R.id.registrosAcabamento11_1);
+
+
+
+                 valorHidraulicaCriacaoAgua1 = findViewById(R.id.criacaoPontoAgua);
+                 valorHidraulicaCriacaoAgua1_1 = findViewById(R.id.criacaoPontoAgua_1);
+                 valorHidraulicaCriacaoAgua2 = findViewById(R.id.criacaoPontoAgua_2);
+                 valorHidraulicaCriacaoAgua2_1 = findViewById(R.id.criacaoPontoAgua_2_1);
+                 valorHidraulicaCriacaoAgua3 = findViewById(R.id.criacaoPontoAgua_3);
+                 valorHidraulicaCriacaoAgua3_1 = findViewById(R.id.criacaoPontoAgua_3_1);
+                 valorHidraulicaCriacaoAgua4 = findViewById(R.id.criacaoPontoAgua_4);
+                 valorHidraulicaCriacaoAgua4_1 = findViewById(R.id.criacaoPontoAgua_4_1);
+                 valorHidraulicaCriacaoAgua5 = findViewById(R.id.criacaoPontoAgua_5);
+                 valorHidraulicaCriacaoAgua5_1 = findViewById(R.id.criacaoPontoAgua_5_1);
+                 valorHidraulicaCriacaoAgua6 = findViewById(R.id.criacaoPontoAgua_6);
+                 valorHidraulicaCriacaoAgua6_1 = findViewById(R.id.criacaoPontoAgua_6_1);
+                 valorHidraulicaCriacaoAgua7 = findViewById(R.id.criacaoPontoAgua_7);
+                 valorHidraulicaCriacaoAgua7_1 = findViewById(R.id.criacaoPontoAgua_7_1);
+                 valorHidraulicaCriacaoAgua8 = findViewById(R.id.criacaoPontoAgua_8);
+                 valorHidraulicaCriacaoAgua8_1 = findViewById(R.id.criacaoPontoAgua_8_1);
+                 valorHidraulicaCriacaoAgua9 = findViewById(R.id.criacaoPontoAgua_9);
+                 valorHidraulicaCriacaoAgua9_1 = findViewById(R.id.criacaoPontoAgua_9_1);
+                 valorHidraulicaCriacaoAgua10 = findViewById(R.id.criacaoPontoAgua_10);
+                 valorHidraulicaCriacaoAgua10_1 = findViewById(R.id.criacaoPontoAgua_10_1);
+                 valorHidraulicaCriacaoAgua11 = findViewById(R.id.criacaoPontoAgua_11);
+                 valorHidraulicaCriacaoAgua11_1 = findViewById(R.id.criacaoPontoAgua_11_1);
+
+                 valorHidraulicaCriacaoEsgoto1 = findViewById(R.id.criacaoPontoEsgoto);
+                 valorHidraulicaCriacaoEsgoto1_1 = findViewById(R.id.criacaoPontoEsgoto_1);
+                 valorHidraulicaCriacaoEsgoto2 = findViewById(R.id.criacaoPontoEsgoto_2);
+                 valorHidraulicaCriacaoEsgoto2_1 = findViewById(R.id.criacaoPontoEsgoto_2_1);
+                 valorHidraulicaCriacaoEsgoto3 = findViewById(R.id.criacaoPontoEsgoto_3);
+                 valorHidraulicaCriacaoEsgoto3_1 = findViewById(R.id.criacaoPontoEsgoto_3_1);
+                 valorHidraulicaCriacaoEsgoto4 = findViewById(R.id.criacaoPontoEsgoto_4);
+                 valorHidraulicaCriacaoEsgoto4_1 = findViewById(R.id.criacaoPontoEsgoto_4_1);
+                 valorHidraulicaCriacaoEsgoto5 = findViewById(R.id.criacaoPontoEsgoto_5);
+                 valorHidraulicaCriacaoEsgoto5_1 = findViewById(R.id.criacaoPontoEsgoto_5_1);
+                 valorHidraulicaCriacaoEsgoto6 = findViewById(R.id.criacaoPontoEsgoto_6);
+                 valorHidraulicaCriacaoEsgoto6_1 = findViewById(R.id.criacaoPontoEsgoto_6_1);
+                 valorHidraulicaCriacaoEsgoto7 = findViewById(R.id.criacaoPontoEsgoto_7);
+                 valorHidraulicaCriacaoEsgoto7_1 = findViewById(R.id.criacaoPontoEsgoto_7_1);
+                 valorHidraulicaCriacaoEsgoto8 = findViewById(R.id.criacaoPontoEsgoto_8);
+                 valorHidraulicaCriacaoEsgoto8_1 = findViewById(R.id.criacaoPontoEsgoto_8_1);
+                 valorHidraulicaCriacaoEsgoto9 = findViewById(R.id.criacaoPontoEsgoto_9);
+                 valorHidraulicaCriacaoEsgoto9_1 = findViewById(R.id.criacaoPontoEsgoto_9_1);
+                 valorHidraulicaCriacaoEsgoto10 = findViewById(R.id.criacaoPontoEsgoto_10);
+                 valorHidraulicaCriacaoEsgoto10_1 = findViewById(R.id.criacaoPontoEsgoto_10_1);
+                 valorHidraulicaCriacaoEsgoto11 = findViewById(R.id.criacaoPontoEsgoto_11);
+                 valorHidraulicaCriacaoEsgoto11_1 = findViewById(R.id.criacaoPontoEsgoto_11_1);
+
+
+                 valorHidraulicaRalo10cm1 = findViewById(R.id.instalacaoRalo10cm);
+                 valorHidraulicaRalo10cm1_1 = findViewById(R.id.instalacaoRalo10cm1);
+                 valorHidraulicaRalo10cm2 = findViewById(R.id.instalacaoRalo10cm2);
+                 valorHidraulicaRalo10cm2_1 = findViewById(R.id.instalacaoRalo10cm2_1);
+                 valorHidraulicaRalo10cm3 = findViewById(R.id.instalacaoRalo10cm3);
+                 valorHidraulicaRalo10cm3_1 = findViewById(R.id.instalacaoRalo10cm3_1);
+                 valorHidraulicaRalo10cm4 = findViewById(R.id.instalacaoRalo10cm4);
+                 valorHidraulicaRalo10cm4_1 = findViewById(R.id.instalacaoRalo10cm4_1);
+                 valorHidraulicaRalo10cm5 = findViewById(R.id.instalacaoRalo10cm5);
+                 valorHidraulicaRalo10cm5_1 = findViewById(R.id.instalacaoRalo10cm5_1);
+                 valorHidraulicaRalo10cm6 = findViewById(R.id.instalacaoRalo10cm6);
+                 valorHidraulicaRalo10cm6_1 = findViewById(R.id.instalacaoRalo10cm6_1);
+                 valorHidraulicaRalo10cm7 = findViewById(R.id.instalacaoRalo10cm7);
+                 valorHidraulicaRalo10cm7_1 = findViewById(R.id.instalacaoRalo10cm7_1);
+                 valorHidraulicaRalo10cm8 = findViewById(R.id.instalacaoRalo10cm8);
+                 valorHidraulicaRalo10cm8_1 = findViewById(R.id.instalacaoRalo10cm8_1);
+                 valorHidraulicaRalo10cm9 = findViewById(R.id.instalacaoRalo10cm9);
+                 valorHidraulicaRalo10cm9_1 = findViewById(R.id.instalacaoRalo10cm9_1);
+                 valorHidraulicaRalo10cm10 = findViewById(R.id.instalacaoRalo10cm10);
+                 valorHidraulicaRalo10cm10_1 = findViewById(R.id.instalacaoRalo10cm10_1);
+                 valorHidraulicaRalo10cm11 = findViewById(R.id.instalacaoRalo10cm11);
+                 valorHidraulicaRalo10cm11_1 = findViewById(R.id.instalacaoRalo10cm11_1);
+
+
+                 valorHidraulicaRalo15cm1 = findViewById(R.id.instalacaoRalo15cm);
+                 valorHidraulicaRalo15cm1_1 = findViewById(R.id.instalacaoRalo15cm1);
+                 valorHidraulicaRalo15cm2 = findViewById(R.id.instalacaoRalo15cm2);
+                 valorHidraulicaRalo15cm2_1 = findViewById(R.id.instalacaoRalo15cm2_1);
+                 valorHidraulicaRalo15cm3 = findViewById(R.id.instalacaoRalo15cm3);
+                 valorHidraulicaRalo15cm3_1 = findViewById(R.id.instalacaoRalo15cm3_1);
+                 valorHidraulicaRalo15cm4 = findViewById(R.id.instalacaoRalo15cm4);
+                 valorHidraulicaRalo15cm4_1 = findViewById(R.id.instalacaoRalo15cm4_1);
+                 valorHidraulicaRalo15cm5 = findViewById(R.id.instalacaoRalo15cm5);
+                 valorHidraulicaRalo15cm5_1 = findViewById(R.id.instalacaoRalo15cm5_1);
+                 valorHidraulicaRalo15cm6 = findViewById(R.id.instalacaoRalo15cm6);
+                 valorHidraulicaRalo15cm6_1 = findViewById(R.id.instalacaoRalo15cm6_1);
+                 valorHidraulicaRalo15cm7 = findViewById(R.id.instalacaoRalo15cm7);
+                 valorHidraulicaRalo15cm7_1 = findViewById(R.id.instalacaoRalo15cm7_1);
+                 valorHidraulicaRalo15cm8 = findViewById(R.id.instalacaoRalo15cm8);
+                 valorHidraulicaRalo15cm8_1 = findViewById(R.id.instalacaoRalo15cm8_1);
+                 valorHidraulicaRalo15cm9 = findViewById(R.id.instalacaoRalo15cm9);
+                 valorHidraulicaRalo15cm9_1 = findViewById(R.id.instalacaoRalo15cm9_1);
+                 valorHidraulicaRalo15cm10 = findViewById(R.id.instalacaoRalo15cm10);
+                 valorHidraulicaRalo15cm10_1 = findViewById(R.id.instalacaoRalo15cm10_1);
+                 valorHidraulicaRalo15cm11 = findViewById(R.id.instalacaoRalo15cm11);
+                 valorHidraulicaRalo15cm11_1 = findViewById(R.id.instalacaoRalo15cm11_1);
+
+
+
+                 valorHidraulicaChuveiro2 = findViewById(R.id.chuveiro2);
+                 valorHidraulicaChuveiro2_1 = findViewById(R.id.chuveiro2_1);
+                 valorHidraulicaChuveiro4 = findViewById(R.id.chuveiro4);
+                 valorHidraulicaChuveiro4_1 = findViewById(R.id.chuveiro4_1);
+
+
+
+                 valorHidraulicaInstalarVasoSanitario2 = findViewById(R.id.instalacaoVasoSanitario2);
+                 valorHidraulicaInstalarVasoSanitario2_1 = findViewById(R.id.instalacaoVasoSanitario2_1);
+                 valorHidraulicaInstalarVasoSanitario4 = findViewById(R.id.instalacaoVasoSanitario4);
+                 valorHidraulicaInstalarVasoSanitario4_1 = findViewById(R.id.instalacaoVasoSanitario4_1);
+
+
+
+                 valorHidraulicaRaloLinear2 = findViewById(R.id.instalacaoRaloLinear2);
+                 valorHidraulicaRaloLinear2_1 = findViewById(R.id.instalacaoRaloLinear2_1);
+                 valorHidraulicaRaloLinear4 = findViewById(R.id.instalacaoRaloLinear4);
+                 valorHidraulicaRaloLinear4_1 = findViewById(R.id.instalacaoRaloLinear4_1);
+
+
+
 
 
 
@@ -1833,7 +2270,6 @@ public class Main2Activity extends AppCompatActivity
                          if (isChecked) {
                              linearLayout11.setVisibility(View.VISIBLE);
                              checkBoxQuarto2.setBackgroundColor(Color.parseColor("#1d1d1d"));
-
                              checkBoxQuarto2.setTextColor(Color.parseColor("#ffffff"));
 
 
@@ -1856,6 +2292,813 @@ public class Main2Activity extends AppCompatActivity
                          }
                      }});
 
+                 checkBoxRevestimentoCozinha.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutRevestimento1.setVisibility(View.VISIBLE);
+                             checkBoxRevestimentoCozinha.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxRevestimentoCozinha.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxRevestimentoAreaServico.setChecked(false);
+                             checkBoxRevestimentoBanheiroSocial.setChecked(false);
+                             checkBoxRevestimentoQuarto2.setChecked(false);
+                             checkBoxRevestimentoSalaJantar.setChecked(false);
+                             checkBoxRevestimentoSalaEstar.setChecked(false);
+                             checkBoxRevestimentoBanheiroSuite.setChecked(false);
+                             checkBoxRevestimentoSacadaVaranda.setChecked(false);
+                             checkBoxRevestimentoLavabo.setChecked(false);
+                             checkBoxRevestimentoQuarto1.setChecked(false);
+                             checkBoxRevestimentoQuartoSuite.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutRevestimento1.setVisibility(View.GONE);
+                             checkBoxRevestimentoCozinha.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+                 checkBoxRevestimentoBanheiroSocial.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutRevestimento2.setVisibility(View.VISIBLE);
+                             checkBoxRevestimentoBanheiroSocial.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxRevestimentoBanheiroSocial.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxRevestimentoBanheiroSuite.setChecked(false);
+                             checkBoxRevestimentoAreaServico.setChecked(false);
+                             checkBoxRevestimentoQuartoSuite.setChecked(false);
+                             checkBoxRevestimentoQuarto1.setChecked(false);
+                             checkBoxRevestimentoSalaEstar.setChecked(false);
+                             checkBoxRevestimentoLavabo.setChecked(false);
+                             checkBoxRevestimentoSalaJantar.setChecked(false);
+                             checkBoxRevestimentoSacadaVaranda.setChecked(false);
+                             checkBoxRevestimentoQuarto2.setChecked(false);
+                             checkBoxRevestimentoCozinha.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutRevestimento2.setVisibility(View.GONE);
+                             checkBoxRevestimentoBanheiroSocial.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+                 checkBoxRevestimentoAreaServico.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutRevestimento3.setVisibility(View.VISIBLE);
+                             checkBoxRevestimentoAreaServico.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxRevestimentoAreaServico.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxRevestimentoBanheiroSuite.setChecked(false);
+                             checkBoxRevestimentoBanheiroSocial.setChecked(false);
+                             checkBoxRevestimentoQuartoSuite.setChecked(false);
+                             checkBoxRevestimentoQuarto1.setChecked(false);
+                             checkBoxRevestimentoSalaEstar.setChecked(false);
+                             checkBoxRevestimentoLavabo.setChecked(false);
+                             checkBoxRevestimentoSalaJantar.setChecked(false);
+                             checkBoxRevestimentoSacadaVaranda.setChecked(false);
+                             checkBoxRevestimentoQuarto2.setChecked(false);
+                             checkBoxRevestimentoCozinha.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutRevestimento3.setVisibility(View.GONE);
+                             checkBoxRevestimentoAreaServico.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+                 checkBoxRevestimentoBanheiroSuite.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutRevestimento4.setVisibility(View.VISIBLE);
+                             checkBoxRevestimentoBanheiroSuite.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxRevestimentoBanheiroSuite.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxRevestimentoAreaServico.setChecked(false);
+                             checkBoxRevestimentoBanheiroSocial.setChecked(false);
+                             checkBoxRevestimentoQuartoSuite.setChecked(false);
+                             checkBoxRevestimentoQuarto1.setChecked(false);
+                             checkBoxRevestimentoSalaEstar.setChecked(false);
+                             checkBoxRevestimentoLavabo.setChecked(false);
+                             checkBoxRevestimentoSalaJantar.setChecked(false);
+                             checkBoxRevestimentoSacadaVaranda.setChecked(false);
+                             checkBoxRevestimentoQuarto2.setChecked(false);
+                             checkBoxRevestimentoCozinha.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutRevestimento4.setVisibility(View.GONE);
+                             checkBoxRevestimentoBanheiroSuite.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+                 checkBoxRevestimentoLavabo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutRevestimento5.setVisibility(View.VISIBLE);
+                             checkBoxRevestimentoLavabo.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxRevestimentoLavabo.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxRevestimentoAreaServico.setChecked(false);
+                             checkBoxRevestimentoBanheiroSocial.setChecked(false);
+                             checkBoxRevestimentoQuartoSuite.setChecked(false);
+                             checkBoxRevestimentoQuarto1.setChecked(false);
+                             checkBoxRevestimentoSalaEstar.setChecked(false);
+                             checkBoxRevestimentoBanheiroSuite.setChecked(false);
+                             checkBoxRevestimentoSalaJantar.setChecked(false);
+                             checkBoxRevestimentoSacadaVaranda.setChecked(false);
+                             checkBoxRevestimentoQuarto2.setChecked(false);
+                             checkBoxRevestimentoCozinha.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutRevestimento5.setVisibility(View.GONE);
+                             checkBoxRevestimentoLavabo.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+                 checkBoxRevestimentoSacadaVaranda.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutRevestimento6.setVisibility(View.VISIBLE);
+                             checkBoxRevestimentoSacadaVaranda.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxRevestimentoSacadaVaranda.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxRevestimentoAreaServico.setChecked(false);
+                             checkBoxRevestimentoBanheiroSocial.setChecked(false);
+                             checkBoxRevestimentoQuartoSuite.setChecked(false);
+                             checkBoxRevestimentoQuarto1.setChecked(false);
+                             checkBoxRevestimentoSalaEstar.setChecked(false);
+                             checkBoxRevestimentoBanheiroSuite.setChecked(false);
+                             checkBoxRevestimentoSalaJantar.setChecked(false);
+                             checkBoxRevestimentoLavabo.setChecked(false);
+                             checkBoxRevestimentoQuarto2.setChecked(false);
+                             checkBoxRevestimentoCozinha.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutRevestimento6.setVisibility(View.GONE);
+                             checkBoxRevestimentoSacadaVaranda.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+                 checkBoxRevestimentoSalaJantar.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutRevestimento7.setVisibility(View.VISIBLE);
+                             checkBoxRevestimentoSalaJantar.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxRevestimentoSalaJantar.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxRevestimentoAreaServico.setChecked(false);
+                             checkBoxRevestimentoBanheiroSocial.setChecked(false);
+                             checkBoxRevestimentoQuarto2.setChecked(false);
+                             checkBoxRevestimentoCozinha.setChecked(false);
+                             checkBoxRevestimentoSalaEstar.setChecked(false);
+                             checkBoxRevestimentoBanheiroSuite.setChecked(false);
+                             checkBoxRevestimentoSacadaVaranda.setChecked(false);
+                             checkBoxRevestimentoLavabo.setChecked(false);
+                             checkBoxRevestimentoQuarto1.setChecked(false);
+                             checkBoxRevestimentoQuartoSuite.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutRevestimento7.setVisibility(View.GONE);
+                             checkBoxRevestimentoSalaJantar.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+                 checkBoxRevestimentoSalaEstar.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutRevestimento8.setVisibility(View.VISIBLE);
+                             checkBoxRevestimentoSalaEstar.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxRevestimentoSalaEstar.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxRevestimentoAreaServico.setChecked(false);
+                             checkBoxRevestimentoBanheiroSocial.setChecked(false);
+                             checkBoxRevestimentoQuartoSuite.setChecked(false);
+                             checkBoxRevestimentoQuarto1.setChecked(false);
+                             checkBoxRevestimentoSalaJantar.setChecked(false);
+                             checkBoxRevestimentoBanheiroSuite.setChecked(false);
+                             checkBoxRevestimentoSacadaVaranda.setChecked(false);
+                             checkBoxRevestimentoLavabo.setChecked(false);
+                             checkBoxRevestimentoQuarto2.setChecked(false);
+                             checkBoxRevestimentoCozinha.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutRevestimento8.setVisibility(View.GONE);
+                             checkBoxRevestimentoSalaEstar.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+                 checkBoxRevestimentoQuarto1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutRevestimento9.setVisibility(View.VISIBLE);
+                             checkBoxRevestimentoQuarto1.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxRevestimentoQuarto1.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxRevestimentoAreaServico.setChecked(false);
+                             checkBoxRevestimentoBanheiroSocial.setChecked(false);
+                             checkBoxRevestimentoQuartoSuite.setChecked(false);
+                             checkBoxRevestimentoSalaJantar.setChecked(false);
+                             checkBoxRevestimentoSalaEstar.setChecked(false);
+                             checkBoxRevestimentoBanheiroSuite.setChecked(false);
+                             checkBoxRevestimentoSacadaVaranda.setChecked(false);
+                             checkBoxRevestimentoLavabo.setChecked(false);
+                             checkBoxRevestimentoQuarto2.setChecked(false);
+                             checkBoxRevestimentoCozinha.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutRevestimento9.setVisibility(View.GONE);
+                             checkBoxRevestimentoQuarto1.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+                 checkBoxRevestimentoQuarto2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutRevestimento10.setVisibility(View.VISIBLE);
+                             checkBoxRevestimentoQuarto2.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxRevestimentoQuarto2.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxRevestimentoAreaServico.setChecked(false);
+                             checkBoxRevestimentoBanheiroSocial.setChecked(false);
+                             checkBoxRevestimentoQuartoSuite.setChecked(false);
+                             checkBoxRevestimentoSalaJantar.setChecked(false);
+                             checkBoxRevestimentoSalaEstar.setChecked(false);
+                             checkBoxRevestimentoBanheiroSuite.setChecked(false);
+                             checkBoxRevestimentoSacadaVaranda.setChecked(false);
+                             checkBoxRevestimentoLavabo.setChecked(false);
+                             checkBoxRevestimentoQuarto1.setChecked(false);
+                             checkBoxRevestimentoCozinha.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutRevestimento10.setVisibility(View.GONE);
+                             checkBoxRevestimentoQuarto2.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+                 checkBoxRevestimentoQuartoSuite.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutRevestimento11.setVisibility(View.VISIBLE);
+                             checkBoxRevestimentoQuartoSuite.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxRevestimentoQuartoSuite.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxRevestimentoAreaServico.setChecked(false);
+                             checkBoxRevestimentoBanheiroSocial.setChecked(false);
+                             checkBoxRevestimentoQuarto2.setChecked(false);
+                             checkBoxRevestimentoSalaJantar.setChecked(false);
+                             checkBoxRevestimentoSalaEstar.setChecked(false);
+                             checkBoxRevestimentoBanheiroSuite.setChecked(false);
+                             checkBoxRevestimentoSacadaVaranda.setChecked(false);
+                             checkBoxRevestimentoLavabo.setChecked(false);
+                             checkBoxRevestimentoQuarto1.setChecked(false);
+                             checkBoxRevestimentoCozinha.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutRevestimento11.setVisibility(View.GONE);
+                             checkBoxRevestimentoQuartoSuite.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+
+
+                 checkBoxHidraulicaCozinha.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutHidraulica1.setVisibility(View.VISIBLE);
+                             checkBoxHidraulicaCozinha.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxHidraulicaCozinha.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxHidraulicaAreaServico.setChecked(false);
+                             checkBoxHidraulicaBanheiroSocial.setChecked(false);
+
+                             checkBoxHidraulicaBanheiroSuite.setChecked(false);
+                             checkBoxHidraulicaSacadaVaranda.setChecked(false);
+                             checkBoxHidraulicaLavabo.setChecked(false);
+
+                         }else if (isChecked == false) {
+                             linearLayoutHidraulica1.setVisibility(View.GONE);
+                             checkBoxHidraulicaCozinha.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+                 checkBoxHidraulicaBanheiroSocial.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutHidraulica2.setVisibility(View.VISIBLE);
+                             checkBoxHidraulicaBanheiroSocial.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxHidraulicaBanheiroSocial.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxHidraulicaAreaServico.setChecked(false);
+                             checkBoxHidraulicaCozinha.setChecked(false);
+
+                             checkBoxHidraulicaBanheiroSuite.setChecked(false);
+                             checkBoxHidraulicaSacadaVaranda.setChecked(false);
+                             checkBoxHidraulicaLavabo.setChecked(false);
+
+                         }else if (isChecked == false) {
+                             linearLayoutHidraulica2.setVisibility(View.GONE);
+                             checkBoxHidraulicaBanheiroSocial.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+                 checkBoxHidraulicaAreaServico.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutHidraulica3.setVisibility(View.VISIBLE);
+                             checkBoxHidraulicaAreaServico.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxHidraulicaAreaServico.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxHidraulicaBanheiroSocial.setChecked(false);
+                             checkBoxHidraulicaCozinha.setChecked(false);
+
+                             checkBoxHidraulicaBanheiroSuite.setChecked(false);
+                             checkBoxHidraulicaSacadaVaranda.setChecked(false);
+                             checkBoxHidraulicaLavabo.setChecked(false);
+
+                         }else if (isChecked == false) {
+                             linearLayoutHidraulica3.setVisibility(View.GONE);
+                             checkBoxHidraulicaAreaServico.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+                 checkBoxHidraulicaBanheiroSuite.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutHidraulica4.setVisibility(View.VISIBLE);
+                             checkBoxHidraulicaBanheiroSuite.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxHidraulicaBanheiroSuite.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxHidraulicaBanheiroSocial.setChecked(false);
+                             checkBoxHidraulicaCozinha.setChecked(false);
+
+                             checkBoxHidraulicaAreaServico.setChecked(false);
+                             checkBoxHidraulicaSacadaVaranda.setChecked(false);
+                             checkBoxHidraulicaLavabo.setChecked(false);
+
+                         }else if (isChecked == false) {
+                             linearLayoutHidraulica4.setVisibility(View.GONE);
+                             checkBoxHidraulicaBanheiroSuite.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+                 checkBoxHidraulicaLavabo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutHidraulica5.setVisibility(View.VISIBLE);
+                             checkBoxHidraulicaLavabo.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxHidraulicaLavabo.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxHidraulicaBanheiroSocial.setChecked(false);
+                             checkBoxHidraulicaCozinha.setChecked(false);
+
+                             checkBoxHidraulicaAreaServico.setChecked(false);
+                             checkBoxHidraulicaSacadaVaranda.setChecked(false);
+                             checkBoxHidraulicaBanheiroSuite.setChecked(false);
+
+                         }else if (isChecked == false) {
+                             linearLayoutHidraulica5.setVisibility(View.GONE);
+                             checkBoxHidraulicaLavabo.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+                 checkBoxHidraulicaSacadaVaranda.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutHidraulica6.setVisibility(View.VISIBLE);
+                             checkBoxHidraulicaSacadaVaranda.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxHidraulicaSacadaVaranda.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxHidraulicaBanheiroSocial.setChecked(false);
+                             checkBoxHidraulicaCozinha.setChecked(false);
+
+                             checkBoxHidraulicaAreaServico.setChecked(false);
+                             checkBoxHidraulicaLavabo.setChecked(false);
+                             checkBoxHidraulicaBanheiroSuite.setChecked(false);
+
+                         }else if (isChecked == false) {
+                             linearLayoutHidraulica6.setVisibility(View.GONE);
+                             checkBoxHidraulicaSacadaVaranda.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+                 checkBoxPinturaSacadaVaranda.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutHidraulica6.setVisibility(View.VISIBLE);
+                             checkBoxHidraulicaSacadaVaranda.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxHidraulicaSacadaVaranda.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxHidraulicaBanheiroSocial.setChecked(false);
+                             checkBoxHidraulicaCozinha.setChecked(false);
+
+                             checkBoxHidraulicaAreaServico.setChecked(false);
+                             checkBoxHidraulicaLavabo.setChecked(false);
+                             checkBoxHidraulicaBanheiroSuite.setChecked(false);
+
+                         }else if (isChecked == false) {
+                             linearLayoutHidraulica6.setVisibility(View.GONE);
+                             checkBoxHidraulicaSacadaVaranda.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+                 checkBoxPinturaCozinha.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutPintura1.setVisibility(View.VISIBLE);
+                             checkBoxPinturaCozinha.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxPinturaCozinha.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxPinturaBanheiroSocial.setChecked(false);
+                             checkBoxPinturaSalaJantar.setChecked(false);
+                             checkBoxPinturaQuarto2.setChecked(false);
+                             checkBoxPinturaSacadaVaranda.setChecked(false);
+                             checkBoxPinturaSalaEstar.setChecked(false);
+                             checkBoxPinturaAreaServico.setChecked(false);
+                             checkBoxPinturaLavabo.setChecked(false);
+                             checkBoxPinturaBanheiroSuite.setChecked(false);
+                             checkBoxPinturaQuarto1.setChecked(false);
+                             checkBoxPinturaQuartoSuite.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutPintura1.setVisibility(View.GONE);
+                             checkBoxPinturaCozinha.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+                 checkBoxPinturaBanheiroSocial.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutPintura2.setVisibility(View.VISIBLE);
+                             checkBoxPinturaBanheiroSocial.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxPinturaBanheiroSocial.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxPinturaCozinha.setChecked(false);
+                             checkBoxPinturaSalaJantar.setChecked(false);
+                             checkBoxPinturaQuarto2.setChecked(false);
+                             checkBoxPinturaSacadaVaranda.setChecked(false);
+                             checkBoxPinturaSalaEstar.setChecked(false);
+                             checkBoxPinturaAreaServico.setChecked(false);
+                             checkBoxPinturaLavabo.setChecked(false);
+                             checkBoxPinturaBanheiroSuite.setChecked(false);
+                             checkBoxPinturaQuarto1.setChecked(false);
+                             checkBoxPinturaQuartoSuite.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutPintura2.setVisibility(View.GONE);
+                             checkBoxPinturaBanheiroSocial.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+                 checkBoxPinturaAreaServico.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutPintura3.setVisibility(View.VISIBLE);
+                             checkBoxPinturaAreaServico.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxPinturaAreaServico.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxPinturaCozinha.setChecked(false);
+                             checkBoxPinturaSalaJantar.setChecked(false);
+                             checkBoxPinturaQuarto2.setChecked(false);
+                             checkBoxPinturaSacadaVaranda.setChecked(false);
+                             checkBoxPinturaSalaEstar.setChecked(false);
+                             checkBoxPinturaBanheiroSocial.setChecked(false);
+                             checkBoxPinturaLavabo.setChecked(false);
+                             checkBoxPinturaBanheiroSuite.setChecked(false);
+                             checkBoxPinturaQuarto1.setChecked(false);
+                             checkBoxPinturaQuartoSuite.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutPintura3.setVisibility(View.GONE);
+                             checkBoxPinturaAreaServico.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+                 checkBoxPinturaBanheiroSuite.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutPintura4.setVisibility(View.VISIBLE);
+                             checkBoxPinturaBanheiroSuite.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxPinturaBanheiroSuite.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxPinturaCozinha.setChecked(false);
+                             checkBoxPinturaSalaJantar.setChecked(false);
+                             checkBoxPinturaAreaServico.setChecked(false);
+                             checkBoxPinturaQuarto2.setChecked(false);
+                             checkBoxPinturaSacadaVaranda.setChecked(false);
+                             checkBoxPinturaSalaEstar.setChecked(false);
+                             checkBoxPinturaBanheiroSocial.setChecked(false);
+                             checkBoxPinturaLavabo.setChecked(false);
+                             checkBoxPinturaQuarto1.setChecked(false);
+                             checkBoxPinturaQuartoSuite.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutPintura4.setVisibility(View.GONE);
+                             checkBoxPinturaBanheiroSuite.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+                 checkBoxPinturaLavabo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutPintura5.setVisibility(View.VISIBLE);
+                             checkBoxPinturaLavabo.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxPinturaLavabo.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxPinturaCozinha.setChecked(false);
+                             checkBoxPinturaSalaJantar.setChecked(false);
+                             checkBoxPinturaQuarto2.setChecked(false);
+                             checkBoxPinturaAreaServico.setChecked(false);
+                             checkBoxPinturaSacadaVaranda.setChecked(false);
+                             checkBoxPinturaSalaEstar.setChecked(false);
+                             checkBoxPinturaBanheiroSocial.setChecked(false);
+                             checkBoxPinturaBanheiroSuite.setChecked(false);
+                             checkBoxPinturaQuarto1.setChecked(false);
+                             checkBoxPinturaQuartoSuite.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutPintura5.setVisibility(View.GONE);
+                             checkBoxPinturaLavabo.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+                 checkBoxPinturaSacadaVaranda.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutPintura6.setVisibility(View.VISIBLE);
+                             checkBoxPinturaSacadaVaranda.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxPinturaSacadaVaranda.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+
+                             checkBoxPinturaCozinha.setChecked(false);
+                             checkBoxPinturaAreaServico.setChecked(false);
+                             checkBoxPinturaSalaJantar.setChecked(false);
+                             checkBoxPinturaQuarto2.setChecked(false);
+                             checkBoxPinturaLavabo.setChecked(false);
+                             checkBoxPinturaSalaEstar.setChecked(false);
+                             checkBoxPinturaBanheiroSocial.setChecked(false);
+                             checkBoxPinturaBanheiroSuite.setChecked(false);
+                             checkBoxPinturaBanheiroSocial.setChecked(false);
+                             checkBoxPinturaQuarto1.setChecked(false);
+                             checkBoxPinturaQuartoSuite.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutPintura6.setVisibility(View.GONE);
+                             checkBoxPinturaSacadaVaranda.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+                 checkBoxPinturaSalaJantar.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutPintura7.setVisibility(View.VISIBLE);
+                             checkBoxPinturaSalaJantar.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxPinturaSalaJantar.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+                             checkBoxPinturaAreaServico.setChecked(false);
+                             checkBoxPinturaCozinha.setChecked(false);
+                             checkBoxPinturaSacadaVaranda.setChecked(false);
+                             checkBoxPinturaQuarto2.setChecked(false);
+                             checkBoxPinturaLavabo.setChecked(false);
+                             checkBoxPinturaSalaEstar.setChecked(false);
+                             checkBoxPinturaBanheiroSocial.setChecked(false);
+                             checkBoxPinturaBanheiroSuite.setChecked(false);
+                             checkBoxPinturaQuarto1.setChecked(false);
+                             checkBoxPinturaQuartoSuite.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutPintura7.setVisibility(View.GONE);
+                             checkBoxPinturaSalaJantar.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+                 checkBoxPinturaSalaEstar.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutPintura8.setVisibility(View.VISIBLE);
+                             checkBoxPinturaSalaEstar.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxPinturaSalaEstar.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+                             checkBoxPinturaAreaServico.setChecked(false);
+                             checkBoxPinturaCozinha.setChecked(false);
+                             checkBoxPinturaSacadaVaranda.setChecked(false);
+                             checkBoxPinturaQuarto2.setChecked(false);
+                             checkBoxPinturaQuarto1.setChecked(false);
+                             checkBoxPinturaLavabo.setChecked(false);
+                             checkBoxPinturaSalaJantar.setChecked(false);
+                             checkBoxPinturaBanheiroSocial.setChecked(false);
+                             checkBoxPinturaBanheiroSuite.setChecked(false);
+                             checkBoxPinturaQuartoSuite.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutPintura8.setVisibility(View.GONE);
+                             checkBoxPinturaSalaEstar.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+                 checkBoxPinturaQuarto1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutPintura9.setVisibility(View.VISIBLE);
+                             checkBoxPinturaQuarto1.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxPinturaQuarto1.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+                             checkBoxPinturaAreaServico.setChecked(false);
+                             checkBoxPinturaCozinha.setChecked(false);
+                             checkBoxPinturaSacadaVaranda.setChecked(false);
+                             checkBoxPinturaQuarto2.setChecked(false);
+                             checkBoxPinturaLavabo.setChecked(false);
+                             checkBoxPinturaSalaJantar.setChecked(false);
+                             checkBoxPinturaBanheiroSocial.setChecked(false);
+                             checkBoxPinturaBanheiroSuite.setChecked(false);
+                             checkBoxPinturaSalaEstar.setChecked(false);
+                             checkBoxPinturaQuartoSuite.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutPintura9.setVisibility(View.GONE);
+                             checkBoxPinturaQuarto1.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+                 checkBoxPinturaQuarto2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutPintura10.setVisibility(View.VISIBLE);
+                             checkBoxPinturaQuarto2.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxPinturaQuarto2.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+                             checkBoxPinturaAreaServico.setChecked(false);
+                             checkBoxPinturaCozinha.setChecked(false);
+                             checkBoxPinturaSacadaVaranda.setChecked(false);
+                             checkBoxPinturaQuarto1.setChecked(false);
+                             checkBoxPinturaLavabo.setChecked(false);
+                             checkBoxPinturaSalaJantar.setChecked(false);
+                             checkBoxPinturaBanheiroSocial.setChecked(false);
+                             checkBoxPinturaBanheiroSuite.setChecked(false);
+                             checkBoxPinturaSalaEstar.setChecked(false);
+                             checkBoxPinturaQuartoSuite.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutPintura10.setVisibility(View.GONE);
+                             checkBoxPinturaQuarto2.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
+
+                 checkBoxPinturaQuartoSuite.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                     @Override
+                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                         if (isChecked) {
+                             linearLayoutPintura11.setVisibility(View.VISIBLE);
+                             checkBoxPinturaQuartoSuite.setBackgroundColor(Color.parseColor("#1d1d1d"));
+                             checkBoxPinturaQuartoSuite.setTextColor(Color.parseColor("#ffffff"));
+
+
+
+                             //Desativando os outros checkBox
+                             checkBoxPinturaAreaServico.setChecked(false);
+                             checkBoxPinturaCozinha.setChecked(false);
+                             checkBoxPinturaSacadaVaranda.setChecked(false);
+                             checkBoxPinturaQuarto1.setChecked(false);
+                             checkBoxPinturaLavabo.setChecked(false);
+                             checkBoxPinturaSalaJantar.setChecked(false);
+                             checkBoxPinturaBanheiroSocial.setChecked(false);
+                             checkBoxPinturaBanheiroSuite.setChecked(false);
+                             checkBoxPinturaSalaEstar.setChecked(false);
+                             checkBoxPinturaQuarto2.setChecked(false);
+                         }else if (isChecked == false) {
+                             linearLayoutPintura11.setVisibility(View.GONE);
+                             checkBoxPinturaQuartoSuite.setBackgroundResource(R.drawable.btn_servico1);
+
+                         }
+                     }});
 
 
 
@@ -2093,7 +3336,7 @@ public class Main2Activity extends AppCompatActivity
                          varRemoverVao8_1 = Integer.parseInt(valorRemoverVao8_1.getText().toString()) * precoRemoverVao;
 
 
-                         valorTotalSalaEstar= varRemoverRevestimentoParede8 + varRemoverRevestimentoParede8_1 +  varRemoverPiso8 + varRemoverPiso8_1 + varRemoverPia8 + varRemoverPia8_1 + varRemoverAlvenaria8 + varRemoverAlvenaria8_1 + varRemoverTanque8 + varRemoverTanque8_1 + varRemoverCaixinha4x2_8 + varRemoverCaixinha4x2_8_1 + varRemoverCaixinha4x4_8 + varRemoverCaixinha4x4_8_1 + varRemoverHidraulica8 + varRemoverHidraulica8_1 + varRemoverGesso8 + varRemoverGesso8_1 + varRemoverVasoSanitario8 + varRemoverVasoSanitario8_1 + varRemoverVao8 + varRemoverVao8_1;
+                        valorTotalSalaEstar= varRemoverRevestimentoParede8 + varRemoverRevestimentoParede8_1 +  varRemoverPiso8 + varRemoverPiso8_1 + varRemoverPia8 + varRemoverPia8_1 + varRemoverAlvenaria8 + varRemoverAlvenaria8_1 + varRemoverTanque8 + varRemoverTanque8_1 + varRemoverCaixinha4x2_8 + varRemoverCaixinha4x2_8_1 + varRemoverCaixinha4x4_8 + varRemoverCaixinha4x4_8_1 + varRemoverHidraulica8 + varRemoverHidraulica8_1 + varRemoverGesso8 + varRemoverGesso8_1 + varRemoverVasoSanitario8 + varRemoverVasoSanitario8_1 + varRemoverVao8 + varRemoverVao8_1;
 
                          //Calculando Valores Quarto1
 
@@ -2180,9 +3423,231 @@ public class Main2Activity extends AppCompatActivity
 
 
 
+                         //Valores Revestimento Cozinha
 
-                         total = valorTotalCozinha + valorTotalBanheiro1 + valorTotalBanheiro2 + valorTotalBanheiro2 + valorTotalLavabo + valorTotalSacadaVaranda + valorTotalSalaEstar + valorTotalSalaJantar + valorTotalQuarto1 + valorTotalQuarto2 + valorTotalQuarto3;
-                         Toast.makeText(mContext, "R$"+ total, Toast.LENGTH_SHORT).show();
+
+                         varAdicionarAlvenaria = Integer.parseInt(valorRevestimentoAlvenariaBase1.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarAlvenaria1 = Integer.parseInt(valorRevestimentoAlvenariaBase1_1.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarContraPiso = Integer.parseInt(valorRevestimentoContraPiso1.getText().toString()) * precoCriarContraPiso;
+                         varAdicionarContraPiso1 = Integer.parseInt(valorRevestimentoContraPiso1_1.getText().toString()) * precoCriarContraPiso;
+                         varAplicacaoImpermeabilizante = Integer.parseInt(valorRevestimentoImpermeabilidade1.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicacaoImpermeabilizante1 = Integer.parseInt(valorRevestimentoImpermeabilidade1_1.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicarPorcelanatoMaior = Integer.parseInt(valorRevestimentoPorcelanatoAcima1.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMaior1 = Integer.parseInt(valorRevestimentoPorcelanatoAcima1_1.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMenor = Integer.parseInt(valorRevestimentoPorcelanatoMenor1.getText().toString()) * precoPorcelanatoMenor;
+                         varAplicarPorcelanatoMenor1 = Integer.parseInt(valorRevestimentoPorcelanatoMenor1_1.getText().toString()) * precoPorcelanatoMenor;
+                         varPastilhaVidro = Integer.parseInt(valorRevestimentoPastilhaVidro1.getText().toString()) * precoPastilhaVidro;
+                         varPastilhaVidro_1 = Integer.parseInt(valorRevestimentoPastilhaVidro1_1.getText().toString()) * precoPastilhaVidro;
+                         varRevestimento3D = Integer.parseInt(valorRevestimento3D1.getText().toString()) * precoRevestimento3D;
+                         varRevestimento3D_1 = Integer.parseInt(valorRevestimento3D1_1.getText().toString()) * precoRevestimento3D;
+
+
+                         valorTotalRevestimentoCozinha = varAdicionarAlvenaria + varAdicionarAlvenaria1 + varAdicionarContraPiso +varAdicionarContraPiso1 + varAplicacaoImpermeabilizante + varAplicacaoImpermeabilizante1 + varAplicarPorcelanatoMaior + varAplicarPorcelanatoMaior1 + varAplicarPorcelanatoMenor + varAplicarPorcelanatoMenor1 + varPastilhaVidro + varPastilhaVidro_1 + varRevestimento3D + varRevestimento3D_1;
+
+                         //Valores Revestimento Banheiro Social
+                         varAdicionarAlvenaria2 = Integer.parseInt(valorRevestimentoAlvenariaBase2.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarAlvenaria2_1 = Integer.parseInt(valorRevestimentoAlvenariaBase2_1.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarContraPiso2 = Integer.parseInt(valorRevestimentoContraPiso2.getText().toString()) * precoCriarContraPiso;
+                         varAdicionarContraPiso2_1 = Integer.parseInt(valorRevestimentoContraPiso2_1.getText().toString()) * precoCriarContraPiso;
+                         varAplicacaoImpermeabilizante2 = Integer.parseInt(valorRevestimentoImpermeabilidade2.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicacaoImpermeabilizante2_1 = Integer.parseInt(valorRevestimentoImpermeabilidade2_1.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicarPorcelanatoMaior2 = Integer.parseInt(valorRevestimentoPorcelanatoAcima2.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMaior2_1 = Integer.parseInt(valorRevestimentoPorcelanatoAcima2_1.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMenor2 = Integer.parseInt(valorRevestimentoPorcelanatoMenor2.getText().toString()) * precoPorcelanatoMenor;
+                         varAplicarPorcelanatoMenor2_1 = Integer.parseInt(valorRevestimentoPorcelanatoMenor2_1.getText().toString()) * precoPorcelanatoMenor;
+                         varPastilhaVidro_2 = Integer.parseInt(valorRevestimentoPastilhaVidro2.getText().toString()) * precoPastilhaVidro;
+                         varPastilhaVidro_2_1 = Integer.parseInt(valorRevestimentoPastilhaVidro2_1.getText().toString()) * precoPastilhaVidro;
+                         varRevestimento3D_2 = Integer.parseInt(valorRevestimento3D2.getText().toString()) * precoRevestimento3D;
+                         varRevestimento3D_2_1 = Integer.parseInt(valorRevestimento3D2_1.getText().toString()) * precoRevestimento3D;
+
+                         valorTotalRevestimentoBanheiroSocial = varAdicionarAlvenaria2+varAdicionarAlvenaria2_1+varAdicionarContraPiso2+varAdicionarContraPiso2_1+varAplicacaoImpermeabilizante2+varAplicacaoImpermeabilizante2_1+varAplicarPorcelanatoMaior2+varAplicarPorcelanatoMaior2_1+varAplicarPorcelanatoMenor2+varAplicarPorcelanatoMenor2_1+varPastilhaVidro_2+varPastilhaVidro_2_1+varRevestimento3D_2+varRevestimento3D_2_1;
+
+
+                         // Valores Revestimento Area de Servico
+                         varAdicionarAlvenaria3 = Integer.parseInt(valorRevestimentoAlvenariaBase3.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarAlvenaria3_1 = Integer.parseInt(valorRevestimentoAlvenariaBase3_1.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarContraPiso3 = Integer.parseInt(valorRevestimentoContraPiso3.getText().toString()) * precoCriarContraPiso;
+                         varAdicionarContraPiso3_1 = Integer.parseInt(valorRevestimentoContraPiso3_1.getText().toString()) * precoCriarContraPiso;
+                         varAplicacaoImpermeabilizante3 = Integer.parseInt(valorRevestimentoImpermeabilidade3.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicacaoImpermeabilizante3_1 = Integer.parseInt(valorRevestimentoImpermeabilidade3_1.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicarPorcelanatoMaior3 = Integer.parseInt(valorRevestimentoPorcelanatoAcima3.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMaior3_1 = Integer.parseInt(valorRevestimentoPorcelanatoAcima3_1.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMenor3 = Integer.parseInt(valorRevestimentoPorcelanatoMenor3.getText().toString()) * precoPorcelanatoMenor;
+                         varAplicarPorcelanatoMenor3_1 = Integer.parseInt(valorRevestimentoPorcelanatoMenor3_1.getText().toString()) * precoPorcelanatoMenor;
+                         varPastilhaVidro_3 = Integer.parseInt(valorRevestimentoPastilhaVidro3.getText().toString()) * precoPastilhaVidro;
+                         varPastilhaVidro_3_1 = Integer.parseInt(valorRevestimentoPastilhaVidro3_1.getText().toString()) * precoPastilhaVidro;
+                         varRevestimento3D_3 = Integer.parseInt(valorRevestimento3D3.getText().toString()) * precoRevestimento3D;
+                         varRevestimento3D_3_1 = Integer.parseInt(valorRevestimento3D3_1.getText().toString()) * precoRevestimento3D;
+
+
+                         valorTotalRevestimentoAreaServico = varAdicionarAlvenaria3+varAdicionarAlvenaria3_1+varAdicionarContraPiso3+varAdicionarContraPiso3_1+varAplicacaoImpermeabilizante3+varAplicacaoImpermeabilizante3_1+varAplicarPorcelanatoMaior3+varAplicarPorcelanatoMaior3_1+varAplicarPorcelanatoMenor3+varAplicarPorcelanatoMenor3_1+varPastilhaVidro_3+varPastilhaVidro_3_1+varRevestimento3D_3+varRevestimento3D_3_1;
+
+
+
+                         //Valores Revestimento Banheiro Suite
+                         varAdicionarAlvenaria4 = Integer.parseInt(valorRevestimentoAlvenariaBase4.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarAlvenaria4_1 = Integer.parseInt(valorRevestimentoAlvenariaBase4_1.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarContraPiso4 = Integer.parseInt(valorRevestimentoContraPiso4.getText().toString()) * precoCriarContraPiso;
+                         varAdicionarContraPiso4_1 = Integer.parseInt(valorRevestimentoContraPiso4_1.getText().toString()) * precoCriarContraPiso;
+                         varAplicacaoImpermeabilizante4 = Integer.parseInt(valorRevestimentoImpermeabilidade4.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicacaoImpermeabilizante4_1 = Integer.parseInt(valorRevestimentoImpermeabilidade4_1.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicarPorcelanatoMaior4 = Integer.parseInt(valorRevestimentoPorcelanatoAcima4.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMaior4_1 = Integer.parseInt(valorRevestimentoPorcelanatoAcima4_1.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMenor4 = Integer.parseInt(valorRevestimentoPorcelanatoMenor4.getText().toString()) * precoPorcelanatoMenor;
+                         varAplicarPorcelanatoMenor4_1 = Integer.parseInt(valorRevestimentoPorcelanatoMenor4_1.getText().toString()) * precoPorcelanatoMenor;
+                         varPastilhaVidro_4 = Integer.parseInt(valorRevestimentoPastilhaVidro4.getText().toString()) * precoPastilhaVidro;
+                         varPastilhaVidro_4_1 = Integer.parseInt(valorRevestimentoPastilhaVidro4_1.getText().toString()) * precoPastilhaVidro;
+                         varRevestimento3D_4 = Integer.parseInt(valorRevestimento3D4.getText().toString()) * precoRevestimento3D;
+                         varRevestimento3D_4_1 = Integer.parseInt(valorRevestimento3D4_1.getText().toString()) * precoRevestimento3D;
+
+                         valorTotalRevestimentoBanheiroSuite = varRevestimento3D_4_1+varRevestimento3D_4+varPastilhaVidro_4_1+varPastilhaVidro_4+varAplicarPorcelanatoMenor4+varAplicarPorcelanatoMaior4_1+varAplicarPorcelanatoMaior4+varAdicionarAlvenaria4+varAdicionarAlvenaria4_1+varAdicionarContraPiso4+varAdicionarContraPiso4_1+varAplicacaoImpermeabilizante4+varAplicacaoImpermeabilizante4_1;
+
+
+                         //Valores Revestimento Lavabo
+                         varAdicionarAlvenaria5 = Integer.parseInt(valorRevestimentoAlvenariaBase5.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarAlvenaria5_1 = Integer.parseInt(valorRevestimentoAlvenariaBase5_1.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarContraPiso5 = Integer.parseInt(valorRevestimentoContraPiso5.getText().toString()) * precoCriarContraPiso;
+                         varAdicionarContraPiso5_1 = Integer.parseInt(valorRevestimentoContraPiso5_1.getText().toString()) * precoCriarContraPiso;
+                         varAplicacaoImpermeabilizante5 = Integer.parseInt(valorRevestimentoImpermeabilidade5.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicacaoImpermeabilizante5_1 = Integer.parseInt(valorRevestimentoImpermeabilidade5_1.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicarPorcelanatoMaior5 = Integer.parseInt(valorRevestimentoPorcelanatoAcima5.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMaior5_1 = Integer.parseInt(valorRevestimentoPorcelanatoAcima5_1.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMenor5 = Integer.parseInt(valorRevestimentoPorcelanatoMenor5.getText().toString()) * precoPorcelanatoMenor;
+                         varAplicarPorcelanatoMenor5_1 = Integer.parseInt(valorRevestimentoPorcelanatoMenor5_1.getText().toString()) * precoPorcelanatoMenor;
+                         varPastilhaVidro_5 = Integer.parseInt(valorRevestimentoPastilhaVidro5.getText().toString()) * precoPastilhaVidro;
+                         varPastilhaVidro_5_1 = Integer.parseInt(valorRevestimentoPastilhaVidro5_1.getText().toString()) * precoPastilhaVidro;
+                         varRevestimento3D_5 = Integer.parseInt(valorRevestimento3D5.getText().toString()) * precoRevestimento3D;
+                         varRevestimento3D_5_1 = Integer.parseInt(valorRevestimento3D5_1.getText().toString()) * precoRevestimento3D;
+
+
+                         valorTotalRevestimentoLavabo = varAdicionarAlvenaria5+varAdicionarAlvenaria5_1+varAdicionarContraPiso5+varAdicionarContraPiso5_1+varAplicacaoImpermeabilizante5+varAplicacaoImpermeabilizante5_1+varAplicarPorcelanatoMaior5+varAplicarPorcelanatoMaior5_1+varAplicarPorcelanatoMenor5+varAplicarPorcelanatoMenor5_1+varPastilhaVidro_5+varPastilhaVidro_5_1+varRevestimento3D_5+varRevestimento3D_5_1;
+
+                         //Valores Revestimento Sacada
+
+                         varAdicionarAlvenaria6 = Integer.parseInt(valorRevestimentoAlvenariaBase6.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarAlvenaria6_1 = Integer.parseInt(valorRevestimentoAlvenariaBase6_1.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarContraPiso6 = Integer.parseInt(valorRevestimentoContraPiso6.getText().toString()) * precoCriarContraPiso;
+                         varAdicionarContraPiso6_1 = Integer.parseInt(valorRevestimentoContraPiso6_1.getText().toString()) * precoCriarContraPiso;
+                         varAplicacaoImpermeabilizante6 = Integer.parseInt(valorRevestimentoImpermeabilidade6.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicacaoImpermeabilizante6_1 = Integer.parseInt(valorRevestimentoImpermeabilidade6_1.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicarPorcelanatoMaior6 = Integer.parseInt(valorRevestimentoPorcelanatoAcima6.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMaior6_1 = Integer.parseInt(valorRevestimentoPorcelanatoAcima6_1.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMenor6 = Integer.parseInt(valorRevestimentoPorcelanatoMenor6.getText().toString()) * precoPorcelanatoMenor;
+                         varAplicarPorcelanatoMenor6_1 = Integer.parseInt(valorRevestimentoPorcelanatoMenor6_1.getText().toString()) * precoPorcelanatoMenor;
+                         varPastilhaVidro_6 = Integer.parseInt(valorRevestimentoPastilhaVidro6.getText().toString()) * precoPastilhaVidro;
+                         varPastilhaVidro_6_1 = Integer.parseInt(valorRevestimentoPastilhaVidro6_1.getText().toString()) * precoPastilhaVidro;
+                         varRevestimento3D_6 = Integer.parseInt(valorRevestimento3D6.getText().toString()) * precoRevestimento3D;
+                         varRevestimento3D_6_1 = Integer.parseInt(valorRevestimento3D6_1.getText().toString()) * precoRevestimento3D;
+
+
+                         valorTotalRevestimentoSacada = varAdicionarAlvenaria6+varAdicionarAlvenaria6_1+varAdicionarContraPiso6+varAdicionarContraPiso6_1+varAplicacaoImpermeabilizante6+varAplicacaoImpermeabilizante6_1+varAplicarPorcelanatoMaior6+varAplicarPorcelanatoMaior6_1+varAplicarPorcelanatoMenor6+varAplicarPorcelanatoMenor6_1+varPastilhaVidro_6+varPastilhaVidro_6_1+varRevestimento3D_6+varRevestimento3D_6_1;
+
+                         //Revestimento de Sala de Jantar
+                         varAdicionarAlvenaria7 = Integer.parseInt(valorRevestimentoAlvenariaBase7.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarAlvenaria7_1 = Integer.parseInt(valorRevestimentoAlvenariaBase7_1.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarContraPiso7 = Integer.parseInt(valorRevestimentoContraPiso7.getText().toString()) * precoCriarContraPiso;
+                         varAdicionarContraPiso7_1 = Integer.parseInt(valorRevestimentoContraPiso7_1.getText().toString()) * precoCriarContraPiso;
+                         varAplicacaoImpermeabilizante7 = Integer.parseInt(valorRevestimentoImpermeabilidade7.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicacaoImpermeabilizante7_1 = Integer.parseInt(valorRevestimentoImpermeabilidade7_1.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicarPorcelanatoMaior7 = Integer.parseInt(valorRevestimentoPorcelanatoAcima7.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMaior7_1 = Integer.parseInt(valorRevestimentoPorcelanatoAcima7_1.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMenor7 = Integer.parseInt(valorRevestimentoPorcelanatoMenor7.getText().toString()) * precoPorcelanatoMenor;
+                         varAplicarPorcelanatoMenor7_1 = Integer.parseInt(valorRevestimentoPorcelanatoMenor7_1.getText().toString()) * precoPorcelanatoMenor;
+                         varPastilhaVidro_7 = Integer.parseInt(valorRevestimentoPastilhaVidro7.getText().toString()) * precoPastilhaVidro;
+                         varPastilhaVidro_7_1 = Integer.parseInt(valorRevestimentoPastilhaVidro7_1.getText().toString()) * precoPastilhaVidro;
+                         varRevestimento3D_7 = Integer.parseInt(valorRevestimento3D7.getText().toString()) * precoRevestimento3D;
+                         varRevestimento3D_7_1 = Integer.parseInt(valorRevestimento3D7_1.getText().toString()) * precoRevestimento3D;
+
+
+                         valorTotalRevestimentoSalaJantar = varAdicionarAlvenaria7+varAdicionarAlvenaria7_1+varAdicionarContraPiso7+varAdicionarContraPiso7_1+varAplicacaoImpermeabilizante7+varAplicacaoImpermeabilizante7_1+varAplicarPorcelanatoMaior7+varAplicarPorcelanatoMaior7_1+varAplicarPorcelanatoMenor7+varAplicarPorcelanatoMenor7_1+varPastilhaVidro_7+varPastilhaVidro_7_1+varRevestimento3D_7+varRevestimento3D_7_1;
+
+
+                         //Valores Revestimento Sala Estar
+                         varAdicionarAlvenaria8 = Integer.parseInt(valorRevestimentoAlvenariaBase8.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarAlvenaria8_1 = Integer.parseInt(valorRevestimentoAlvenariaBase8_1.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarContraPiso8 = Integer.parseInt(valorRevestimentoContraPiso8.getText().toString()) * precoCriarContraPiso;
+                         varAdicionarContraPiso8_1 = Integer.parseInt(valorRevestimentoContraPiso8_1.getText().toString()) * precoCriarContraPiso;
+                         varAplicacaoImpermeabilizante8 = Integer.parseInt(valorRevestimentoImpermeabilidade8.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicacaoImpermeabilizante8_1 = Integer.parseInt(valorRevestimentoImpermeabilidade8_1.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicarPorcelanatoMaior8 = Integer.parseInt(valorRevestimentoPorcelanatoAcima8.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMaior8_1 = Integer.parseInt(valorRevestimentoPorcelanatoAcima8_1.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMenor8 = Integer.parseInt(valorRevestimentoPorcelanatoMenor8.getText().toString()) * precoPorcelanatoMenor;
+                         varAplicarPorcelanatoMenor8_1 = Integer.parseInt(valorRevestimentoPorcelanatoMenor8_1.getText().toString()) * precoPorcelanatoMenor;
+                         varPastilhaVidro_8 = Integer.parseInt(valorRevestimentoPastilhaVidro8.getText().toString()) * precoPastilhaVidro;
+                         varPastilhaVidro_8_1 = Integer.parseInt(valorRevestimentoPastilhaVidro8_1.getText().toString()) * precoPastilhaVidro;
+                         varRevestimento3D_8 = Integer.parseInt(valorRevestimento3D8.getText().toString()) * precoRevestimento3D;
+                         varRevestimento3D_8_1 = Integer.parseInt(valorRevestimento3D8_1.getText().toString()) * precoRevestimento3D;
+
+
+                         valorTotalRevestimentoSalaEstar = varAdicionarAlvenaria8+varAdicionarAlvenaria8_1+varAdicionarContraPiso8+varAdicionarContraPiso8_1+varAplicacaoImpermeabilizante8+varAplicacaoImpermeabilizante8_1+varAplicarPorcelanatoMaior8+varAplicarPorcelanatoMaior8_1+varAplicarPorcelanatoMenor8+varAplicarPorcelanatoMenor8_1+varPastilhaVidro_8+varPastilhaVidro_8_1+varRevestimento3D_8+varRevestimento3D_8_1;
+
+
+                         //Valores Revestimento Quarto Suite
+                         varAdicionarAlvenaria9 = Integer.parseInt(valorRevestimentoAlvenariaBase9.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarAlvenaria9_1 = Integer.parseInt(valorRevestimentoAlvenariaBase9_1.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarContraPiso9 = Integer.parseInt(valorRevestimentoContraPiso9.getText().toString()) * precoCriarContraPiso;
+                         varAdicionarContraPiso9_1 = Integer.parseInt(valorRevestimentoContraPiso9_1.getText().toString()) * precoCriarContraPiso;
+                         varAplicacaoImpermeabilizante9 = Integer.parseInt(valorRevestimentoImpermeabilidade9.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicacaoImpermeabilizante9_1 = Integer.parseInt(valorRevestimentoImpermeabilidade9_1.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicarPorcelanatoMaior9 = Integer.parseInt(valorRevestimentoPorcelanatoAcima9.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMaior9_1 = Integer.parseInt(valorRevestimentoPorcelanatoAcima9_1.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMenor9 = Integer.parseInt(valorRevestimentoPorcelanatoMenor9.getText().toString()) * precoPorcelanatoMenor;
+                         varAplicarPorcelanatoMenor9_1 = Integer.parseInt(valorRevestimentoPorcelanatoMenor9_1.getText().toString()) * precoPorcelanatoMenor;
+                         varPastilhaVidro_9 = Integer.parseInt(valorRevestimentoPastilhaVidro9.getText().toString()) * precoPastilhaVidro;
+                         varPastilhaVidro_9_1 = Integer.parseInt(valorRevestimentoPastilhaVidro9_1.getText().toString()) * precoPastilhaVidro;
+                         varRevestimento3D_9 = Integer.parseInt(valorRevestimento3D9.getText().toString()) * precoRevestimento3D;
+                         varRevestimento3D_9_1 = Integer.parseInt(valorRevestimento3D9_1.getText().toString()) * precoRevestimento3D;
+
+                         valorTotalRevestimentoQuartoSuite = varAdicionarAlvenaria9+varAdicionarAlvenaria9_1+varAdicionarContraPiso9+varAdicionarContraPiso9_1+varAplicacaoImpermeabilizante9+varAplicacaoImpermeabilizante9_1+varAplicarPorcelanatoMaior9+varAplicarPorcelanatoMaior9_1+varAplicarPorcelanatoMenor9+varAplicarPorcelanatoMenor9_1+varPastilhaVidro_9+varPastilhaVidro_9_1+varRevestimento3D_9+varRevestimento3D_9_1;
+
+                         //Valores Revstimento Quarto 1
+                         varAdicionarAlvenaria10 = Integer.parseInt(valorRevestimentoAlvenariaBase10.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarAlvenaria10_1 = Integer.parseInt(valorRevestimentoAlvenariaBase10_1.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarContraPiso10 = Integer.parseInt(valorRevestimentoContraPiso10.getText().toString()) * precoCriarContraPiso;
+                         varAdicionarContraPiso10_1 = Integer.parseInt(valorRevestimentoContraPiso10_1.getText().toString()) * precoCriarContraPiso;
+                         varAplicacaoImpermeabilizante10 = Integer.parseInt(valorRevestimentoImpermeabilidade10.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicacaoImpermeabilizante10_1 = Integer.parseInt(valorRevestimentoImpermeabilidade10_1.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicarPorcelanatoMaior10 = Integer.parseInt(valorRevestimentoPorcelanatoAcima10.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMaior10_1 = Integer.parseInt(valorRevestimentoPorcelanatoAcima10_1.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMenor10 = Integer.parseInt(valorRevestimentoPorcelanatoMenor10.getText().toString()) * precoPorcelanatoMenor;
+                         varAplicarPorcelanatoMenor10_1 = Integer.parseInt(valorRevestimentoPorcelanatoMenor10_1.getText().toString()) * precoPorcelanatoMenor;
+                         varPastilhaVidro_10 = Integer.parseInt(valorRevestimentoPastilhaVidro10.getText().toString()) * precoPastilhaVidro;
+                         varPastilhaVidro_10_1 = Integer.parseInt(valorRevestimentoPastilhaVidro10_1.getText().toString()) * precoPastilhaVidro;
+                         varRevestimento3D_10 = Integer.parseInt(valorRevestimento3D10.getText().toString()) * precoRevestimento3D;
+                         varRevestimento3D_10_1 = Integer.parseInt(valorRevestimento3D10_1.getText().toString()) * precoRevestimento3D;
+
+
+                         valorTotalRevestimentoQuarto1 = varAdicionarAlvenaria10+varAdicionarAlvenaria10_1+varAdicionarContraPiso10+varAdicionarContraPiso10_1+varAplicacaoImpermeabilizante10+varAplicacaoImpermeabilizante10_1+varAplicarPorcelanatoMaior10+varAplicarPorcelanatoMaior10_1+varAplicarPorcelanatoMenor10+varAplicarPorcelanatoMenor10_1+varPastilhaVidro_10+varPastilhaVidro_10_1+varRevestimento3D_10+varRevestimento3D_10_1;
+
+
+                         //Valores Revestimento Quarto 2
+                         varAdicionarAlvenaria11 = Integer.parseInt(valorRevestimentoAlvenariaBase11.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarAlvenaria11_1 = Integer.parseInt(valorRevestimentoAlvenariaBase11_1.getText().toString()) * precoCriarAlvenaria;
+                         varAdicionarContraPiso11 = Integer.parseInt(valorRevestimentoContraPiso11.getText().toString()) * precoCriarContraPiso;
+                         varAdicionarContraPiso11_1 = Integer.parseInt(valorRevestimentoContraPiso11_1.getText().toString()) * precoCriarContraPiso;
+                         varAplicacaoImpermeabilizante11 = Integer.parseInt(valorRevestimentoImpermeabilidade11.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicacaoImpermeabilizante11_1 = Integer.parseInt(valorRevestimentoImpermeabilidade11_1.getText().toString()) * precoAplicarImpermeabilizante;
+                         varAplicarPorcelanatoMaior11 = Integer.parseInt(valorRevestimentoPorcelanatoAcima11.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMaior11_1 = Integer.parseInt(valorRevestimentoPorcelanatoAcima11_1.getText().toString()) * precoPorcelanatoMaior;
+                         varAplicarPorcelanatoMenor11 = Integer.parseInt(valorRevestimentoPorcelanatoMenor11.getText().toString()) * precoPorcelanatoMenor;
+                         varAplicarPorcelanatoMenor11_1 = Integer.parseInt(valorRevestimentoPorcelanatoMenor11_1.getText().toString()) * precoPorcelanatoMenor;
+                         varPastilhaVidro_11 = Integer.parseInt(valorRevestimentoPastilhaVidro11.getText().toString()) * precoPastilhaVidro;
+                         varPastilhaVidro_11_1 = Integer.parseInt(valorRevestimentoPastilhaVidro11_1.getText().toString()) * precoPastilhaVidro;
+                         varRevestimento3D_11 = Integer.parseInt(valorRevestimento3D11.getText().toString()) * precoRevestimento3D;
+                         varRevestimento3D_11_1 = Integer.parseInt(valorRevestimento3D11_1.getText().toString()) * precoRevestimento3D;
+
+
+                         valorTotalRevestimentoQuarto2 = varAdicionarAlvenaria11+varAdicionarAlvenaria11_1+varAdicionarContraPiso11+varAdicionarContraPiso11_1+varAplicacaoImpermeabilizante11+varAplicacaoImpermeabilizante11_1+varAplicarPorcelanatoMaior11+varAplicarPorcelanatoMaior11_1+varAplicarPorcelanatoMenor11+varAplicarPorcelanatoMenor11_1+varPastilhaVidro_11+varPastilhaVidro_11_1+varRevestimento3D_11+varRevestimento3D_11_1;
+
+                         valorTotalCategoriaRevestimento = valorTotalRevestimentoAreaServico+valorTotalRevestimentoQuarto2+valorTotalRevestimentoQuarto1+valorTotalRevestimentoQuartoSuite+valorTotalRevestimentoSalaEstar+valorTotalRevestimentoSalaJantar+valorTotalRevestimentoSacada+valorTotalRevestimentoLavabo+valorTotalRevestimentoAreaServico+valorTotalRevestimentoBanheiroSocial+valorTotalRevestimentoCozinha;
+
+
+
+
+                         totalDemolicao = valorTotalCozinha + valorTotalBanheiro1 + valorTotalBanheiro2 + valorTotalBanheiro2 + valorTotalLavabo + valorTotalSacadaVaranda + valorTotalSalaEstar + valorTotalSalaJantar + valorTotalQuarto1 + valorTotalQuarto2 + valorTotalQuarto3;
+
+
+                         Toast.makeText(mContext, "R$"+ totalDemolicao, Toast.LENGTH_SHORT).show();
 
 
                          View view = getLayoutInflater().inflate(R.layout.layout_edt, null);
@@ -2283,8 +3748,8 @@ public class Main2Activity extends AppCompatActivity
                  Paragraph dataParagrafo = new Paragraph(String.valueOf(now), fontData);
                  dataParagrafo.setAlignment(Element.ALIGN_LEFT);
                  Paragraph espacoBranco = new Paragraph("", boldTitulo);
-                 Paragraph tituloParagrafo = new Paragraph("Orçamento Demolição", boldTitulo);
-                 Paragraph valorTotal = new Paragraph("TOTAL R$ "+ total+"0", boldTotal);
+                 Paragraph tituloParagrafo = new Paragraph("Orçamento", boldTitulo);
+                 Paragraph valorTotal = new Paragraph("TOTAL R$ "+ totalDemolicao+"0", boldTotal);
                  Paragraph paragrafoCozinha = new Paragraph("Cozinha                                                                                Total R$"+ valorTotalCozinha+"0", boldServicos);
                  Paragraph paragrafoBanheiro = new Paragraph("Banheiro", boldServicos);
                  Paragraph paragrafoAreaServico = new Paragraph("Área de Serviço", boldServicos);
@@ -2476,6 +3941,10 @@ public class Main2Activity extends AppCompatActivity
                  document.add(Chunk.NEWLINE);
                  document.add(Chunk.NEWLINE);
 
+
+                 if (totalDemolicao > 0){
+
+                 }
                  if (valorTotalCozinha > 0){
                      PdfPTable tableCozinha = new PdfPTable(1);
                      tableCozinha.setWidthPercentage(100);
